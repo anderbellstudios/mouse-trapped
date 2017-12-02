@@ -1,7 +1,3 @@
-body {
-  font-family: Arial;
-}
-
 #game-placeholder {
   position: absolute;
   top: 25%; left: 25%; bottom: 25%; right: 25%;
@@ -35,7 +31,7 @@ body {
 
 #splash-table-left > h1{
   color: white;
-  font-family: "Avenir Next", "Avenir", "Helvetica", sans-serif;
+  font-family: 'Avenir Next', 'Roboto', sans-serif;
   font-weight: 200;
   font-size: 7vw;
   letter-spacing: 7pt;

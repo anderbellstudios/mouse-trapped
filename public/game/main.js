@@ -20,4 +20,8 @@ window.onload = function() {
     viewHeight, 
     Phaser.CANVAS
   );
+
+  game.state.add('menu', mainMenu);
+
+  game.state.start('menu');
 };

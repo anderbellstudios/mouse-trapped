@@ -4,7 +4,7 @@ canvas {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  border: silver 2px solid;
+  border: #7E7E7E 2px solid;
 }
 
 #interactive-bg {

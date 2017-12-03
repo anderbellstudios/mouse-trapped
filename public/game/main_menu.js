@@ -1,5 +1,5 @@
 var buttons = [
-  { name: 'play',    onclick: function () { alert('This is a placeholder button.'); } },
+  { name: 'play',    onclick: function () { game.state.start('playing'); } },
   { name: 'options', onclick: function () { alert('This is a placeholder button.'); } }
 ];
 

@@ -6,7 +6,7 @@ MapGenerator = {
       var cells = row.split(";");
 
       cells.forEach(function (tileData, cell_number) {
-        var frame  = tileData.slice(0, 2);
+        var frame  = tileData.slice(0, 2) - 0;
         var symbol = tileData[2];
         var tileId = tileData.slice(3);
 

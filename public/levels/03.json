@@ -1,0 +1,1 @@
+{ "start": "01", "special": { "00": {}, "01": {}, "02": { "cutscene": "interlevel.mp4", "next_level": "01" }, "03": { "delay": 4000 }, "04": { "delay": 2000 }, "05": { "delay": 1000 }, "06": { "delay": 500 }, "07": { "delay": 250 } } }

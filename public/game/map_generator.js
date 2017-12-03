@@ -42,6 +42,12 @@ MapGenerator = {
       case 'r':
         return RotatingBarrierTile;
         break;
+      case 'u':
+        return ButtonTile;
+        break;
+      case 't':
+        return ToggledBarrierTile;
+        break;
       case 'e':
         return EndTile;
         break;

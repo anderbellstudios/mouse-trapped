@@ -11,6 +11,7 @@ var playing = {
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
+    game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
   },
 

@@ -39,6 +39,9 @@ MapGenerator = {
       case 'b':
         return BarrierTile;
         break;
+      case 'r':
+        return RotatingBarrierTile;
+        break;
       case 'e':
         return EndTile;
         break;

@@ -1,4 +1,4 @@
-var game, gridWidth, gridHeight, viewWidth, viewHeight;
+var game, gridWidth, gridHeight, viewWidth, viewHeight, tileSize;
 
 window.onload = function() {
   gridWidth = 16;
@@ -10,7 +10,7 @@ window.onload = function() {
   var idealTileWidth  = Math.floor(maxWidth  / gridWidth);
   var idealTileHeight = Math.floor(maxHeight / gridHeight);
 
-  var tileSize = Math.min(idealTileWidth, idealTileHeight);
+  tileSize = Math.min(idealTileWidth, idealTileHeight);
 
   viewWidth  = gridWidth  * tileSize; 
   viewHeight = gridHeight * tileSize; 

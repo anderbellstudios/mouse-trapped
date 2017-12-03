@@ -1,0 +1,50 @@
+MapGenerator = {
+  loadMap: function (level_name, game, tileSize) {
+    var tileset = game.cache.getText(level_name + '_tileset');
+    var lvldata = game.cache.getText(level_name + '_lvldata');
+
+    var rows = tileset.split("\n");
+    var tiles = [];
+    rows.forEach(function (row, row_number) {
+      var cells = row.split(";");
+
+      cells.forEach(function (tileData, cell_number) {
+        var frame  = tileData.slice(0, 2);
+        var symbol = tileData[2];
+        var tileId = tileData.slice(3);
+
+        var special = JSON.parse(lvldata).special[tileId];
+
+        var tileConstructor = MapGenerator.constructorFor(symbol);
+        if (tileConstructor == undefined) {
+          alert("invalid tile: " + tileData);
+        }
+
+        var position = {
+          x: cell_number * tileSize,
+          y: row_number  * tileSize
+        };
+
+        var tile = new tileConstructor(position, frame, tileId, special);
+        tiles.push(tile);
+      });
+
+    });
+
+    return tiles;
+  },
+
+  constructorFor: function (symbol) {
+    switch (symbol) {
+      case 'f':
+        return FloorTile;
+        break;
+      case 'b':
+        return BarrierTile;
+        break;
+      default:
+        alert("invalid symbol found: " + symbol);
+        break;
+    }
+  }
+}

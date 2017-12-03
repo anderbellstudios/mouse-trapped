@@ -23,6 +23,7 @@ window.onload = function() {
 
   game.state.add('menu', mainMenu);
   game.state.add('playing', playing);
+  game.state.add('cutscene', cutscene);
 
   game.state.start('menu');
 };

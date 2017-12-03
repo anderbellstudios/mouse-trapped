@@ -1,1 +1,1 @@
-{ "start": "01", "cutscene": "interlevel.mp4", "special": { "00": {}, "01": {}, "02": { "next_level": "02" } } }
+{ "start": "01", "special": { "00": {}, "01": {}, "02": { "cutscene": "interlevel.mp4", "next_level": "02" } } }

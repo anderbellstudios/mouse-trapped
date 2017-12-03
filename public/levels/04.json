@@ -1,0 +1,12 @@
+{ "start": "01", "special": { 
+	"00": {}, 
+	"01": {}, 
+	"02": { "cutscene": "interlevel.mp4", "next_level": "01" } ,
+	"03": { "target": "09" },
+	"04": { "target": "07" },
+	"05": { "target": "08" },
+	"06": { "delay": 1000 },
+	"07": { "state": "closed" },
+	"08": { "state": "open" },
+	"09": { "state": "closed" }
+} }

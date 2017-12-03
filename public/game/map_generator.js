@@ -1,8 +1,5 @@
 MapGenerator = {
-  loadMap: function (level_name, game, tileSize) {
-    var tileset = game.cache.getText(level_name + '_tileset');
-    var lvldata = game.cache.getText(level_name + '_lvldata');
-
+  loadMap: function (tileset, lvldata, game, tileSize) {
     var rows = tileset.split("\n");
     var tiles = [];
     rows.forEach(function (row, row_number) {
@@ -13,7 +10,7 @@ MapGenerator = {
         var symbol = tileData[2];
         var tileId = tileData.slice(3);
 
-        var special = JSON.parse(lvldata).special[tileId];
+        var special = lvldata.special[tileId];
 
         var tileConstructor = MapGenerator.constructorFor(symbol);
         if (tileConstructor == undefined) {

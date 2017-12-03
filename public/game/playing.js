@@ -1,11 +1,16 @@
-var map, player;
+var map, player, lvlId;
 
 var playing = {
+  init: function (lvl) {
+    lvlId = lvl;
+  },
+
   preload: function () {
-    game.load.text('tileset', '/levels/01.lvl');
-    game.load.text('lvldata', '/levels/01.json');
+    game.load.text('tileset', '/levels/' + lvlId + '.lvl');
+    game.load.text('lvldata', '/levels/' + lvlId + '.json');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
+    game.load.spritesheet('endImage', '/images/end.png', 100, 100);
   },
 
   create: function () {

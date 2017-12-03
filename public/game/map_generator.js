@@ -39,6 +39,9 @@ MapGenerator = {
       case 'b':
         return BarrierTile;
         break;
+      case 'e':
+        return EndTile;
+        break;
       default:
         alert("invalid symbol found: " + symbol);
         break;

@@ -2,9 +2,9 @@
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel.mp4", "next_level": "04" }, 
-	"03": { "delay": 4000 }, 
-	"04": { "delay": 2000 }, 
-	"05": { "delay": 1000 }, 
-	"06": { "delay": 500 }, 
-	"07": { "delay": 250 } 
+	"03": { "delay": 4000, "offset":  100 }, 
+	"04": { "delay": 2000, "offset":  400 }, 
+	"05": { "delay": 1000, "offset":  900 }, 
+	"06": { "delay":  500, "offset": 1600 }, 
+	"07": { "delay":  250, "offset": 2500 } 
 } }

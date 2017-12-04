@@ -31,5 +31,9 @@
   console.log("                                                                                ");
   console.log("In either case, have fun!                                                       ");
   console.log("--------------------------------------------------------------------------------");
+
+  $(window).bind('beforeunload', function(){
+    return 'Are you sure you want to leave?';
+  });
 </script>
 

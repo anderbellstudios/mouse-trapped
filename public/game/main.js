@@ -6,9 +6,8 @@ var user_settings = {
 }
 
 var main_menu = [
-  { name: 'play',         onclick: function () { game.state.start('playing', true, false, '01'); } },
-  { name: 'instructions', onclick: function () { window.open('/instructions'); } },
-  { name: 'options',      onclick: function () { game.state.start('menu', true, false, 'options', options_menu); } }
+  { name: 'play',    onclick: function () { game.state.start('playing', true, false, '01'); } },
+  { name: 'options', onclick: function () { game.state.start('menu', true, false, 'options', options_menu); } }
 ];
 
 var options_menu = [

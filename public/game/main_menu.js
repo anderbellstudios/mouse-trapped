@@ -1,6 +1,7 @@
 var buttons = [
-  { name: 'play',    onclick: function () { game.state.start('playing', true, false, '01'); } },
-  { name: 'options', onclick: function () { alert('This is a placeholder button.'); } }
+  { name: 'play',         onclick: function () { game.state.start('playing', true, false, '01'); } },
+  { name: 'instructions', onclick: function () { window.open('/instructions'); } },
+  { name: 'options',      onclick: function () { alert('This is a placeholder button.'); } }
 ];
 
 var rowHeight = 225;

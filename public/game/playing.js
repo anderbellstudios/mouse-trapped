@@ -62,15 +62,23 @@ FirstResponder = {
   keyDown: function (keypress) {
     switch (keypress.keyCode) {
       case Phaser.KeyCode.H:
+      case Phaser.KeyCode.A:
+      case Phaser.KeyCode.LEFT:
         player.walk({ dx: -tileSize, dy: 0 });
         break;
       case Phaser.KeyCode.J:
+      case Phaser.KeyCode.S:
+      case Phaser.KeyCode.DOWN:
         player.walk({ dx: 0, dy: tileSize });
         break;
       case Phaser.KeyCode.K:
+      case Phaser.KeyCode.W:
+      case Phaser.KeyCode.UP:
         player.walk({ dx: 0, dy: -tileSize });
         break;
       case Phaser.KeyCode.L:
+      case Phaser.KeyCode.D:
+      case Phaser.KeyCode.RIGHT:
         player.walk({ dx: tileSize, dy: 0 });
         break;
     }

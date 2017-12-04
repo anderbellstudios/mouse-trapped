@@ -1,14 +1,15 @@
-var buttons = [
-  { name: 'play',         onclick: function () { game.state.start('playing', true, false, '01'); } },
-  { name: 'instructions', onclick: function () { window.open('/instructions'); } },
-  { name: 'options',      onclick: function () { alert('This is a placeholder button.'); } }
-];
+var buttons, titlePath;
 
 var rowHeight = 225;
 var buttonWidth = 600;
 var titleWidth = 1500;
 
-var mainMenu = {
+var menu = {
+  init: function (_titlePath, _buttons) {
+    titlePath = _titlePath;
+    buttons = _buttons;
+  },
+
   preload: function () {
     var button;
     for (var i = 0; i < buttons.length; i++) {
@@ -16,7 +17,7 @@ var mainMenu = {
       game.load.spritesheet(button.name, 'images/buttons/' + button.name + '.png', buttonWidth, rowHeight);
     }
 
-    game.load.image('title', 'images/title.png', titleWidth, rowHeight);
+    game.load.image('title', 'images/menu_titles/' + titlePath + '.png', titleWidth, rowHeight);
   },
 
   create: function () {

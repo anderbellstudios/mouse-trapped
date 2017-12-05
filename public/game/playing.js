@@ -1,4 +1,4 @@
-var map, player, lvlId;
+var map, player, lvlId, lvlData;
 
 var playing = {
   init: function (lvl) {
@@ -18,7 +18,9 @@ var playing = {
 
   create: function () {
     var tileset = game.cache.getText('tileset');
-    var lvldata = JSON.parse(game.cache.getText('lvldata'));
+    lvldata = JSON.parse(game.cache.getText('lvldata'));
+
+    $('#message').text(lvldata.message);
 
     map = MapGenerator.loadMap(tileset, lvldata, game, tileSize);
 

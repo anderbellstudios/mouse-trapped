@@ -2,4 +2,4 @@
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel.mp4", "next_level": "02" } 
-} }
+}, "message": "Use WASD, HJKL or the arrow keys to move the mouse and reach the cheese." }

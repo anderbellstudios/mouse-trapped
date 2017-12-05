@@ -7,6 +7,14 @@ canvas {
   border: #7E7E7E 2px solid;
 }
 
+#message {
+  position: absolute;
+  left: 0; bottom: 0; right: 0;
+  padding: 0.2em;
+  background-color: black;
+  color: white;
+}
+
 #interactive-bg {
   position: fixed;
   top: 0; left: 0; bottom: 0; right: 0;

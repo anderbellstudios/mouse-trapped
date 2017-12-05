@@ -46,6 +46,8 @@ var playing = {
       FirstResponder.playerTriedToMove
     );
 
+    player.setFrame(lvldata.playerOrientation);
+
     this.game.input.keyboard.onDownCallback = FirstResponder.keyDown;
   },
 

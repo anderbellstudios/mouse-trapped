@@ -23,6 +23,10 @@ function Player(game, position, size, image, walkCallback) {
     }
   }
 
+  this.setFrame = function (frame) {
+    this.sprite.frame = frame;
+  }
+
   this.moveTo = function (position) {
     this.sprite.x = position.x;
     this.sprite.y = position.y;

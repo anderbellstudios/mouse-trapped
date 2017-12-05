@@ -13,7 +13,7 @@ var playing = {
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
-    game.load.image('playerImage', '/images/player.png');
+    game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
   },
 
   create: function () {
@@ -66,21 +66,25 @@ FirstResponder = {
       case Phaser.KeyCode.A:
       case Phaser.KeyCode.LEFT:
         player.walk({ dx: -tileSize, dy: 0 });
+        player.setFrame(0);
         break;
       case Phaser.KeyCode.J:
       case Phaser.KeyCode.S:
       case Phaser.KeyCode.DOWN:
         player.walk({ dx: 0, dy: tileSize });
+        player.setFrame(1);
         break;
       case Phaser.KeyCode.K:
       case Phaser.KeyCode.W:
       case Phaser.KeyCode.UP:
         player.walk({ dx: 0, dy: -tileSize });
+        player.setFrame(2);
         break;
       case Phaser.KeyCode.L:
       case Phaser.KeyCode.D:
       case Phaser.KeyCode.RIGHT:
         player.walk({ dx: tileSize, dy: 0 });
+        player.setFrame(3);
         break;
     }
   },

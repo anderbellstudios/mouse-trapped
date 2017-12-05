@@ -13,6 +13,7 @@ var playing = {
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
+    game.load.image('playerImage', '/images/player.png');
   },
 
   create: function () {

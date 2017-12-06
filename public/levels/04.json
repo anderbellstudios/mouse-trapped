@@ -1,12 +1,7 @@
 { "start": "01", "playerOrientation": 2, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel.mp4", "next_level": "01" } ,
-	"03": { "target": "09" },
-	"04": { "target": "07" },
-	"05": { "target": "08" },
-	"06": { "delay": 1000, "offset": 0 },
-	"07": { "state": "closed" },
-	"08": { "state": "open" },
-	"09": { "state": "closed" }
-}, "message": "Press the buttons and see what happens." }
+	"02": { "cutscene": "interlevel.mp4", "next_level": "05" },
+	"03": { "state": "closed" },
+	"04": { "target": "03" }
+}, "message": "Press the button and see what happens." }

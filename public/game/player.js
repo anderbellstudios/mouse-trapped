@@ -28,7 +28,6 @@ function Player(game, position, size, image, walkCallback) {
   }
 
   this.moveTo = function (position) {
-    this.sprite.x = position.x;
-    this.sprite.y = position.y;
+    game.add.tween(this.sprite).to(position, 50, Phaser.Easing.Default, true);
   }
 }

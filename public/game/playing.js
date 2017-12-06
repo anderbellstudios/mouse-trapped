@@ -65,6 +65,10 @@ var playing = {
 
 FirstResponder = {
   keyDown: function (keypress) {
+    if (player.isMoving) {
+      return false;
+    }
+
     switch (keypress.keyCode) {
       case Phaser.KeyCode.H:
       case Phaser.KeyCode.A:

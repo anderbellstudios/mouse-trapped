@@ -3,6 +3,7 @@ function Player(game, position, size, image, walkCallback) {
   this.sprite.width = size.width;
   this.sprite.height = size.height;
 
+  this.isMoving = false;
   this.walkSucceeded = walkCallback;
 
   this.position = function () {
@@ -28,6 +29,12 @@ function Player(game, position, size, image, walkCallback) {
   }
 
   this.moveTo = function (position) {
-    game.add.tween(this.sprite).to(position, 50, Phaser.Easing.Default, true);
+    this.isMoving = true;
+    var walkTween = game.add.tween(this.sprite).to(position, 50, Phaser.Easing.Default, true);
+    walkTween.onComplete.add(this.finishMove, this);
+  }
+
+  this.finishMove = function() {
+    this.isMoving = false;
   }
 }

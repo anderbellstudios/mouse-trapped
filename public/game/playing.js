@@ -94,6 +94,10 @@ FirstResponder = {
         player.walk({ dx: tileSize, dy: 0 });
         player.setFrame(3);
         break;
+      case Phaser.KeyCode.Q:
+        var next_lvl = prompt("Jump to level");
+        game.state.start('playing', true, false, next_lvl);
+        break;
     }
   },
 

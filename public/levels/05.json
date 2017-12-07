@@ -1,4 +1,4 @@
-{ "start": "01", "playerOrientation": 2, "special": { 
+{ "start": "01", "playerOrientation": 2, "music": "learning_mouse", "special": { 
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel.mp4", "next_level": "06" } ,

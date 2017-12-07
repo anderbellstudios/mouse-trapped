@@ -8,7 +8,7 @@ var playing = {
   preload: function () {
     game.load.text('tileset', '/levels/' + lvlId + '.lvl');
     game.load.text('lvldata', '/levels/' + lvlId + '.json');
-    game.load.audio('music', '/music/learning_mouse.wav');
+    game.load.audio('learning_mouse', '/music/learning_mouse.wav');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
@@ -21,8 +21,8 @@ var playing = {
     var tileset = game.cache.getText('tileset');
     lvldata = JSON.parse(game.cache.getText('lvldata'));
 
-    if (music == undefined && user_settings.music_enabled) {
-      music = game.add.sound('music', 1, true);
+    if (user_settings.music_enabled) {
+      music = game.add.sound(lvldata.music, 1, true);
       music.play();
     }
 

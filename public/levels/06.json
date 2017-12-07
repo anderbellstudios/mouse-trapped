@@ -1,0 +1,23 @@
+{ "start": "01", "playerOrientation": 1, "special": { 
+	"00": {}, 
+	"01": {}, 
+	"02": { "cutscene": "interlevel.mp4", "next_level": "01" },
+	"03": { "target": "04" },
+	"04": { "state": "closed" },
+	"05": { "target": "06" },
+	"06": { "state": "closed" },
+	"07": { "target": "08" },
+	"08": { "state": "closed" },
+	"09": { "target": "0a" },
+	"0a": { "state": "closed" },
+	"0b": { "target": "0c" },
+	"0c": { "state": "closed" },
+	"0d": { "target": "0e" },
+	"0e": { "state": "closed" },
+	"0f": { "target": "10" },
+	"10": { "state": "closed" },
+	"11": { "target": "12" },
+	"12": { "state": "closed" },
+	"13": { "target": "14" },
+	"14": { "state": "closed" }
+}, "message": "You took 30% more than the average time to complete that last maze. I hope you can do this one faster." }

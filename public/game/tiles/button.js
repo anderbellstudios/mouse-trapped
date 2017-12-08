@@ -4,9 +4,9 @@ class ButtonTile extends Tile {
   }
 
   wasLandedOnBy(player, time) {
-    var target = this.data.target;
+    var targets = this.data.targets;
     map.forEach(function (tile, index) {
-      if (tile.tileId == target) {
+      if (targets.includes(tile.tileId)) {
         tile.trigger();
       }
     });

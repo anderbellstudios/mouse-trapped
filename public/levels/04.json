@@ -3,5 +3,5 @@
 	"01": {}, 
 	"02": { "cutscene": "interlevel.mp4", "next_level": "05" },
 	"03": { "state": "closed" },
-	"04": { "target": "03" }
+	"04": { "targets": ["03"] }
 }, "message": "Press the button and see what happens." }

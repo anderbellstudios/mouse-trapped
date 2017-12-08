@@ -4,5 +4,6 @@
 	"02": { "cutscene": "interlevel.mp4", "next_level": "01" },
 	"03": { "state": "closed" },
 	"04": { "state": "closed" },
-	"05": { "targets": [ "03", "04"] }
+	"05": { "action": "pullOpen",   "targets": [ "03", "04"] },
+	"06": { "action": "pullClosed", "targets": [ "03", "04"] }
 }, "message": "Experimental Level" }

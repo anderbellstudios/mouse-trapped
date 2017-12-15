@@ -9,6 +9,7 @@ var playing = {
     game.load.text('tileset', '/levels/' + lvlId + '.lvl');
     game.load.text('lvldata', '/levels/' + lvlId + '.json');
     game.load.audio('learning_mouse', '/music/learning_mouse.wav');
+    game.load.audio('endless_maze', '/music/endless_maze.wav');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);

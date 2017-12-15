@@ -8,7 +8,7 @@ This game was not intended as a protest against animal testing. The conditions p
 
 ## Getting Started
 
-Although this is a javascript game, it requires a server to run it on so that the browser will load assets correctly. By default, the game expects a [Sinatra server](http://sinatrarb.com), which in turn requires (Ruby)[https://www.ruby-lang.org/en/documentation/installation/].
+Although this is a javascript game, it requires a server to run it on so that the browser will load assets correctly. By default, the game expects a [Sinatra server](http://sinatrarb.com), which in turn requires [Ruby](https://www.ruby-lang.org/en/documentation/installation/).
 
 You can bypass this requirement if necessary by editing the HTML files so that they do not expect eRuby (ERB) and by starting a [simple Python server](https://docs.python.org/2/library/simplehttpserver.html) instead, for example. However, this is not recommended.
 

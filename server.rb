@@ -21,4 +21,9 @@ class MouseTrapped < Sinatra::Base
   route_page(:about, template: :info)
   route_page(:instructions, template: :info)
   route_page(:contact, template: :info)
+
+  get '/videos/interlevel.mp4' do
+    file = File.join('videos', 'interlevel.mp4')
+    send_file(file)
+  end
 end

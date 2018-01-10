@@ -48,6 +48,9 @@ MapGenerator = {
       case 't':
         return ToggledBarrierTile;
         break;
+      case 'p':
+        return PushBarrierTile;
+        break;
       case 'e':
         return EndTile;
         break;

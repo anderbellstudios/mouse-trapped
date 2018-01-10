@@ -1,13 +1,5 @@
-{ "start": "01", "playerOrientation": 1, "music": "endless_maze", "special": { 
+{ "start": "01", "playerOrientation": 1, "music": "learning_mouse", "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel.mp4", "next_level": "01" },
-	"03": { "action": "pullOpen", "targets": ["04"] },
-	"04": { "state": "open" },
-	"05": { "action": "pullOpen", "targets": ["06", "0a"] },
-	"06": { "state": "closed" },
-	"07": { "action": "pullClosed", "targets": ["04", "06"] },
-	"08": { "action": "", "targets": [] },
-	"09": { "action": "pullClosed", "targets": ["04"] },
-	"0a": { "state": "closed" }
-}, "message": "This is a test of patience and recollection in mice. Specifically, patience and recollection in you." }
+	"02": { "state": "closed" }
+}, "message": "I just bought a new component. You'll be the first subject to see it - if you can." }

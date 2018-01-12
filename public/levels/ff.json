@@ -1,0 +1,6 @@
+{ "start": "01", "playerOrientation": 3, "music": "learning_mouse", "special": { 
+	"00": {}, 
+	"01": {}, 
+	"02": { "cutscene": "interlevel.mp4", "next_level": "09" },
+	"03": { "action": "", "targets": [] }
+}, "message": "..." }

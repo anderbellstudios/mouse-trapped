@@ -1,7 +1,7 @@
 { "start": "01", "playerOrientation":3, "music": "learning_mouse", "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "cutscene_duratoin": 3900, "next_level": "08" },
+	"02": { "cutscene": "interlevel", "cutscene_duration": 3900, "next_level": "08" },
 	"03": { "state": "closed" },
 	"04": { "state": "closed" },
 	"05": { "action": "pullOpen", "targets": ["04"] },

@@ -1,7 +1,7 @@
 { "start": "01", "playerOrientation": 1, "music": "endless_maze", "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel.mp4", "next_level": "01" },
+	"02": { "cutscene": "interlevel", "cutscene_duration": 3900, "next_level": "01" },
 	"03": { "action": "pullOpen", "targets": ["04"] },
 	"04": { "state": "open" },
 	"05": { "action": "pullOpen", "targets": ["06", "0a"] },

@@ -1,5 +1,5 @@
 { "start": "01", "playerOrientation": 1, "music": "learning_mouse", "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel.mp4", "next_level": "03" } 
+	"02": { "cutscene": "interlevel", "cutscene_duration": 3900, "next_level": "03" } 
 }, "message": "Navigate around the barriers." }

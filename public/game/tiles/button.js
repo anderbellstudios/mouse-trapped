@@ -12,6 +12,25 @@ class ButtonTile extends Tile {
       }
     });
 
+    this.pressedTime = time;
+
     return true; 
+  }
+
+  frame(time) {
+    if ( this.shouldBeHighlighted(time) ) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+  
+  shouldBeHighlighted(time) {
+    if (this.pressedTime === undefined) {
+      this.pressedTime = -505;
+    }
+
+    var relative_time = time - this.pressedTime;
+    return relative_time > 50 && relative_time < 500;
   }
 }

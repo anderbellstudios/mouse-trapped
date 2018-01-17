@@ -12,6 +12,9 @@
   }
 </style>
 
-<div id="interactive-bg"></div>
+<% content_for :content do %>
+  <div id="interactive-bg"></div>
+  <%= yield %>
+<% end %>
 
-<%= yield %>
+<%= render template: "layouts/application" %>

@@ -1,5 +1,17 @@
-<h1>New Subscription</h1>
+<style type="text/css" media="all">
+  #notify-link {
+    color: black;
+  }
+</style>
 
-<%= render 'form', subscription: @subscription %>
+<h1>Notify Me</h1>
 
-<%= link_to 'Back', subscriptions_path %>
+<p>The game is still under development, and new levels and other improvements are made frequently. Enter your email address here to receive notifications when a new level becomes available or we make an improvement to the graphics and other artwork. You can unsubscribe at any time using the link in one of the emails.</p>
+
+<div id="subscription-form">
+  <%= render 'form', subscription: @subscription %>
+</div>
+
+<p>
+  <button type="button" class="btn btn-outline-primary" onclick="window.location = '/playing';">Start Playing</button>
+</p>

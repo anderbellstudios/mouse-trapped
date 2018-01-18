@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'about', to: 'static#about'
   get 'instructions', to: 'static#instructions'
   get 'contact', to: 'static#contact'
-  get 'notifyme', to: 'static#notify_me'
+  get 'notifyme', to: 'subscriptions#new'
 
   resource :subscriptions
 end

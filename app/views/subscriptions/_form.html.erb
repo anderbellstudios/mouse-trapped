@@ -11,12 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :subscription_email %>
+  <div class="field form-group">
+    <span style="color: #555;">
+      <%= form.label :email, value: 'Email address' %>
+    </span>
+    <%= form.text_field :email, placeholder: "someone@example.com", class: "form-control", type: 'email', id: :subscription_email %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit value: 'Subscribe', class: 'btn btn-primary' %>
   </div>
 <% end %>

@@ -6,10 +6,18 @@
 
 <h1>Notify Me</h1>
 
-<p>The game is still under development, and new levels and other improvements are made frequently. Enter your email address here to receive notifications when a new level becomes available or we make an improvement to the graphics and other artwork. You can unsubscribe at any time using the link in one of the emails.</p>
+<p>The game is still under development, and new levels and other improvements are made frequently. Enter your email address here to receive notifications when a new level becomes available or when we make another large improvement to the game. You can unsubscribe at any time using the link in one of the emails.</p>
 
 <div id="subscription-form">
   <%= render 'form', subscription: @subscription %>
+  <div id="success-box" class="msg-box">
+    <h2>You're Subscribed</h2>
+    <p>We will now notify you when something interesting happens.</p>
+  </div>
+  <div id="error-box" class="msg-box">
+    <h2>Something Went Wrong</h2>
+    <p>You might already be subscribed, or perhaps the internet connection has dropped.</p>
+  </div>
 </div>
 
 <p>

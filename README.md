@@ -14,7 +14,13 @@ You can bypass this requirement if necessary by editing the HTML files so that t
 
 ## Starting the Server
 
-Assuming you are using a rails server, you can start listening for requests to localhost using the command below. 
+Before the server can be run in production, you will need to precompile the assets that are not already in the public directory. 
+
+```
+RAILS_ENV=production rake assets:precompile
+```
+
+You can now start the server. 
 
 ```
 rails s -e production

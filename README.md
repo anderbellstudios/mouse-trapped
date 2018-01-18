@@ -17,18 +17,16 @@ You can bypass this requirement if necessary by editing the HTML files so that t
 Before the server can be run in production, you will need to precompile the assets that are not already in the public directory. 
 
 ```
-RAILS_ENV=production rake assets:precompile
+RAILS_ENV=production bin/rake assets:precompile
 ```
 
 You can now start the server. 
 
 ```
-rails s -e production
+bin/rake server 
 ```
 
 Assuming there are no errors, you should be able to access the server at http://localhost:3000/. You can change the port using the `-p` flag, although you will probably need to aquire root privileges in order to listen on port 80. 
-
-You can also use the `-d` flag to "daemonize" the process so that it runs in the background even after you close your terminal window. You may need to restart the server if you reboot the computer or log out if you do this.
 
 ## Acknowledgements
 

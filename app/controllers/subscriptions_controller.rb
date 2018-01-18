@@ -10,7 +10,11 @@ class SubscriptionsController < ApplicationController
   # POST /subscriptions.json
   def create
     @subscription = Subscription.new(subscription_params)
-    @result = @subscription.save ? "success" : "failure"
+    succeeded = @subscription.save 
+    @result = succeeded ? "success" : "failure"
+    if succeeded
+      SubscriptionMailer.welcome_email( @subscription ).deliver_later
+    end
     render layout: false
   end
 

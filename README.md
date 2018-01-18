@@ -14,10 +14,11 @@ You can bypass this requirement if necessary by editing the HTML files so that t
 
 ## Starting the Server
 
-Before the server can be run in production, you will need to precompile the assets that are not already in the public directory. 
+Before the server can be run in production, you will need to precompile the assets that are not already in the public directory. You also need to create the database and tables used to store email subscriptions. 
 
 ```
 RAILS_ENV=production bin/rake assets:precompile
+RAILS_ENV=production bin/rake db:migrate
 ```
 
 You can now start the server. 

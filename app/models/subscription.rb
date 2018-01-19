@@ -8,4 +8,9 @@ end
 
 class Subscription < ApplicationRecord
   validates :email, presence: true, email: true, uniqueness: true
+  def self.deliver_email(email, *args)
+    Subscription.all.each do |sub|
+      SubscriptionMailer.send(email, sub, *args).deliver_later
+    end
+  end
 end

@@ -1,4 +1,5 @@
 class SubscriptionsController < ApplicationController
+  before_action :set_subscription, only: [:destroy]
   layout :resolve_layout
 
   # GET /subscriptions/new
@@ -18,21 +19,23 @@ class SubscriptionsController < ApplicationController
     render layout: false
   end
 
-  # DELETE /subscriptions/1
-  # DELETE /subscriptions/1.json
   def destroy
-    return false # disable destroying
-    @subscription.destroy
-    respond_to do |format|
-      format.html { redirect_to subscriptions_url, notice: 'Subscription was successfully destroyed.' }
-      format.json { head :no_content }
+    if params[:security_hash] == @subscription.security_hash then
+      @subscription.destroy
+    else
+      head :forbidden
     end
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_subscription
+      @subscription = Subscription.find(params[:id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      params.require(:subscription).permit(:email)
+      params.require(:subscription).permit(:email).merge( security_hash: SecureRandom.hex )
     end
 
     def resolve_layout

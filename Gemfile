@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Use DelayedJob for job queues
+gem 'delayed_job_active_record'
 # Use Figaro for environment variables
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

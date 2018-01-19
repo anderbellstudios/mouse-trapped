@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'instructions', to: 'static#instructions'
   get 'contact', to: 'static#contact'
   get 'notifyme', to: 'subscriptions#new'
+  get 'unsubscribe/:id', to: 'subscriptions#destroy'
   resource :subscriptions
 end

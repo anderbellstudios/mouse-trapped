@@ -12,7 +12,21 @@ Although this is a javascript game, it requires a server to run it on so that th
 
 You can bypass this requirement if necessary by editing the HTML files so that they do not expect eRuby (ERB) and by starting a [simple Python server](https://docs.python.org/2/library/simplehttpserver.html) instead, for example. However, this is not recommended.
 
+## Setting up Postgres and Gmail
+
+Although playing the game itself requires only a working server, certain features of the website, such as the subscription service, require additional configuration. If you have no intention of using these features, feel free to skip this section. However, this will likely result in errors if you try to access any part of the site related to email notifications. 
+
+The mailing list requires access to a Postgres database running on localhost. To find out how to set this up, please google "postgress server [YOUR OPERATING SYSTEM]".
+
+You will also need to put in place three environment variables: GMAIL\_USERNAME, GMAIL\_PASSWORD and SERVER\_DOMAIN. The first two are required to send emails to subscribed users. The server is configured to use a gmail account by default. Follow the link below to allow the app to log in. 
+
+https://accounts.google.com/DisplayUnlockCaptcha
+
+The third variable, SERVER\_DOMAIN, is the url to the home page of the website, including protocol and a slash at the end. For example, "https://mouse-trapped.herokuapp.com/" or "http://localhost:3000/". This is used in the automatic mailer to handle unsubscriptions. 
+
 ## Starting the Server
+
+Once you have all the requirements in place, run `bundle install` in the root directory to install any missing gems. 
 
 Before the server can be run in production, you will need to precompile the assets that are not already in the public directory. You also need to create the database and tables used to store email subscriptions. 
 
@@ -21,7 +35,7 @@ RAILS_ENV=production bin/rake assets:precompile
 RAILS_ENV=production bin/rake db:migrate
 ```
 
-You can now start the server. 
+You can now start the server using the custom rake task `server`. (Note that this is different to `rails server`, which will start the application in development mode by default.)
 
 ```
 bin/rake server 

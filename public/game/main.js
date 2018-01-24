@@ -51,9 +51,10 @@ window.onload = function() {
     Phaser.CANVAS
   );
 
+  game.state.add('preloader', preloader);
   game.state.add('menu', menu);
   game.state.add('playing', playing);
   game.state.add('cutscene', cutscene);
 
-  game.state.start('menu', true, false, 'main_menu', main_menu);
+  game.state.start('preloader');
 };

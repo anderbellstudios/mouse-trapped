@@ -1,4 +1,5 @@
 var loading_text;
+var not_started = true;
 var preloader = {
   preload: function() {
     game.load.audio('learning_mouse', '/music/learning_mouse.wav');
@@ -22,12 +23,10 @@ var preloader = {
 
     this.load.onFileComplete.add(function(progress, cacheKey, success, totalLoaded, totalFiles) {
       loading_text.setText("Loading... " + progress + "%");
+      if (progress == 100 && not_started) {
+        game.state.start('menu', true, false, 'main_menu', main_menu);
+        not_started = false;
+      }
     }, this);
-  },
-
-  create: function() {
-    setTimeout(function() {
-      game.state.start('menu', true, false, 'main_menu', main_menu);
-    }, 1000);
   }
 };

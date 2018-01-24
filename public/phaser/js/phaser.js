@@ -77292,7 +77292,7 @@ Phaser.Loader.prototype = {
             }
         }
 
-        return null;
+        return urls[0]; // WAS "return null;" edited to force playback of any video
 
     },
 

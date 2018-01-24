@@ -9,6 +9,7 @@ var preloader = {
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
+    game.load.video('video', 'https://doc-08-6o-docs.googleusercontent.com/docs/securesc/k4kgijrcjv9gje5ibue5ggjh5vshfp94/60j1hqssbkhak8lud0cue9m8ij6loe63/1516780800000/17879090549451632696/17879090549451632696/1rFIG_a7dEL3xPOiuPqSjAGQw1aV6pwQ0?nonce=l2ovrc9a2fcfo&user=17879090549451632696&hash=62mf7mpq2kk1e7fvsnh1i7mn7bsgc5vm');
 
     loading_text = game.add.text(game.world.centerX, game.world.centerY, 'Loading... ', { 
       font: "40pt Arial", 

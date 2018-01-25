@@ -8,11 +8,12 @@ var cutscene = function () {
   }
 
   this.create = function () {
-    this.video = game.add.video('video');
-    this.videoSprite = this.video.addToWorld(0, 0);
-    this.videoSprite.width = viewWidth;
-    this.videoSprite.height = viewHeight;
-    this.video.onComplete.add(this.postCutsceneCallback, true);
-    this.video.play();
+    // this.video = game.add.video('video');
+    // this.videoSprite = this.video.addToWorld(0, 0);
+    // this.videoSprite.width = viewWidth;
+    // this.videoSprite.height = viewHeight;
+    // this.video.onComplete.add(this.postCutsceneCallback, true);
+    // this.video.play();
+    this.postCutsceneCallback();
   }
 }

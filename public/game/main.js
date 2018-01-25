@@ -31,13 +31,15 @@ var sounds_menu = [
 ];
 
 function fadeToLevel(lvl, msg, cutscene) {
-    music.stop();
-    $('#message').text(msg);
-    Fade.toBlack(game, 1000, function () {
-      game.state.start("cutscene", true, false, cutscene, function () {
-        game.state.start('playing', true, false, lvl);
-      });
-    })
+  music.stop();
+  cutsceneInProgress = true;
+  $('#message').text(msg);
+  Fade.toBlack(game, 1000, function () {
+    game.state.start("cutscene", true, false, cutscene, function () {
+      game.state.start('playing', true, false, lvl);
+      cutsceneInProgress = false;
+    });
+  });
 }
 
 window.onload = function() {

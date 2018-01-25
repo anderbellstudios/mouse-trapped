@@ -11,7 +11,6 @@ var preloader = {
     game.load.spritesheet('holeImage', '/images/hole.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
-    game.load.video('video', 'https://dl.dropboxusercontent.com/s/ktff4uaosmenc94/interlevel.mp4');
 
     loading_text = game.add.text(game.world.centerX, game.world.centerY, 'Loading... ', { 
       font: "40pt Arial", 

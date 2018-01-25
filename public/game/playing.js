@@ -1,4 +1,5 @@
 var music, map, player, lvlId, lvlData;
+var cutsceneInProgress = false;
 
 var playing = {
   init: function (lvl) {
@@ -64,7 +65,7 @@ var playing = {
 
 FirstResponder = {
   keyDown: function (keypress) {
-    if (player.isMoving) {
+    if (player.isMoving || cutsceneInProgress) {
       return false;
     }
 

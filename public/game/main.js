@@ -30,6 +30,16 @@ var sounds_menu = [
   { name: 'off', onclick: function () { user_settings.sounds_enabled = false; launch_menu('options', options_menu); } }
 ];
 
+function fadeToLevel(lvl, msg, cutscene) {
+    music.stop();
+    $('#message').text(msg);
+    Fade.toBlack(game, 1000, function () {
+      game.state.start("cutscene", true, false, cutscene, function () {
+        game.state.start('playing', true, false, next_lvl);
+      });
+    })
+}
+
 window.onload = function() {
   gridWidth = 16;
   gridHeight = 12;

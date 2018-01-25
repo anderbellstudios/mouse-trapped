@@ -1,7 +1,7 @@
 { "start": "01", "playerOrientation": 2, "music": "learning_mouse", "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "cutscene_duration": 3900, "next_level": "06" } ,
+	"02": { "cutscene": "interlevel", "next_level": "06" } ,
 	"03": { "action": "toggle", "targets": ["09"] },
 	"04": { "action": "toggle", "targets": ["07"] },
 	"05": { "action": "toggle", "targets": ["08"] },

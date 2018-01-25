@@ -1,5 +1,5 @@
 var cutscene = function () {
-  this.init = function (video, duration, callback) {
+  this.init = function (video, callback) {
     this.postCutsceneCallback = callback;
     this.video = video;
   }

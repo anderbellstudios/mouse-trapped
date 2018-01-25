@@ -8,6 +8,7 @@ var preloader = {
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
+    game.load.spritesheet('holeImage', '/images/hole.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
     game.load.video('video', 'https://dl.dropboxusercontent.com/s/ktff4uaosmenc94/interlevel.mp4');

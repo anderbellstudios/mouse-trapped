@@ -54,6 +54,9 @@ MapGenerator = {
       case 'e':
         return EndTile;
         break;
+      case 'h':
+        return HoleTile;
+        break;
       default:
         alert("invalid symbol found: " + symbol);
         break;

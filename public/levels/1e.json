@@ -1,7 +1,7 @@
 { "start": "01", "playerOrientation": 3, "music": "learning_mouse", "special": { 
 	"00": {}, 
 	"01": {},
-	"02": { "cutscene": "interlevel", "next_level": "09" }, 
+	"02": { "cutscene": "interlevel", "next_level": "1f" }, 
 	"03": { "cutscene": "interlevel", "next_level": "ff" }, 
 	"04": { "delay": 1000, "offset":  0 },
 	"05": { "state": "closed" },

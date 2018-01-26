@@ -1,4 +1,6 @@
-{ "start": "01", "playerOrientation": 3, "music": "endless_maze", "special": { 
+{ "music": "endless_maze", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 7}, "direction": 3 }
+], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel", "next_level": "1e" },

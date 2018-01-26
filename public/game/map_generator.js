@@ -1,5 +1,5 @@
 MapGenerator = {
-  loadMap: function (tileset, lvldata, game, tileSize) {
+  loadMap: function (tileset, lvldata, tileSize) {
     var rows = tileset.split("\n");
     var tiles = [];
     rows.forEach(function (row, row_number) {
@@ -23,6 +23,10 @@ MapGenerator = {
         };
 
         var tile = new tileConstructor(position, frame, tileId, special);
+        tile.sprite = game.add.sprite(0, 0, tile.image); 
+        tile.sprite.width = tileSize;
+        tile.sprite.height = tileSize;
+
         tiles.push(tile);
       });
 

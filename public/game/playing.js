@@ -1,4 +1,4 @@
-var music, map, player, lvlId, lvlData;
+var music, map, player, creatures, things, lvlId, lvlData;
 var cutsceneInProgress = false;
 
 var playing = {
@@ -22,42 +22,24 @@ var playing = {
 
     $('#message').text(lvldata.message);
 
-    map = MapGenerator.loadMap(tileset, lvldata, game, tileSize);
+    map = MapGenerator.loadMap(tileset, lvldata, tileSize);
+    creatures = CreatureGenerator.loadCreatures(lvldata.creatures, tileSize, FirstResponder.creatureTriedToMove);
+    things = map.concat(creatures);
 
-    var startTileId = lvldata.start;
+    player = creatures[lvldata.player];
 
-    playerPosition = {
-      x: 0, y: 0
-    };
-
-    map.forEach(function (tile, index) {
-      tile.sprite = game.add.sprite(0, 0, tile.image); // create a singleton property
-      tile.sprite.width = tileSize;
-      tile.sprite.height = tileSize;
-
-      if (tile.tileId == startTileId) {
-        playerPosition = tile.position;
-      }
+    things.forEach(function (thing, index) {
+      thing.sprite = game.add.sprite(0, 0, thing.image); 
+      thing.sprite.width = tileSize;
+      thing.sprite.height = tileSize;
     });
-
-    player = new Player(
-      game,
-      playerPosition,
-      {width: tileSize, height: tileSize},
-      'playerImage',
-      FirstResponder.playerTriedToMove
-    );
-
-    player.setFrame(lvldata.playerOrientation);
 
     this.game.input.keyboard.onDownCallback = FirstResponder.keyDown;
   },
 
   update: function () {
-    map.forEach(function (tile, index) {
-      tile.sprite.x = tile.position.x;
-      tile.sprite.y = tile.position.y;
-      tile.sprite.frame = tile.frame(game.time.time);
+    things.forEach(function (thing, index) {
+      thing.update(game.time.time);
     });
   }
 };
@@ -73,26 +55,22 @@ FirstResponder = {
       case Phaser.KeyCode.H:
       case Phaser.KeyCode.A:
       case Phaser.KeyCode.LEFT:
-        player.walk({ dx: -tileSize, dy: 0 });
-        player.setFrame(0);
+        player.walk(tileSize, 0);
         break;
       case Phaser.KeyCode.J:
       case Phaser.KeyCode.S:
       case Phaser.KeyCode.DOWN:
-        player.walk({ dx: 0, dy: tileSize });
-        player.setFrame(1);
+        player.walk(tileSize, 1);
         break;
       case Phaser.KeyCode.K:
       case Phaser.KeyCode.W:
       case Phaser.KeyCode.UP:
-        player.walk({ dx: 0, dy: -tileSize });
-        player.setFrame(2);
+        player.walk(tileSize, 2);
         break;
       case Phaser.KeyCode.L:
       case Phaser.KeyCode.D:
       case Phaser.KeyCode.RIGHT:
-        player.walk({ dx: tileSize, dy: 0 });
-        player.setFrame(3);
+        player.walk(tileSize, 3);
         break;
       case Phaser.KeyCode.Q:
         music.stop();
@@ -102,19 +80,19 @@ FirstResponder = {
     }
   },
 
-  playerTriedToMove: function (player, position) {
+  creatureTriedToMove: function (creature, position) {
     var target;
     var landedOn;
 
-    map.forEach(function (tile, index) {
-      target = tile.position;
+    things.forEach(function (thing, index) {
+      target = thing.position;
       if (position.x == target.x && position.y == target.y) {
-        landedOn = tile;
+        landedOn = thing;
       }
     });
 
     if (landedOn) {
-      return landedOn.wasLandedOnBy(player, game.time.time);
+      return landedOn.wasLandedOnBy(creature, game.time.time);
     } else {
       return false;
     }

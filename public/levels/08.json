@@ -1,9 +1,9 @@
-{ "music": "endless_maze", "creatures": [
+{ "music": "learning_mouse", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 7}, "direction": 3 }
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "next_level": "1e" },
+	"02": { "cutscene": "interlevel", "next_level": "09" },
 	"03": { "message": "Oh, sorry. You must be in the control group.", "next_level": "08" },
 	"04": { "state": "closed" }
 }, "message": "That may look like a deadly pit, but it's actually an invisible floor tile! Try stepping on it." }

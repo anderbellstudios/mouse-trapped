@@ -13,4 +13,14 @@ class Tile {
   wasLandedOnBy(player, time) {
     return false;
   }
+
+  update(time) {
+    this.sprite.x = this.position.x;
+    this.sprite.y = this.position.y;
+    this.sprite.frame = this.frame(time);
+  }
+  
+  get cattable() {
+    return true;
+  }
 }

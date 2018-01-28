@@ -4,7 +4,7 @@ class HoleTile extends Tile {
   }
 
   wasLandedOnBy(player, time) {
-    fadeToLevel(this.data.next_level, this.data.message, "interlevel");
+    player.die(this.data.next_level, this.data.message, "interlevel");
     return true;
   }
 }

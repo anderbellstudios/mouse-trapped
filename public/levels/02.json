@@ -1,4 +1,6 @@
-{ "start": "01", "playerOrientation": 1, "music": "learning_mouse", "special": { 
+{ "music": "learning_mouse", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 5}, "direction": 1 }
+], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel", "next_level": "03" } 

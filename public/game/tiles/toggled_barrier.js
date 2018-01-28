@@ -41,4 +41,8 @@ class ToggledBarrierTile extends Tile {
         break;
     }
   }
+
+  get cattable() {
+    return this.state;
+  }
 }

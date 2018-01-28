@@ -7,4 +7,8 @@ class EndTile extends Tile {
     fadeToLevel(this.data.next_level, "Well done!", "interlevel");
     return true;
   }
+
+  get cattable() {
+    return false;
+  }
 }

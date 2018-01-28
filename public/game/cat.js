@@ -10,7 +10,7 @@ class Cat extends Creature {
       this._lastMoved = time;
     }
 
-    if (time - this._lastMoved > this.data.speed) {
+    if (time - this._lastMoved > this.data.speed && gameInProgress) {
       this._lastMoved = time;
       this.moveTick(time);
     }

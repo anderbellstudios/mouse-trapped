@@ -1,4 +1,4 @@
-var music, map, player, creatures, things, lvlId, lvlData;
+var music, map, player, creatures, things, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -19,6 +19,8 @@ var playing = {
   create: function () {
     var tileset = game.cache.getText('tileset');
     lvldata = JSON.parse(game.cache.getText('lvldata'));
+
+    gameInProgress = true;
 
     if (user_settings.music_enabled) {
       music = game.add.sound(lvldata.music, 1, true);

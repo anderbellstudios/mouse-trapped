@@ -12,7 +12,7 @@ CreatureGenerator = {
         y: data.position.y * tileSize
       };
 
-      var creature = new constructor(position, null, data.direction, walkCallback);
+      var creature = new constructor(position, null, data.direction, walkCallback, data.special);
       creature.sprite = game.add.sprite(0, 0, creature.image); 
       creature.sprite.width = tileSize;
       creature.sprite.height = tileSize;
@@ -27,6 +27,8 @@ CreatureGenerator = {
     switch (type) {
       case 'mouse':
         return Mouse;
+      case 'cat':
+        return Cat;
       default:
         alert("invalid creature found: " + type);
         break;

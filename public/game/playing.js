@@ -1,6 +1,11 @@
 var music, map, player, creatures, things, lvlId, lvlData;
 var cutsceneInProgress = false;
 
+function creatureDidDie(creature) {
+  creatures.splice(creatures.indexOf(creature), 1);
+  things.splice(things.indexOf(creature), 1);
+}
+
 var playing = {
   init: function (lvl) {
     lvlId = lvl;
@@ -82,14 +87,7 @@ FirstResponder = {
 
   creatureTriedToMove: function (creature, position) {
     var target;
-    var landedOn;
-
-    things.forEach(function (thing, index) {
-      target = thing.position;
-      if (position.x == target.x && position.y == target.y) {
-        landedOn = thing;
-      }
-    });
+    var landedOn = thingAtAbsPos(position, things);
 
     if (landedOn) {
       return landedOn.wasLandedOnBy(creature, game.time.time);
@@ -98,3 +96,4 @@ FirstResponder = {
     }
   }
 };
+

@@ -1,9 +1,10 @@
 class Creature {
-  constructor(position, sprite, frame, walkCallback) {
+  constructor(position, sprite, frame, walkCallback, data) {
     this.position = position;
     this.sprite = sprite;
     this._frame = frame;
     this.walkCallback = walkCallback;
+    this.data = data;
     this.isMoving = false;
   }
 
@@ -20,14 +21,19 @@ class Creature {
     this.sprite.frame = this.frame(time);
   }
 
+  die(next_level, message, cutscene) {
+    this.sprite.destroy();
+    creatureDidDie(this);
+    this.postDie(next_level, message, cutscene);
+  }
+
+  postDie(next_level, message, cutscene) {
+  }
+
   walk(distance, direction) {
-    this._frame = direction;
     var translation = this.translationFor(distance, direction);
 
-    var new_position = {
-      x: this.position.x + translation.dx,
-      y: this.position.y + translation.dy
-    }
+    var new_position = posAdd(this.position, translation);
 
     if ( this.walkCallback(this, new_position) ) {
       this.moveTo(new_position);
@@ -36,6 +42,16 @@ class Creature {
 
   moveTo(position) {
     this.isMoving = true;
+    var angle = angleBetween(this.position, position);
+    if (angle < 0) {
+      this._frame = 2;
+    } else if (angle < 90) {
+      this._frame = 3;
+    } else if (angle < 180) {
+      this._frame = 1;
+    } else if (angle < 270) {
+      this._frame = 0;
+    } 
     var walkTween = game.add.tween(this.sprite).to(position, 50, Phaser.Easing.Default, true);
     walkTween.onComplete.add(function() {
       this.isMoving = false;
@@ -54,5 +70,9 @@ class Creature {
       case 3:
         return { dx: distance, dy: 0 };
     }
+  }
+
+  wasLandedOnBy(creature, time) {
+    return false;
   }
 }

@@ -1,6 +1,6 @@
 { "music": "endless_maze", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 5 }, "direction": 1 },
-	{ "type": "cat", "position": { "x": 13, "y": 5 }, "direction": 3, "special": { "speed": 100 } }
+	{ "type": "cat", "position": { "x": 13, "y": 5 }, "direction": 3, "special": { "speed": 150 } }
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": { "cutscene": "interlevel", "next_level": "1e" },

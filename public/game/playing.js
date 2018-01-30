@@ -48,6 +48,38 @@ var playing = {
     things.forEach(function (thing, index) {
       thing.update(game.time.time);
     });
+
+    var keyH     = game.input.keyboard.addKey(Phaser.Keyboard.H);
+    var keyA     = game.input.keyboard.addKey(Phaser.Keyboard.A);
+    var keyLeft  = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
+    var keyJ     = game.input.keyboard.addKey(Phaser.Keyboard.J);
+    var keyS     = game.input.keyboard.addKey(Phaser.Keyboard.S);
+    var keyDown  = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
+    var keyK     = game.input.keyboard.addKey(Phaser.Keyboard.K);
+    var keyW     = game.input.keyboard.addKey(Phaser.Keyboard.W);
+    var keyUp    = game.input.keyboard.addKey(Phaser.Keyboard.UP);
+    var keyL     = game.input.keyboard.addKey(Phaser.Keyboard.L);
+    var keyD     = game.input.keyboard.addKey(Phaser.Keyboard.D);
+    var keyRight = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+
+    var canMove = player.canMove(game.time.time) && !cutsceneInProgress;
+
+    var goLeft  = keyH.isDown || keyA.isDown || keyLeft.isDown;
+    var goDown  = keyJ.isDown || keyS.isDown || keyDown.isDown;
+    var goUp    = keyK.isDown || keyW.isDown || keyUp.isDown;
+    var goRight = keyL.isDown || keyD.isDown || keyRight.isDown;
+
+    if (canMove) {
+      if (goLeft) {
+        player.walk(tileSize, 0);
+      } else if (goDown) {
+        player.walk(tileSize, 1);
+      } else if (goUp) {
+        player.walk(tileSize, 2);
+      } else if (goRight) {
+        player.walk(tileSize, 3);
+      }
+    }
   }
 };
 
@@ -59,26 +91,6 @@ FirstResponder = {
     }
 
     switch (keypress.keyCode) {
-      case Phaser.KeyCode.H:
-      case Phaser.KeyCode.A:
-      case Phaser.KeyCode.LEFT:
-        player.walk(tileSize, 0);
-        break;
-      case Phaser.KeyCode.J:
-      case Phaser.KeyCode.S:
-      case Phaser.KeyCode.DOWN:
-        player.walk(tileSize, 1);
-        break;
-      case Phaser.KeyCode.K:
-      case Phaser.KeyCode.W:
-      case Phaser.KeyCode.UP:
-        player.walk(tileSize, 2);
-        break;
-      case Phaser.KeyCode.L:
-      case Phaser.KeyCode.D:
-      case Phaser.KeyCode.RIGHT:
-        player.walk(tileSize, 3);
-        break;
       case Phaser.KeyCode.Q:
         music.stop();
         var next_lvl = prompt("Jump to level");

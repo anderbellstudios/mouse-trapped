@@ -6,6 +6,7 @@ class Creature {
     this.walkCallback = walkCallback;
     this.data = data;
     this.isMoving = false;
+    this.lastMoved = -1000; 
   }
 
   frame(time) {
@@ -55,8 +56,13 @@ class Creature {
     var walkTween = game.add.tween(this.sprite).to(position, 50, Phaser.Easing.Default, true);
     walkTween.onComplete.add(function() {
       this.isMoving = false;
+      this.lastMoved = game.time.time;
       this.position = position;
     }, this);
+  }
+
+  canMove(time) {
+    return !this.isMoving && ( time - this.lastMoved > 100 );
   }
 
   translationFor(distance, direction) {

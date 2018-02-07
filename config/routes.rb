@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'static#contact'
   get 'notifyme', to: 'subscriptions#new'
   get 'unsubscribe/:id', to: 'subscriptions#destroy'
+  get 'level_code/:id', to: 'level_codes#show'
   resource :subscriptions
 end

@@ -18,6 +18,13 @@
     <%= form.text_field :email, placeholder: "someone@example.com", class: "form-control", type: 'email', id: :subscription_email %>
   </div>
 
+  <div class="field form-group">
+    <span style="color: #555;">
+      <%= form.label :code, value: 'Invitation code (optional)' %>
+    </span>
+    <%= form.text_field :code, length: 7, placeholder: "fffffff", class: "form-control", id: :invitation_code_field %>
+  </div>
+
   <div class="actions">
     <%= form.submit value: 'Subscribe', class: 'btn btn-primary' %>
   </div>

@@ -92,9 +92,14 @@ FirstResponder = {
 
     switch (keypress.keyCode) {
       case Phaser.KeyCode.Q:
-        music.stop();
-        var next_lvl = prompt("Jump to level");
-        game.state.start('playing', true, false, next_lvl);
+        var level_code = prompt("Enter your level code here...");
+        var level = level_for(level_code);
+        if (level) {
+          music.stop();
+          game.state.start('playing', true, false, level);
+        } else {
+          alert("Code invalid. Is this an invitation code?");
+        }
         break;
     }
   },
@@ -111,3 +116,16 @@ FirstResponder = {
   }
 };
 
+function level_for(code) {
+  var result = $.ajax({
+    type: "GET",
+    url: '/level_code/' + code,
+    async: false
+  }).responseText.replace(/\n|\r/g,'');
+
+  if (result == 'invalid') { 
+    return false;
+  } else {
+    return result;
+  }
+}

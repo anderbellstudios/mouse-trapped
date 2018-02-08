@@ -61,6 +61,8 @@ MapGenerator = {
       case 'h':
         return HoleTile;
         break;
+      case 'o':
+        return ToggledHoleTile;
       default:
         alert("invalid symbol found: " + symbol);
         break;

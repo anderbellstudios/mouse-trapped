@@ -1,0 +1,29 @@
+{ "music": "learning_mouse", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 11}, "direction": 2 },
+	{ "type": "cat", "position": { "x": 8, "y": 11}, "direction": 3, "special": { "speed": 120 } }
+], "player": 0, "special": { 
+	"00": {},
+	"01": { "cutscene": "interlevel", "next_level": "1e" },
+	"02": { "action": "pullClosed", "targets": ["07"] },
+	"03": { "action": "pullOpen", "targets": ["08"] },
+	"04": { "action": "pullClosed", "targets": ["09"] },
+	"05": { "action": "pullOpen", "targets": ["06"] },
+	"06": { "state": "closed" },
+	"07": { "state": "open" },
+	"08": { "state": "closed", "message": "Did you think this hole was closed? It wasn't." },
+	"09": { "state": "open" },
+	"0a": { "action": "pullClosed", "targets": ["0c", "15"] },
+	"0b": { "action": "pullOpen", "targets": ["0c"] },
+	"0c": { "state": "closed" },
+	"0d": { "action": "pullOpen", "targets": ["0c"] },
+	"0e": { "action": "pullOpen", "targets": ["0c"] },
+	"0f": { "state": "open" },
+	"10": { "action": "pullOpen", "targets": ["0f"] },
+	"11": { "action": "pullClosed", "targets": ["0f"] },
+	"12": { "action": "pullOpen", "targets": ["07"] },
+	"13": { "delay": 7000, "offset": 0 },
+	"14": { "action": "pullOpen", "targets": ["15"] },
+	"15": { "state": "open" },
+	"16": { "action": "pullOpen", "targets": ["09"] },
+	"17": { "action": "pullClosed", "targets": ["08"] }
+}, "message": "These cats are specially trained to not chase any mouse that's out of reach. I recommend you stay out of reach." }

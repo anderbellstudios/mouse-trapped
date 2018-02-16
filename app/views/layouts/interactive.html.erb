@@ -10,11 +10,36 @@
   nav * :hover, .navbar-brand {
     color: #fff !important;
   }
+
+  body {
+    background: rgb(0, 144, 255) !important;
+  }
 </style>
 
 <% content_for :content do %>
-  <div id="interactive-bg"></div>
+  <div id="bg-holder"></div>
   <%= yield %>
 <% end %>
 
 <%= render template: "layouts/application" %>
+
+<script charset="utf-8">
+  var img = $('<img/>')[0];
+  img.src = "images/splash.png";
+  $(img).one("load", function() {
+    $('#bg-holder')[0].className = 'interactive-bg';
+    $({blurRadius: 50}).animate({blurRadius: 0}, {
+      duration: 2000,
+      easing: 'linear', 
+      step: function() {
+        $('#bg-holder').css({
+          "-webkit-filter": "blur("+this.blurRadius+"px)",
+          "filter": "blur("+this.blurRadius+"px)"
+        });
+      }
+    });
+  }).each(function() {
+    if(this.complete) $(this).load();
+  });
+</script>
+

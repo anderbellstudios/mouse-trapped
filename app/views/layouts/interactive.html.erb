@@ -27,9 +27,11 @@
   var img = $('<img/>')[0];
   img.src = "images/splash.png";
   $(img).one("load", function() {
+    $('#bg-holder').hide();
     $('#bg-holder')[0].className = 'interactive-bg';
+    $('#bg-holder').fadeIn(1000);
     $({blurRadius: 50}).animate({blurRadius: 0}, {
-      duration: 2000,
+      duration: 3000,
       easing: 'linear', 
       step: function() {
         $('#bg-holder').css({

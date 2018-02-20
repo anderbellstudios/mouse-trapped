@@ -95,7 +95,9 @@ FirstResponder = {
         var level_code = prompt("Enter your level code here...");
         var level = level_for(level_code);
         if (level) {
-          music.stop();
+          if (music != undefined) {
+            music.stop();
+          }
           game.state.start('playing', true, false, level);
         } else {
           alert("Code invalid. Is this an invitation code?");

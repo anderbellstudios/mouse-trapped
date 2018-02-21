@@ -26,5 +26,5 @@
 	"15": { "state": "open" },
 	"16": { "action": "pullOpen", "targets": ["09"] },
 	"17": { "action": "pullClosed", "targets": ["08"] },
-	"0a": { "action": "pullClosed", "targets": ["15"] }
+	"18": { "action": "pullClosed", "targets": ["15"] }
 }, "message": "These cats are specially trained to not chase any mouse that's out of reach. I recommend you stay out of reach." }

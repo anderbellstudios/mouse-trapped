@@ -1,6 +1,6 @@
 MapGenerator = {
   loadMap: function (tileset, lvldata, tileSize) {
-    var rows = tileset.split("\n");
+    var rows = tileset.replace(/^\s+|\s+$/g, '').split("\n");
     var tiles = [];
     rows.forEach(function (row, row_number) {
       var cells = row.split(";");

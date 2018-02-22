@@ -65,10 +65,11 @@ window.onload = function() {
     Phaser.CANVAS
   );
 
+  game.state.add('boot', boot);
   game.state.add('preloader', preloader);
   game.state.add('menu', menu);
   game.state.add('playing', playing);
   game.state.add('cutscene', cutscene);
 
-  game.state.start('preloader');
+  game.state.start('boot');
 };

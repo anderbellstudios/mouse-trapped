@@ -2,7 +2,7 @@ var buttons, titlePath;
 
 var rowHeight = 225;
 var buttonWidth = 600;
-var titleWidth = 1500;
+var titleWidth = 1150;
 
 var menu = {
   init: function (_titlePath, _buttons) {
@@ -21,7 +21,9 @@ var menu = {
   },
 
   create: function () {
-    game.stage.backgroundColor = '#D7D5D7';
+    var bg = game.add.sprite(0, 0, 'menu_bg'); 
+    bg.width = viewWidth;
+    bg.height = viewHeight;
 
     var button_count = buttons.length;
 
@@ -33,7 +35,7 @@ var menu = {
 
     var title = game.add.sprite(game.world.centerX, verticalPosition(0), 'title');
     title.anchor.setTo(0.5, 0.5);
-    title.scale.setTo(scaleFactor);
+    title.scale.setTo(scaleFactor * 1.5);
 
     var button, element;
     for (var i = 0; i < button_count; i++) {

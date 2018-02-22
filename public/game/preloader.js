@@ -11,17 +11,20 @@ var preloader = {
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.spritesheet('holeImage', '/images/hole.png', 100, 100);
     game.load.image('blackImage', '/images/black.png');
+    game.load.image('menu_bg', '/images/menu_bg.png');
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
     game.load.spritesheet('catImage', '/images/cat.png', 100, 100);
 
+    var bg = game.add.sprite(0, 0, 'loading_bg'); 
+    bg.width = viewWidth;
+    bg.height = viewHeight;
+
     loading_text = game.add.text(game.world.centerX, game.world.centerY, 'Loading... ', { 
       font: "40pt Arial", 
-      fill: "grey", 
+      fill: "white", 
       align: "center" 
     });
     loading_text.anchor.set(0.5);
-
-    game.stage.backgroundColor = '#D7D5D7';
 
     this.load.onFileComplete.add(function(progress, cacheKey, success, totalLoaded, totalFiles) {
       loading_text.setText("Loading... " + progress + "%");

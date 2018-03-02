@@ -1,5 +1,5 @@
-{ "music": "learning_mouse", "creatures": [
-	{ "type": "mouse", "position": { "x": 0, "y": 7}, "direction": 3 }
+{ "music": "stay_optimistic", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 7 }, "direction": 3 }
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 

@@ -5,6 +5,7 @@ var preloader = {
     game.load.audio('stay_optimistic', '/music/stay_optimistic.wav');
     game.load.audio('endless_maze', '/music/endless_maze.wav');
     game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
+    game.load.video('interlevel', '/videos/interlevel.mp4');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);

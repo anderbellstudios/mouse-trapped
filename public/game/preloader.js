@@ -5,14 +5,18 @@ var preloader = {
     game.load.audio('stay_optimistic', '/music/stay_optimistic.wav');
     game.load.audio('endless_maze', '/music/endless_maze.wav');
     game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
+    game.load.audio('replaceable', '/music/replaceable.wav');
     game.load.video('interlevel', '/videos/interlevel.mp4');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.spritesheet('holeImage', '/images/hole.png', 100, 100);
+    game.load.spritesheet('tryAgainButtonImage', 'images/buttons/try_again.png', 600, 225);
+    game.load.spritesheet('quitButtonImage', 'images/buttons/quit.png', 600, 225);
     game.load.image('blackImage', '/images/black.png');
     game.load.image('menu_bg', '/images/menu_bg.png');
+    game.load.image('death_bg', '/images/death_bg.png');
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
     game.load.spritesheet('catImage', '/images/cat.png', 100, 100);
 

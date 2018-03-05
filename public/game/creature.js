@@ -22,13 +22,13 @@ class Creature {
     this.sprite.frame = this.frame(time);
   }
 
-  die(next_level, message, cutscene) {
+  die(next_level, message) {
     this.sprite.destroy();
     creatureDidDie(this);
-    this.postDie(next_level, message, cutscene);
+    this.postDie(next_level, message);
   }
 
-  postDie(next_level, message, cutscene) {
+  postDie(next_level, message) {
   }
 
   walk(distance, direction) {

@@ -4,11 +4,17 @@ class Mouse extends Creature {
   }
 
   wasLandedOnBy(creature, time) {
-    this.die(lvlId, "The cat got you! Try again...", "interlevel");
+    this.die(lvlId, "The cat got you! Try again...");
     return false;
   }
 
-  postDie(next_level, message, cutscene) {
-    fadeToLevel(next_level, message, cutscene);
+  postDie(next_level, message) {
+    if (music != undefined) {
+      music.stop();
+    }
+
+    Fade.toBlack(game, 1000, function () {
+      game.state.start('death', true, false, next_level, message);
+    });
   }
 }

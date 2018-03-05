@@ -22,6 +22,10 @@ var playing = {
 
     gameInProgress = true;
 
+    if (music != undefined) {
+      music.stop();
+    }
+
     if (user_settings.music_enabled) {
       music = game.add.sound(lvldata.music, 1, true);
       music.play();

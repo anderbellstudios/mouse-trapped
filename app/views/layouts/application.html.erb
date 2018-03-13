@@ -15,6 +15,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115612357-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-115612357-1');
+    </script>
+
+
   </head>
 
   <body>
@@ -40,6 +52,9 @@
           </li>
           <li class="nav-item">
             <a id="notify-link" class="nav-link" href="/notifyme">Notify Me</a>
+          </li>
+          <li class="nav-item">
+            <a id="privacy-link" class="nav-link" href="/privacy">Privacy Policy</a>
           </li>
         </ul>
       </div>

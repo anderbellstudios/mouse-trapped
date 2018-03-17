@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Compress assets to improve loading time
+gem 'heroku-deflater', :group => :production
 # Use DelayedJob for job queues
 gem 'delayed_job_active_record'
 # Use Figaro for environment variables

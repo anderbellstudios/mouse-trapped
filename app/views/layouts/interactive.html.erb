@@ -17,7 +17,7 @@
 </style>
 
 <% content_for :content do %>
-  <div id="bg-holder"></div>
+  <div id="bg-holder" class="interactive-bg"></div>
   <%= yield %>
 <% end %>
 
@@ -25,10 +25,11 @@
 
 <script charset="utf-8">
   var img = $('<img/>')[0];
-  img.src = "images/splash.png";
+  var img_path = "<%= image_path('splash.png') %>";
+  img.src = img_path;
   $(img).one("load", function() {
     $('#bg-holder').hide();
-    $('#bg-holder')[0].className = 'interactive-bg';
+    $('#bg-holder').css('background-image', "url(\'" + img_path + "\')");
     $('#bg-holder').fadeIn(1000);
     $({blurRadius: 50}).animate({blurRadius: 0}, {
       duration: 3000,

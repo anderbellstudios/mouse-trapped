@@ -45,7 +45,7 @@ function fadeToLevel(lvl, msg, cutscene) {
   });
 }
 
-window.onload = function() {
+window.addEventListener("load",function(event) {
   gridWidth = 16;
   gridHeight = 12;
 
@@ -74,4 +74,4 @@ window.onload = function() {
   game.state.add('death', death);
 
   game.state.start('boot');
-};
+}, false);

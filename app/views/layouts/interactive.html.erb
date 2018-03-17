@@ -24,6 +24,7 @@
 <%= render template: "layouts/application" %>
 
 <script charset="utf-8">
+window.addEventListener("load",function(event) {
   var img = $('<img/>')[0];
   var img_path = "<%= image_path('splash.png') %>";
   img.src = img_path;
@@ -44,5 +45,6 @@
   }).each(function() {
     if(this.complete) $(this).load();
   });
+}, false);
 </script>
 

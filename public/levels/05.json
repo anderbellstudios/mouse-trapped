@@ -1,6 +1,8 @@
 { "music": "stay_optimistic", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 11 }, "direction": 2 }
-], "player": 0, "special": { 
+], "player": 0, "sparkle": {
+  "03": { "frequency":10000, "duration":1000, "offset":0 }
+}, "special": { 
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel", "next_level": "06" } ,

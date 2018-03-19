@@ -1,6 +1,9 @@
 { "music": "endless_maze", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 }
-], "player": 0, "special": { 
+], "player": 0, "sparkle": {
+  "08": { "frequency":20000, "duration":"500", "offset":-1 },
+  "09": { "frequency":25000, "duration":"250", "offset":-1 }
+}, "special": { 
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel", "next_level": "01" },

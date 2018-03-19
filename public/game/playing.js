@@ -1,4 +1,4 @@
-var music, map, player, creatures, things, lvlId, lvlData, gameInProgress;
+var music, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -33,24 +33,27 @@ var playing = {
 
     $('#message').text(lvldata.message);
 
+    sparkles = [];
+
     map = MapGenerator.loadMap(tileset, lvldata, tileSize);
     creatures = CreatureGenerator.loadCreatures(lvldata.creatures, tileSize, FirstResponder.creatureTriedToMove);
     things = map.concat(creatures);
+    entities = map.concat(creatures).concat(sparkles);
 
     player = creatures[lvldata.player];
 
-    things.forEach(function (thing, index) {
-      thing.sprite = game.add.sprite(0, 0, thing.image); 
-      thing.sprite.width = tileSize;
-      thing.sprite.height = tileSize;
+    entities.forEach(function (entity, index) {
+      entity.sprite = game.add.sprite(0, 0, entity.image); 
+      entity.sprite.width = tileSize;
+      entity.sprite.height = tileSize;
     });
 
     this.game.input.keyboard.onDownCallback = FirstResponder.keyDown;
   },
 
   update: function () {
-    things.forEach(function (thing, index) {
-      thing.update(game.time.time);
+    entities.forEach(function (entity, index) {
+      entity.update(game.time.time);
     });
 
     var keyH     = game.input.keyboard.addKey(Phaser.Keyboard.H);

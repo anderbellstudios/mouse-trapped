@@ -12,6 +12,7 @@ var preloader = {
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.spritesheet('holeImage', '/images/hole.png', 100, 100);
+    game.load.spritesheet('sparkleImage', 'images/sparkle.png', 100, 100);
     game.load.spritesheet('tryAgainButtonImage', 'images/buttons/try_again.png', 600, 225);
     game.load.spritesheet('quitButtonImage', 'images/buttons/quit.png', 600, 225);
     game.load.image('blackImage', '/images/black.png');

@@ -9,6 +9,17 @@ MapGenerator = {
         var frame  = tileData.slice(0, 2) - 0;
         var symbol = tileData[2];
         var tileId = tileData.slice(3);
+          
+        var position = {
+          x: cell_number * tileSize,
+          y: row_number  * tileSize
+        };
+
+        if ( lvldata.sparkle != undefined ) {
+          if ( lvldata.sparkle[tileId] != undefined ) {
+            SparkleGenerator.build(lvldata.sparkle[tileId], position);
+          }
+        }
 
         var special = lvldata.special[tileId];
 
@@ -16,11 +27,6 @@ MapGenerator = {
         if (tileConstructor == undefined) {
           alert("invalid tile: " + tileData);
         }
-
-        var position = {
-          x: cell_number * tileSize,
-          y: row_number  * tileSize
-        };
 
         var tile = new tileConstructor(position, frame, tileId, special);
         tile.sprite = game.add.sprite(0, 0, tile.image); 

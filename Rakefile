@@ -40,7 +40,7 @@ task :mail do
       { 
         name: 'awareness', 
         value: MailProtocol.new {
-          Subscription.deliver_email :awareness
+          Subscription.deliver_email :awareness_email
         } 
       } 
     ]

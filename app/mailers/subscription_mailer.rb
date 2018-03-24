@@ -25,12 +25,6 @@ class SubscriptionMailer < ApplicationMailer
     mail(to: @subscription.email, subject: "You introduced a new player to Mouse Trapped")
   end
 
-  def introducing_level_codes_email(subscription)
-    @subscription = subscription
-    set_unsubscribe_url
-    mail(to: @subscription.email, subject: "We've changed the way you skip levels")
-  end
-
   private 
     def set_unsubscribe_url
       @unsubscribe_url = "#{Figaro.env.server_domain}unsubscribe/#{@subscription.id}?security_hash=#{@subscription.security_hash}"

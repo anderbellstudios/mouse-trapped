@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# Use tty-prompt for rake tasks
+gem 'tty-prompt'
 # Compress assets to improve loading time
 gem 'heroku-deflater', :group => :production
 # Use DelayedJob for job queues

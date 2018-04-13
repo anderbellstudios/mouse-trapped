@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def should_redirect?
-    request.host != 'www.mousetrapped.co.uk' or request.host != 'localhost'
+    request.host != 'www.mousetrapped.co.uk' and request.host != 'localhost'
   end
 end

@@ -66,7 +66,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'mouse-trapped.herokuapp.com',
+    domain:               'www.mousetrapped.co.uk',
     user_name:            Figaro.env.gmail_username,
     password:             Figaro.env.gmail_password,
     authentication:       'plain',

@@ -22,7 +22,7 @@ You will also need to put in place three environment variables: GMAIL\_USERNAME,
 
 https://accounts.google.com/DisplayUnlockCaptcha
 
-The third variable, SERVER\_DOMAIN, is the url to the home page of the website, including protocol and a slash at the end. For example, "https://mouse-trapped.herokuapp.com/" or "http://localhost:3000/". This is used in the automatic mailer to handle unsubscriptions. 
+The third variable, SERVER\_DOMAIN, is the url to the home page of the website, including protocol and a slash at the end. For example, "https://www.mousetrapped.co.uk/" or "http://localhost:3000/". This is used in the automatic mailer to handle unsubscriptions. 
 
 ## Starting the Server
 

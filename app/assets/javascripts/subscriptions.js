@@ -1,4 +1,4 @@
-window.addEventListener('load' function() {
+window.addEventListener('load', function() {
   var h = $('form').height();
   var w = $('form').width();
   $('.msg-box').height(h);

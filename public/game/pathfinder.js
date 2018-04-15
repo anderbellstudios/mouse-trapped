@@ -17,7 +17,15 @@ function route_between(start, goal, graph, neighbourCallback) {
 
   while (openSet.length > 0) {
     var current = openSet.sort(function (a, b) {
-      fScore[ c(a) ] - fScore[ c(b) ];
+      var a_score = fScore[ c(a) ];
+      var b_score = fScore[ c(b) ];
+      if (a_score < b_score) {
+        return -1;
+      } else if (b_score < a_score) {
+        return 1;
+      } else {
+        return 0;
+      }
     })[0];
 
     if ( posEqual(current, goal) ) {

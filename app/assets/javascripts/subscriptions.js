@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener('load' function() {
   var h = $('form').height();
   var w = $('form').width();
   $('.msg-box').height(h);
@@ -26,13 +26,12 @@ $(document).ready(function () {
     });
     return false;
   });
-});
+}, false);
 
 function successOccured() {
   $('form').hide();
   $('#success-box').show();
 }
-
 
 function failureOccured() {
   $('form').hide();

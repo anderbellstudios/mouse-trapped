@@ -12,7 +12,9 @@ class Mouse extends Creature {
     if (music != undefined) {
       music.stop();
     }
-
+    if (dialogue != undefined) {
+      dialogue.stop();
+    }
     Fade.toBlack(game, 1000, function () {
       game.state.start('death', true, false, next_level, message);
     });

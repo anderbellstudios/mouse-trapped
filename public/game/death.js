@@ -10,7 +10,7 @@ var death = {
 
   create: function () {
     if (user_settings.music_enabled) {
-      music = game.add.sound('replaceable', 1, true);
+      music = game.add.sound('replaceable', 0.2, true);
       music.play();
     }
 
@@ -43,12 +43,20 @@ function continuePlaying() {
     music.stop();
   }
 
+  if (dialogue != undefined) {
+    dialogue.stop();
+  }
+
   game.state.start('playing', true, false, nextLevel);
 }
 
 function quitGame() {
   if (music != undefined) {
     music.stop();
+  }
+
+  if (dialogue != undefined) {
+    dialogue.stop();
   }
 
   game.state.start('menu', true, false, 'main_menu', main_menu);

@@ -1,4 +1,4 @@
-var music, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
+var music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -15,6 +15,7 @@ var playing = {
   preload: function () {
     game.load.text('tileset', '/levels/' + lvlId + '.lvl');
     game.load.text('lvldata', '/levels/' + lvlId + '.json');
+    game.load.audio('dialogue', '/sounds/' + lvlId + '.wav');
   },
 
   create: function () {
@@ -28,8 +29,13 @@ var playing = {
     }
 
     if (user_settings.music_enabled) {
-      music = game.add.sound(lvldata.music, 1, true);
+      music = game.add.sound(lvldata.music, 0.2, true);
       music.play();
+    }
+
+    if(user_settings.sounds_enabled && lvldata.has_dialogue == "true") {
+      dialogue = game.add.sound('dialogue', 0.8, false);
+      dialogue.play();
     }
 
     $('#message').text(lvldata.message);
@@ -105,6 +111,9 @@ FirstResponder = {
         if (level) {
           if (music != undefined) {
             music.stop();
+          }
+          if (dialogue != undefined) {
+            dialogue.stop();
           }
           game.state.start('playing', true, false, level);
         } else {

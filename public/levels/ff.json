@@ -1,4 +1,4 @@
-{ "music": "", "creatures": [
+{ "music": "", "has_dialogue": "false", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 0}, "direction": 1 }
 ], "player": 0, "special": { 
 	"00": {}, 

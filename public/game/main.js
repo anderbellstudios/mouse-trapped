@@ -35,6 +35,10 @@ function fadeToLevel(lvl, msg, cutscene) {
     music.stop();
   }
 
+  if (dialogue != undefined) {
+    dialogue.stop();
+  }
+
   cutsceneInProgress = true;
   $('#message').text(msg);
   Fade.toBlack(game, 1000, function () {

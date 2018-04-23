@@ -69,6 +69,12 @@ MapGenerator = {
         break;
       case 'o':
         return ToggledHoleTile;
+      case 'd':
+        return DimensionFloorTile;
+      case 'w':
+        return WormHoleTile;
+      case 'E':
+        return TheEndTile;
       default:
         alert("invalid symbol found: " + symbol);
         break;

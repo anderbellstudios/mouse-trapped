@@ -7,6 +7,9 @@ var preloader = {
     game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
     game.load.audio('replaceable', '/music/replaceable.wav');
     game.load.video('interlevel', '/videos/interlevel.mp4');
+    game.load.video('end_one', '/videos/end_one.mp4');
+    game.load.video('end_two', '/videos/end_two.mp4');
+    game.load.video('end_three', '/videos/end_three.mp4');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);

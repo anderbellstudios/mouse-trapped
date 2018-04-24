@@ -18,6 +18,12 @@ class SubscriptionMailer < ApplicationMailer
     mail(to: @subscription.email, subject: "Help to spread the word about Mouse Trapped")
   end
 
+  def application_submitted_email(subscription)
+    @subscription = subscription
+    set_unsubscribe_url
+    mail(to: @subscription.email, subject: "We've submitted our application to the Young Game Designers competition")
+  end
+
   def invitation_accepted_email(subscription, level_code)
     @subscription = subscription
     @level_code = level_code

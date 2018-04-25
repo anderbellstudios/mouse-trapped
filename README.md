@@ -1,6 +1,6 @@
 # Mouse Trapped
 
-Mouse Trapped is under development for the BAFTA Young Game Designers competition. Coders, artists and story writers design their own video games, whether they focus on the concept or actually produce the game. (We have done the latter.)
+Mouse Trapped was originally developed for the BAFTA Young Game Designers competition, in which coders, artists and story writers design their own video games. They may either focus on the concept or actually produce the game. As you can see, we have done the latter.
 
 In the game, you navigate the mouse around a set of mazes of rapidly increasing difficulty which appear to have no end. You receive no sympathy from the scientist, who barely acknowledges that you are any more important than a glass beaker. After all, if you break, he can always get a new one.
 
@@ -45,6 +45,7 @@ Assuming there are no errors, you should be able to access the server at http://
 
 ## Acknowledgements
 
+ - The voice of the scientist is portrayed by Paul Howlett.
  - The game is mostly written in Phaser, an HTML 5 game framework.
  - The website uses Bootstrap to make it look good and to minimise the amount of CSS I need to write.
  - The server is hosted by Ruby on Rails and its dependencies.

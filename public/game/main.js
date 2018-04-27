@@ -53,6 +53,12 @@ function setMessageText(text) {
   $('#message').text(text);
   text_height = $('#message').height();
   $('#message').css('transform', 'translateY(-' + (text_height + 15) + 'px)');
+  var oldText = text;
+  setTimeout(function (){
+    if ($('#message').text() == oldText) {
+      $('#message').text("");
+    }
+  }, 10000);
 }
 
 window.addEventListener("load",function(event) {

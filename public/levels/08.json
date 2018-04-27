@@ -6,4 +6,4 @@
 	"02": { "cutscene": "interlevel", "next_level": "09" },
 	"03": { "message": "Oh, sorry. You must be in the control group.", "next_level": "08" },
 	"04": { "state": "closed" }
-}, "message": "That may look like a deadly pit, but it's actually an invisible floor tile! Try stepping on it." }
+}, "level_code": "escape", "message": "That may look like a deadly pit, but it's actually an invisible floor tile! Try stepping on it." }

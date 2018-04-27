@@ -18,4 +18,4 @@
 	"0d": { "state": "closed" },
 	"0e": { "action": "pullOpen", "targets": ["0f"] },
 	"0f": { "state": "closed" }
-}, "message": "Did you know that cats are unable to perceive giant holes in the ground? Think about that." }
+}, "level_code": "run", "message": "Did you know that cats are unable to perceive giant holes in the ground? Think about that." }

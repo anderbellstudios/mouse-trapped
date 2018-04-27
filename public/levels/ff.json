@@ -5,4 +5,4 @@
 	"01": {}, 
 	"02": { "cutscene": "interlevel", "next_level": "1f" },
 	"03": { "action": "", "targets": [] }
-}, "message": "..." }
+}, "level_code": "n/a", "message": "..." }

@@ -9,4 +9,4 @@
 	"05": { "delay": 1000, "offset":  900 }, 
 	"06": { "delay":  500, "offset": 1600 }, 
 	"07": { "delay":  250, "offset": 2500 } 
-}, "message": "Wait for the barriers to open before moving through them." }
+}, "level_code": "cheese", "message": "Wait for the barriers to open before moving through them." }

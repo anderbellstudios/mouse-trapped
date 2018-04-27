@@ -6,4 +6,4 @@
 	"02": { "cutscene": "interlevel", "next_level": "05" },
 	"03": { "state": "closed" },
 	"04": { "action": "toggle", "targets": ["03"] }
-}, "message": "Press the button and see what happens." }
+}, "level_code": "button", "message": "Press the button and see what happens." }

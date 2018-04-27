@@ -1,4 +1,4 @@
-var music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
+var current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -25,6 +25,8 @@ var playing = {
 
     var tileset = game.cache.getText('tileset');
     lvldata = JSON.parse(game.cache.getText('lvldata'));
+
+    current_level_code = lvldata.level_code;
 
     gameInProgress = true;
 

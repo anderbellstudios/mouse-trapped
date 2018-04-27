@@ -15,4 +15,4 @@
 	"08": { "action": "", "targets": [] },
 	"09": { "action": "pullClosed", "targets": ["04"] },
 	"0a": { "state": "closed" }
-}, "message": "This is a test of patience and recollection in mice. Specifically, patience and recollection in you." }
+}, "level_code": "buttons", "message": "This is a test of patience and recollection in mice. Specifically, patience and recollection in you." }

@@ -4,4 +4,4 @@
 	"00": {}, 
 	"01": {}, 
 	"02": { "cutscene": "interlevel", "next_level": "02" } 
-}, "message": "Use WASD, HJKL or the arrow keys to move the mouse and reach the cheese." }
+}, "level_code": "mouse", "message": "Use WASD, HJKL or the arrow keys to move the mouse and reach the cheese." }

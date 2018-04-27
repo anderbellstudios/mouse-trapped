@@ -33,4 +33,4 @@
 	"1d": { "state": "closed" },
 	"1e": { "action": "pullOpen", "targets": ["1f"] },
 	"1f": { "state": "closed" }
-}, "message": "Ignore that other maze next to you - you can't access it anyway. Make your way to the next room." }
+}, "level_code": "maze", "message": "Ignore that other maze next to you - you can't access it anyway. Make your way to the next room." }

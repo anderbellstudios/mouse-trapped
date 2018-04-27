@@ -12,4 +12,4 @@
 	"05": { "action": "pullOpen", "targets": ["04"] },
 	"06": { "action": "pullClosed", "targets": ["03", "04"] },
 	"07": { "state": "closed" }
-}, "message": "I just bought a new component. You'll be the first subject to see it - if you can." }
+}, "level_code": "hidden", "message": "I just bought a new component. You'll be the first subject to see it - if you can." }

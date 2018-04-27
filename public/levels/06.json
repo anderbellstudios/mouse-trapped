@@ -22,4 +22,4 @@
 	"12": { "state": "closed" },
 	"13": { "action": "toggle", "targets": ["14"] },
 	"14": { "state": "closed" }
-}, "message": "You took 30% more than the average time to complete that last maze. I hope you can do this one faster." }
+}, "level_code": "doors", "message": "You took 30% more than the average time to complete that last maze. I hope you can do this one faster." }

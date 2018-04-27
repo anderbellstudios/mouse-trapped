@@ -5,7 +5,7 @@ class EndTile extends Tile {
 
   wasLandedOnBy(player, time) {
     gameInProgress = false;
-    fadeToLevel(this.data.next_level, "Well done!", "interlevel");
+    fadeToLevel(this.data.next_level, "Level code: '" + current_level_code + "'", "interlevel");
     return true;
   }
 

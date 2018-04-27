@@ -11,4 +11,4 @@
 	"06": { "action": "pullClosed", "targets": ["03"] },
 	"07": { "action": "pullOpen", "targets": ["03"] },
 	"08": { "state": "closed" }
-}, "message": "Do you like cats? Of course you like cats! Everyone likes cats." }
+}, "level_code": "hide", "message": "Do you like cats? Of course you like cats! Everyone likes cats." }

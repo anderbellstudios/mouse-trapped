@@ -1,15 +1,13 @@
 { "music": "stay_optimistic", "has_dialogue": "true", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 11 }, "direction": 2 },
-	{ "type": "cat", "position": { "x": 10, "y": 11 }, "direction": 3, "special": { "speed": 120 } }
-], "player": 0, "special": { 
+	{ "type": "cat", "position": { "x": 8, "y": 11 }, "direction": 3, "special": { "speed": 120 } }
+], "player": 0, "sparkle": {
+  "13": { "frequency":8000, "duration":"500", "offset":2000 }
+}, "special": { 
 	"00": {},
 	"01": { "cutscene": "interlevel", "next_level": "1e" },
-	"03": { "action": "pullClosed", "targets": ["15"] },
-	"04": { "action": "pullOpen", "targets": ["08"] },
-	"05": { "action": "toggle", "targets": ["06"] },
-  "06": { "state": "closed" },
 	"07": { "state": "closed" },
-	"08": { "state": "closed", "message": "Did you think this hole was closed? It wasn't." },
+	"08": { "state": "open", "message": "Did you think this hole was closed? It wasn't." },
 	"09": { "state": "closed" },
 	"0a": { "action": "pullClosed", "targets": ["0c"] },
 	"0b": { "action": "pullOpen", "targets": ["0c"] },

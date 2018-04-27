@@ -14,3 +14,8 @@
  *= require_self
  */
 
+@media (max-width: 760px) {
+  body {
+    font-size: 1.5rem;
+  }
+}

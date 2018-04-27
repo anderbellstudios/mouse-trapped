@@ -5,7 +5,7 @@ var nextLevel;
 var death = {
   init: function (_next_level, _message) {
     nextLevel = _next_level;
-    $('#message').text(_message);
+    setMessageText(_message);
   },
 
   create: function () {

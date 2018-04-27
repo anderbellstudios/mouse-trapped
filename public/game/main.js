@@ -40,7 +40,7 @@ function fadeToLevel(lvl, msg, cutscene) {
   }
 
   cutsceneInProgress = true;
-  $('#message').text(msg);
+  setMessageText(msg);
   Fade.toBlack(game, 1000, function () {
     game.state.start("cutscene", true, false, cutscene, function () {
       game.state.start('playing', true, false, lvl);
@@ -49,26 +49,35 @@ function fadeToLevel(lvl, msg, cutscene) {
   });
 }
 
+function setMessageText(text) {
+  $('#message').text(text);
+  text_height = $('#message').height();
+  $('#message').css('transform', 'translateY(-' + (text_height + 15) + 'px)');
+}
+
 window.addEventListener("load",function(event) {
   gridWidth = 16;
   gridHeight = 12;
 
-  var maxWidth  = window.innerWidth  * 0.75;
-  var maxHeight = window.innerHeight * 0.75;
+  viewWidth  = $('#game-container').width();
+  viewHeight = viewWidth * (gridHeight / gridWidth); 
 
-  var idealTileWidth  = Math.floor(maxWidth  / gridWidth);
-  var idealTileHeight = Math.floor(maxHeight / gridHeight);
+  if (viewHeight * 1.25 > window.innerHeight) {
+    viewHeight = window.innerHeight * 0.75;
+    viewWidth = viewHeight * (gridWidth / gridHeight);
+  }
 
-  tileSize = Math.min(idealTileWidth, idealTileHeight);
-
-  viewWidth  = gridWidth  * tileSize; 
-  viewHeight = gridHeight * tileSize; 
+  tileSize = viewWidth / gridWidth;
 
   game = new Phaser.Game(
     viewWidth, 
     viewHeight, 
-    Phaser.CANVAS
+    Phaser.CANVAS,
+    'game-container'
   );
+
+  $('#message').width(viewWidth - 30);
+  $('#message').css('left', (window.innerWidth - viewWidth) / 2 + 15);
 
   game.state.add('boot', boot);
   game.state.add('preloader', preloader);

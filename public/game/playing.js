@@ -42,7 +42,7 @@ var playing = {
       dialogue.play();
     }
 
-    $('#message').text(lvldata.message);
+    setMessageText(lvldata.message);
 
     sparkles = [];
 

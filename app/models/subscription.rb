@@ -8,7 +8,6 @@ end
 
 class Subscription < ApplicationRecord
   validates :email, presence: true, email: true, uniqueness: true
-  has_many :invitation_codes
   def self.deliver_email(email, *args)
     Subscription.all.each do |sub|
       sub.deliver_email(email, *args)

@@ -34,7 +34,13 @@ task :mail do
             q.required true
           end
 
-          NewLevelHelper.notify_users level
+          code = prompt.ask("Please select a level code for this level.") do |q|
+            q.validate /\S/
+            q.required true
+          end
+
+          level_code = LevelCode.create level: level, code: code
+          Subscription.deliver_email :new_level_email, level_code
         } 
       }, 
       { 

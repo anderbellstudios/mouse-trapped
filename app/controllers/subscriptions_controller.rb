@@ -15,7 +15,6 @@ class SubscriptionsController < ApplicationController
     @result = succeeded ? "success" : "failure"
     if succeeded
       SubscriptionMailer.welcome_email( @subscription ).deliver_later
-      InvitationCode.received_code @code
     end
     render layout: false
   end
@@ -36,7 +35,6 @@ class SubscriptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subscription_params
-      @code = params[:subscription][:code]
       params.require(:subscription).permit(:email).merge( security_hash: SecureRandom.hex )
     end
 

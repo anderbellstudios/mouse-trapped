@@ -121,7 +121,7 @@ FirstResponder = {
           }
           game.state.start('playing', true, false, level);
         } else {
-          alert("Code invalid. Is this an invitation code?");
+          alert("Code invalid.");
         }
         break;
     }

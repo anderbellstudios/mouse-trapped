@@ -68,6 +68,8 @@ window.addEventListener("load",function(event) {
   viewWidth  = $('#game-container').width();
   viewHeight = viewWidth * (gridHeight / gridWidth); 
 
+  oldWidth = viewWidth;
+
   if (viewHeight * 1.25 > window.innerHeight) {
     viewHeight = window.innerHeight * 0.75;
     viewWidth = viewHeight * (gridWidth / gridHeight);
@@ -76,14 +78,17 @@ window.addEventListener("load",function(event) {
   tileSize = viewWidth / gridWidth;
 
   game = new Phaser.Game(
-    viewWidth, 
-    viewHeight, 
+    Math.round(viewWidth), 
+    Math.round(viewHeight), 
     Phaser.CANVAS,
     'game-container'
   );
 
   $('#message').width(viewWidth - 30);
   $('#message').css('left', (window.innerWidth - viewWidth) / 2 + 15);
+
+  offset = (oldWidth - viewWidth) / 2;
+  $('#game-container').css('transform', 'translateX(' + offset + 'px)');
 
   game.state.add('boot', boot);
   game.state.add('preloader', preloader);

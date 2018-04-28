@@ -16,10 +16,6 @@ var playing = {
   },
 
   create: function () {
-    gtag('event', lvlId, {
-      'event_category' : 'Level was started'
-    });
-
     var tileset = game.cache.getText(lvlId + '_tiles');
     lvldata = JSON.parse(game.cache.getText(lvlId + '_data'));
 

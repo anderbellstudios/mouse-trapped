@@ -10,7 +10,7 @@ function launch_menu(name, buttons) {
 }
 
 var main_menu = [
-  { name: 'play',    onclick: function () { game.state.start('playing', true, false, '01'); } },
+  { name: 'play',    onclick: function () { gtag('event', 'Game was started', { 'event_category' : 'Game was started' }); game.state.start('playing', true, false, '01'); } },
   { name: 'options', onclick: function () { launch_menu('options', options_menu); } }
 ];
 

@@ -4,6 +4,10 @@ class EndTile extends Tile {
   }
 
   wasLandedOnBy(player, time) {
+    gtag('event', lvlId, {
+      'event_category' : 'Level was finished'
+    });
+
     gameInProgress = false;
     fadeToLevel(this.data.next_level, "Level code: '" + current_level_code + "'", "interlevel");
     return true;

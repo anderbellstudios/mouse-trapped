@@ -9,6 +9,10 @@ class Mouse extends Creature {
   }
 
   postDie(next_level, message) {
+    gtag('event', lvlId, {
+      'event_category' : 'Mouse was killed'
+    });
+
     if (music != undefined) {
       music.stop();
     }

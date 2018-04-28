@@ -13,9 +13,6 @@ var playing = {
   },
 
   preload: function () {
-    game.load.text('tileset', '/levels/' + lvlId + '.lvl');
-    game.load.text('lvldata', '/levels/' + lvlId + '.json');
-    game.load.audio('dialogue', '/sounds/' + lvlId + '.wav');
   },
 
   create: function () {
@@ -23,8 +20,8 @@ var playing = {
       'event_category' : 'Level was started'
     });
 
-    var tileset = game.cache.getText('tileset');
-    lvldata = JSON.parse(game.cache.getText('lvldata'));
+    var tileset = game.cache.getText(lvlId + '_tiles');
+    lvldata = JSON.parse(game.cache.getText(lvlId + '_data'));
 
     current_level_code = lvldata.level_code;
 
@@ -40,7 +37,7 @@ var playing = {
     }
 
     if(user_settings.sounds_enabled && lvldata.has_dialogue == "true") {
-      dialogue = game.add.sound('dialogue', 0.8, false);
+      dialogue = game.add.sound(lvlId + '_dialogue', 0.8, false);
       dialogue.play();
     }
 

@@ -24,6 +24,12 @@ var preloader = {
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
     game.load.spritesheet('catImage', '/images/cat.png', 100, 100);
 
+    [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '1e', 'ff', '1f', '20' ].forEach(function (lvlId){
+      game.load.text(lvlId + '_tiles', '/levels/' + lvlId + '.lvl');
+      game.load.text(lvlId + '_data', '/levels/' + lvlId + '.json');
+      game.load.audio(lvlId + '_dialogue', '/sounds/' + lvlId + '.wav');
+    });
+
     var bg = game.add.sprite(0, 0, 'loading_bg'); 
     bg.width = viewWidth;
     bg.height = viewHeight;

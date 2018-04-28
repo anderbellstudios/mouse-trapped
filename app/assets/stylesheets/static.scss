@@ -15,17 +15,11 @@
 }
 
 #message {
-  // position: absolute;
-  // left: 0; bottom: 0; right: 0;
-  // padding: 0.2em;
-  // background-color: black;
-  // color: white;
-  // font-size: 1.5em;
   position: absolute;
   font-size: 1.5em;
   color: white; 
   text-shadow: 0 0 10px #000000;
-  font-family: 'Avenir Next';
+  font-family: 'Avenir Next', 'Helvetica', 'Arial';
   font-weight: bold;
   text-align: center;
   transform: translateY(-2.5em);

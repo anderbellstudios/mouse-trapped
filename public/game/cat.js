@@ -4,6 +4,10 @@ class Cat extends Creature {
   }
 
   update(time) {
+    if (this.is_dead) {
+      return;
+    }
+
     super.update(time);
 
     if (this._lastMoved === undefined) {

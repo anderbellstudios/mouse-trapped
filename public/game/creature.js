@@ -7,6 +7,7 @@ class Creature {
     this.data = data;
     this.isMoving = false;
     this.lastMoved = -1000; 
+    this.is_dead = false;
   }
 
   frame(time) {
@@ -23,6 +24,7 @@ class Creature {
   }
 
   die(next_level, message) {
+    this.is_dead = true;
     this.sprite.destroy();
     creatureDidDie(this);
     this.postDie(next_level, message);

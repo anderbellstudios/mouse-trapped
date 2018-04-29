@@ -3,5 +3,5 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "next_level": "03" } 
-}, "level_code": "cat", "message": "Navigate around the barriers." }
+	"02": { "message": "Level code: 'cat'", "next_level": "03" } 
+}, "message": "Navigate around the barriers." }

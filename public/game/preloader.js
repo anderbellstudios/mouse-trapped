@@ -44,7 +44,7 @@ var preloader = {
     this.load.onFileComplete.add(function(progress, cacheKey, success, totalLoaded, totalFiles) {
       loading_text.setText("Loading... " + progress + "%");
       if (progress == 100 && not_started) {
-        game.state.start('menu', true, false, 'main_menu', main_menu);
+        launch_menu('main_menu', main_menu);
         not_started = false;
       }
     }, this);

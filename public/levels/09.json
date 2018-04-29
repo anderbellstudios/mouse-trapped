@@ -3,7 +3,7 @@
 	{ "type": "cat", "position": { "x": 13, "y": 5 }, "direction": 3, "special": { "speed": 200 } }
 ], "player": 0, "special": { 
 	"00": {}, 
-	"01": { "cutscene": "interlevel", "next_level": "0a" },
+	"01": { "message": "Level code: 'hide'", "next_level": "0a" },
 	"02": { "state": "closed" },
 	"03": { "state": "closed" },
 	"04": { "action": "pullClosed", "targets": ["02"] },
@@ -11,4 +11,4 @@
 	"06": { "action": "pullClosed", "targets": ["03"] },
 	"07": { "action": "pullOpen", "targets": ["03"] },
 	"08": { "state": "closed" }
-}, "level_code": "hide", "message": "Do you like cats? Of course you like cats! Everyone likes cats." }
+}, "message": "Do you like cats? Of course you like cats! Everyone likes cats." }

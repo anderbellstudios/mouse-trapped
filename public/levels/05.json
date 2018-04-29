@@ -5,7 +5,7 @@
 }, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "next_level": "06" } ,
+	"02": { "message": "Level code: 'scientist'", "next_level": "06" } ,
 	"03": { "action": "toggle", "targets": ["09"] },
 	"04": { "action": "toggle", "targets": ["07"] },
 	"05": { "action": "toggle", "targets": ["08"] },
@@ -13,4 +13,4 @@
 	"07": { "state": "closed" },
 	"08": { "state": "open" },
 	"09": { "state": "closed" }
-}, "level_code": "scientist", "message": "You're getting good at this. Try this one. " }
+}, "message": "You're getting good at this. Try this one. " }

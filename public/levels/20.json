@@ -8,4 +8,4 @@
 	"04": { "cutscene": "end_one", "next_level": "01", "message": "If you think that's odd, you should see the other two endings!" }, 
 	"05": { "action": "pullOpen", "targets": ["03"] },
 	"06": { "cutscene": "end_two", "next_level": "01", "message": "If you think that's odd, you should see the other two endings!" }
-}, "level_code": "not telling you", "message": "..." }
+}, "message": "..." }

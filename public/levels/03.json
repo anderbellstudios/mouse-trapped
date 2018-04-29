@@ -3,10 +3,10 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "next_level": "04" }, 
+	"02": { "message": "Level code: 'cheese'", "next_level": "04" }, 
 	"03": { "delay": 4000, "offset":  100 }, 
 	"04": { "delay": 2000, "offset":  400 }, 
 	"05": { "delay": 1000, "offset":  900 }, 
 	"06": { "delay":  500, "offset": 1600 }, 
 	"07": { "delay":  250, "offset": 2500 } 
-}, "level_code": "cheese", "message": "Wait for the barriers to open before moving through them." }
+}, "message": "Wait for the barriers to open before moving through them." }

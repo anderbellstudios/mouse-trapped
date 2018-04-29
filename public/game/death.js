@@ -9,10 +9,7 @@ var death = {
   },
 
   create: function () {
-    if (user_settings.music_enabled) {
-      music = game.add.sound('replaceable', 0.2, true);
-      music.play();
-    }
+    Audio.playMusic('replaceable');
 
     var bg = game.add.sprite(0, 0, 'death_bg'); 
     bg.width = viewWidth;
@@ -39,25 +36,10 @@ var death = {
 };
 
 function continuePlaying() {
-  if (music != undefined) {
-    music.stop();
-  }
-
-  if (dialogue != undefined) {
-    dialogue.stop();
-  }
-
-  game.state.start('playing', true, false, nextLevel);
+  fadeToLevel(nextLevel, "Have another go.", "interlevel");
 }
 
 function quitGame() {
-  if (music != undefined) {
-    music.stop();
-  }
-
-  if (dialogue != undefined) {
-    dialogue.stop();
-  }
-
-  game.state.start('menu', true, false, 'main_menu', main_menu);
+  Audio.stopAll();
+  launch_menu('main_menu', main_menu);
 }

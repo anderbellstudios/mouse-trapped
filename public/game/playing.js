@@ -23,19 +23,9 @@ var playing = {
 
     gameInProgress = true;
 
-    if (music != undefined) {
-      music.stop();
-    }
-
-    if (user_settings.music_enabled) {
-      music = game.add.sound(lvldata.music, 0.2, true);
-      music.play();
-    }
-
-    if(user_settings.sounds_enabled && lvldata.has_dialogue == "true") {
-      dialogue = game.add.sound(lvlId + '_dialogue', 0.8, false);
-      dialogue.play();
-    }
+    Audio.stopAll();
+    Audio.playMusic(lvldata.music);
+    Audio.playSound(lvlId + '_dialogue');
 
     setMessageText(lvldata.message);
 
@@ -108,13 +98,7 @@ FirstResponder = {
         var level_code = prompt("Enter your level code here...");
         var level = level_for(level_code);
         if (level) {
-          if (music != undefined) {
-            music.stop();
-          }
-          if (dialogue != undefined) {
-            dialogue.stop();
-          }
-          game.state.start('playing', true, false, level);
+          fadeToLevel(level, "Levelporting...", "interlevel");
         } else {
           alert("Code invalid.");
         }

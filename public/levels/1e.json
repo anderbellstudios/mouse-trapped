@@ -3,8 +3,8 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {},
-	"02": { "cutscene": "interlevel", "next_level": "1f" }, 
-	"03": { "cutscene": "interlevel", "next_level": "ff" }, 
+	"02": { "message": "Level code: 'maze'", "next_level": "1f" }, 
+	"03": { "message": "Level code: 'maze'", "next_level": "ff" }, 
 	"04": { "delay": 1000, "offset":  0 },
 	"05": { "state": "closed" },
 	"06": { "state": "closed" },
@@ -33,4 +33,4 @@
 	"1d": { "state": "closed" },
 	"1e": { "action": "pullOpen", "targets": ["1f"] },
 	"1f": { "state": "closed" }
-}, "level_code": "maze", "message": "Ignore that other maze next to you - you can't access it anyway. Make your way to the next room." }
+}, "message": "Ignore that other maze next to you - you can't access it anyway. Make your way to the next room." }

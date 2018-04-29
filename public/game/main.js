@@ -31,14 +31,7 @@ var sounds_menu = [
 ];
 
 function fadeToLevel(lvl, msg, cutscene) {
-  if (music != undefined) {
-    music.stop();
-  }
-
-  if (dialogue != undefined) {
-    dialogue.stop();
-  }
-
+  Audio.stopAll();
   cutsceneInProgress = true;
   setMessageText(msg);
   Fade.toBlack(game, 1000, function () {

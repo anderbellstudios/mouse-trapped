@@ -3,7 +3,7 @@
 	{ "type": "cat", "position": { "x": 13, "y": 7 }, "direction": 2, "special": { "speed": 300 } }
 ], "player": 0, "special": { 
 	"00": {}, 
-	"01": { "cutscene": "interlevel", "next_level": "0b" },
+	"01": { "message": "Level code: 'run'", "next_level": "0b" },
 	"02": { "state": "closed" },
 	"03": { "action": "pullOpen", "targets": ["02"] },
 	"04": { "action": "pullClosed", "targets": ["02"] },
@@ -18,4 +18,4 @@
 	"0d": { "state": "closed" },
 	"0e": { "action": "pullOpen", "targets": ["0f"] },
 	"0f": { "state": "closed" }
-}, "level_code": "run", "message": "Did you know that cats are unable to perceive giant holes in the ground? Think about that." }
+}, "message": "Did you know that cats are unable to perceive giant holes in the ground? Think about that." }

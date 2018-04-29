@@ -62,7 +62,7 @@ MapGenerator = {
         return PushBarrierTile;
         break;
       case 'e':
-        return EndTile;
+        return CheeseTile;
         break;
       case 'h':
         return HoleTile;
@@ -70,11 +70,11 @@ MapGenerator = {
       case 'o':
         return ToggledHoleTile;
       case 'd':
-        return DimensionFloorTile;
+        return EscapeFloorTile;
       case 'w':
-        return WormHoleTile;
+        return EscapeHoleTile;
       case 'E':
-        return TheEndTile;
+        return EscapeCheeseTile;
       default:
         alert("invalid symbol found: " + symbol);
         break;

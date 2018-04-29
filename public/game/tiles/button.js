@@ -3,7 +3,18 @@ class ButtonTile extends Tile {
     return 'buttonImage';
   }
 
-  wasLandedOnBy(player, time) {
+  post_init() {
+    var me = this;
+    this.on_walk.push(function (walker, time) {
+      me.activate_on_walk(walker, time);
+    });
+  }
+
+  walkable(time) {
+    return true;
+  }
+
+  activate_on_walk(walker, time) {
     var targets = this.data.targets;
     var action  = this.data.action;
     map.forEach(function (tile, index) {
@@ -12,25 +23,19 @@ class ButtonTile extends Tile {
       }
     });
 
-    this.pressedTime = time;
-
-    return true; 
+    this.pressed_time = time;
   }
 
   frame(time) {
-    if ( this.shouldBeHighlighted(time) ) {
-      return 1;
-    } else {
-      return 0;
-    }
+    return this.shouldBeHighlighted(time) ? 1 : 0;
   }
   
   shouldBeHighlighted(time) {
-    if (this.pressedTime === undefined) {
-      this.pressedTime = -505;
+    if (this.pressed_time === undefined) {
+      this.pressed_time = -505;
     }
 
-    var relative_time = time - this.pressedTime;
+    var relative_time = time - this.pressed_time;
     return relative_time > 50 && relative_time < 500;
   }
 }

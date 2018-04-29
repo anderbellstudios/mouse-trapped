@@ -3,7 +3,7 @@ class FloorTile extends Tile {
     return 'floorImage';
   }
 
-  wasLandedOnBy(player, time) {
+  walkable(time) {
     return true;
   }
 }

@@ -3,7 +3,7 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "next_level": "05" },
+	"02": { "message": "Level code: 'button'", "next_level": "05" },
 	"03": { "state": "closed" },
 	"04": { "action": "toggle", "targets": ["03"] }
-}, "level_code": "button", "message": "Press the button and see what happens." }
+}, "message": "Press the button and see what happens." }

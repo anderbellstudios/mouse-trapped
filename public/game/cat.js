@@ -55,7 +55,7 @@ class Cat extends Creature {
           var absPos = absPosfor(relPos);
           var occupant = thingAtAbsPos(absPos, map);
           if (occupant != undefined) {
-            if (occupant.cattable) {
+            if (occupant.cattable(time)) {
               neighbours.push(relPos);
             }
           }

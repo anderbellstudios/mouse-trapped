@@ -40,7 +40,7 @@ class Sparkle {
     return true;
   }
 
-  get cattable() {
+  cattable(time) {
     return true;
   }
 }

@@ -3,6 +3,6 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "cutscene": "interlevel", "next_level": "1f" },
+	"02": { "message": "", "next_level": "1f" },
 	"03": { "action": "", "targets": [] }
-}, "level_code": "n/a", "message": "..." }
+}, "message": "..." }

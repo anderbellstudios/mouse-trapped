@@ -68,7 +68,7 @@ window.addEventListener("load",function(event) {
     viewWidth = viewHeight * (gridWidth / gridHeight);
   }
 
-  tileSize = viewWidth / gridWidth;
+  tileSize = Math.round(viewWidth / gridWidth);
 
   game = new Phaser.Game(
     Math.round(viewWidth), 

@@ -1,4 +1,4 @@
-var current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
+var start_time, current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -22,6 +22,7 @@ var playing = {
     current_level_code = lvldata.level_code;
 
     gameInProgress = true;
+    start_time = game.time.time;
 
     Audio.stopAll();
     Audio.playMusic(lvldata.music);

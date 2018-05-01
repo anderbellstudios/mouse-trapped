@@ -12,7 +12,8 @@ class CheeseTile extends Tile {
 
   levelport_on_walk(walker, time) {
     gtag('event', lvlId, {
-      'event_category' : 'Level was finished'
+      'event_category' : 'Level was finished',
+      'event_value': ( time - start_time )
     });
 
     gameInProgress = false;

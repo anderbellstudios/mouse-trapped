@@ -24,20 +24,17 @@
   }
 
   #mobile-warning {
-    background-color: orange;
     margin-top: 1em;
     margin-left: 0.5em;
     margin-right: 0.5em;
-    padding: 0.5em;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   }
 </style>
 
 <% content_for :content do %>
   <div id="bg-holder" class="interactive-bg"></div>
-  <div id="mobile-warning">
-    <b>Warning</b> This game is not suitable for mobile devices. To play, please use a device with a physical keyboard. 
+  <div id="mobile-warning" class="alert alert-info alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <b>Warning</b> This game is not suitable for mobile devices. To play, please use a device with a physical keyboard.  
   </div>
   <%= yield %>
 <% end %>

@@ -16,6 +16,10 @@ let GameEnder = (superclass) => class extends superclass {
         game.state.start("cutscene", true, false, cutscene, function () {
           cutsceneInProgress = false;
           launch_menu('main_menu', main_menu);
+          var destination = '/gameover';
+          if (window.open(destination) === null) {
+            window.location = destination; 
+          }
         });
       });
     }

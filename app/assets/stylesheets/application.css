@@ -20,6 +20,6 @@
   }
 }
 
-.btn-outline-primary {
+.btn-outline-primary, .btn-outline-success, .btn-outline-warning {
   margin-right: 1em;
 }

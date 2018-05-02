@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'static#contact'
   get 'notifyme', to: 'subscriptions#new'
   get 'privacy', to: 'static#privacy'
+  get 'gameover', to: 'static#gameover'
   get 'unsubscribe/:id', to: 'subscriptions#destroy'
   get 'level_code/:id', to: 'level_codes#show'
   resource :subscriptions

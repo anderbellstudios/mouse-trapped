@@ -96,13 +96,7 @@ FirstResponder = {
 
     switch (keypress.keyCode) {
       case Phaser.KeyCode.Q:
-        var level_code = prompt("Enter your level code here...");
-        var level = level_for(level_code);
-        if (level) {
-          fadeToLevel(level, "Levelporting...", "interlevel");
-        } else {
-          alert("Code invalid.");
-        }
+        controlled_levelport(false);
         break;
     }
   },
@@ -119,16 +113,3 @@ FirstResponder = {
   }
 };
 
-function level_for(code) {
-  var result = $.ajax({
-    type: "GET",
-    url: '/level_code/' + code,
-    async: false
-  }).responseText.replace(/\n|\r/g,'');
-
-  if (result == 'invalid') { 
-    return false;
-  } else {
-    return result;
-  }
-}

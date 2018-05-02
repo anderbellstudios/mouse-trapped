@@ -16,8 +16,6 @@ var preloader = {
     game.load.spritesheet('buttonImage', '/images/button.png', 100, 100);
     game.load.spritesheet('holeImage', '/images/hole.png', 100, 100);
     game.load.spritesheet('sparkleImage', 'images/sparkle.png', 100, 100);
-    game.load.spritesheet('tryAgainButtonImage', 'images/buttons/try_again.png', 600, 225);
-    game.load.spritesheet('quitButtonImage', 'images/buttons/quit.png', 600, 225);
     game.load.image('blackImage', '/images/black.png');
     game.load.image('menu_bg', '/images/menu_bg.png');
     game.load.image('death_bg', '/images/death_bg.png');
@@ -28,6 +26,10 @@ var preloader = {
       game.load.text(lvlId + '_tiles', '/levels/' + lvlId + '.lvl');
       game.load.text(lvlId + '_data', '/levels/' + lvlId + '.json');
       game.load.audio(lvlId + '_dialogue', '/sounds/' + lvlId + '.wav');
+    });
+
+    [ 'back', 'music', 'off', 'on', 'options', 'play', 'quit', 'resume', 'sounds', 'tryAgain', ].forEach(function (button){
+      game.load.spritesheet(button + "ButtonImage", 'images/buttons/' + button + '.png', buttonWidth, rowHeight);
     });
 
     var bg = game.add.sprite(0, 0, 'loading_bg'); 

@@ -1,5 +1,9 @@
 var game, gridWidth, gridHeight, viewWidth, viewHeight, tileSize;
 
+var rowHeight = 225;
+var buttonWidth = 600;
+var titleWidth = 1150;
+
 var user_settings = {
   music_enabled: true,
   sounds_enabled: true
@@ -9,8 +13,43 @@ function launch_menu(name, buttons) {
   game.state.start('menu', true, false, name, buttons);
 }
 
+function controlled_levelport(from_start) {
+  var level_code = prompt("Enter your level code here...");
+  var level = level_for(level_code);
+  if (level) {
+    if (from_start) {
+      gtag('event', 'Game was started', { 'event_category' : level }); 
+    } else {
+      gtag('event', 'Levelport occurred', { 'event_category' : level }); 
+    }
+    fadeToLevel(level, "Levelporting...", "interlevel");
+  } else {
+    alert("Code invalid.");
+  }
+}
+
+function level_for(code) {
+  var result = $.ajax({
+    type: "GET",
+    url: '/level_code/' + code,
+    async: false
+  }).responseText.replace(/\n|\r/g,'');
+
+  if (result == 'invalid') { 
+    return false;
+  } else {
+    return result;
+  }
+}
+
 var main_menu = [
-  { name: 'play',    onclick: function () { gtag('event', 'Game was started', { 'event_category' : 'Game was started' }); game.state.start('playing', true, false, '01'); } },
+  { name: 'play', onclick: function () { 
+      gtag('event', 'Game was started', { 'event_category' : '01' }); 
+      game.state.start('playing', true, false, '01'); 
+  } },
+  { name: 'resume', onclick: function () { 
+      controlled_levelport(true);
+  } },
   { name: 'options', onclick: function () { launch_menu('options', options_menu); } }
 ];
 

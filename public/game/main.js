@@ -18,9 +18,9 @@ function controlled_levelport(from_start) {
   var level = level_for(level_code);
   if (level) {
     if (from_start) {
-      gtag('event', 'Game was started', { 'event_category' : level }); 
+      gtag('event', level, { 'event_category' : 'Game was started'}); 
     } else {
-      gtag('event', 'Levelport occurred', { 'event_category' : level }); 
+      gtag('event', level, { 'event_category' : 'Levelport occurred' }); 
     }
     fadeToLevel(level, "Levelporting...", "interlevel");
   } else {
@@ -44,7 +44,7 @@ function level_for(code) {
 
 var main_menu = [
   { name: 'play', onclick: function () { 
-      gtag('event', 'Game was started', { 'event_category' : '01' }); 
+      gtag('event', '01', { 'event_category' : 'Game was started' }); 
       game.state.start('playing', true, false, '01'); 
   } },
   { name: 'resume', onclick: function () { 

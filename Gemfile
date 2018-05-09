@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# Use redcarpet for parsing markdown
+gem 'redcarpet'
 # Use tty-prompt for rake tasks
 gem 'tty-prompt'
 # Compress assets to improve loading time

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get 'unsubscribe/:id', to: 'subscriptions#destroy'
   get 'level_code/:id', to: 'level_codes#show'
   resource :subscriptions
+  get 'news', to: 'news#index'
 end

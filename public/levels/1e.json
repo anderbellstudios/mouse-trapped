@@ -5,7 +5,7 @@
 	"01": {},
 	"02": { "message": "Level code: 'maze'", "next_level": "1f" }, 
 	"03": { "message": "Level code: 'maze'", "next_level": "ff" }, 
-	"04": { "delay": 1000, "offset":  0 },
+	"04": { "closed": 1000, "open": 1000, "offset":  0 },
 	"05": { "state": "closed" },
 	"06": { "state": "closed" },
 	"07": { "action": "pullOpen", "targets": ["06"] },

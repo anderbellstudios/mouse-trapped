@@ -18,7 +18,7 @@
 	"10": { "action": "pullOpen", "targets": ["0f"] },
 	"11": { "action": "pullClosed", "targets": ["0f"] },
 	"12": { "action": "pullOpen", "targets": ["07"] },
-	"13": { "delay": 8000, "offset": 0 },
+	"13": { "closed": 8000, "open": 8000, "offset": 0 },
 	"14": { "action": "pullOpen", "targets": ["15"] },
 	"15": { "state": "open" },
 	"16": { "action": "pullOpen", "targets": ["09"] },

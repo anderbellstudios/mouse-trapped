@@ -1,0 +1,31 @@
+{ "music": "stay_optimistic", "has_dialogue": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 },
+	{ "type": "cat", "position": { "x": 7, "y": 5 }, "direction": 3, "special": { "speed": 100 } }
+], "player": 0, "sparkle": {
+  "0f": { "frequency": 24000, "duration": 500, "offset":  2000 },
+  "10": { "frequency": 24000, "duration": 500, "offset": 18000 },
+  "11": { "frequency": 24000, "duration": 500, "offset": 10000 }
+},"special": { 
+	"00": {}, 
+	"01": {}, 
+	"02": { "message": "Level code: 'cycle'", "next_level": "0b" },
+  "03": { "action": "pullOpen", "targets": ["04"] },
+  "04": { "state": "closed" },
+  "05": { "action": "pullClosed", "targets": ["04"] },
+  "06": { "action": "pullOpen", "targets": ["07"] },
+  "07": { "state": "closed" },
+  "08": { "action": "pullClosed", "targets": ["07"] },
+  "09": { "action": "pullOpen", "targets": ["0a"] },
+  "0a": { "state": "closed" },
+  "0b": { "action": "pullClosed", "targets": ["0a"] },
+  "0c": { "action": "pullOpen", "targets": ["0d"] },
+  "0d": { "state": "closed" },
+  "0e": { "action": "pullClosed", "targets": ["0d"] },
+	"0f": { "closed": 16000, "open": 8000, "offset": 16000 }, 
+	"10": { "closed": 16000, "open": 8000, "offset":  8000 }, 
+	"11": { "closed": 16000, "open": 8000, "offset":     0 }, 
+  "12": { "action": "pullOpen", "targets": ["13"] },
+  "13": { "state": "closed" },
+  "14": { "action": "pullOpen", "targets": ["15"] },
+  "15": { "state": "closed" }
+}, "message": "..." }

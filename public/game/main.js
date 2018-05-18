@@ -97,21 +97,24 @@ window.addEventListener("load",function(event) {
   gridWidth = 16;
   gridHeight = 12;
 
-  viewWidth  = $('#game-container').width();
-  viewHeight = viewWidth * (gridHeight / gridWidth); 
+  viewWidth  = Math.floor( $('#game-container').width() );
+  viewHeight = Math.floor( viewWidth * (gridHeight / gridWidth) ); 
 
   oldWidth = viewWidth;
 
   if (viewHeight * 1.25 > window.innerHeight) {
-    viewHeight = window.innerHeight * 0.75;
-    viewWidth = viewHeight * (gridWidth / gridHeight);
+    viewHeight = Math.floor( window.innerHeight * 0.75 );
+    viewWidth = Math.floor( viewHeight * (gridWidth / gridHeight) );
   }
 
-  tileSize = Math.round(viewWidth / gridWidth);
+  tileSize = Math.floor(viewWidth / gridWidth);
+
+  viewWidth = Math.floor(tileSize * gridWidth);
+  viewHeight = Math.floor(tileSize * gridHeight);
 
   game = new Phaser.Game(
-    Math.round(viewWidth), 
-    Math.round(viewHeight), 
+    viewWidth, 
+    viewHeight, 
     Phaser.CANVAS,
     'game-container'
   );

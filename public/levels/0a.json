@@ -3,7 +3,7 @@
 	{ "type": "cat", "position": { "x": 13, "y": 7 }, "direction": 2, "special": { "speed": 300 } }
 ], "player": 0, "special": { 
 	"00": {}, 
-	"01": { "message": "Level code: 'run'", "next_level": "0b" },
+	"01": { "message": "Level code: 'run'", "next_level": "0c" },
 	"02": { "state": "closed" },
 	"03": { "action": "pullOpen", "targets": ["02"] },
 	"04": { "action": "pullClosed", "targets": ["02"] },

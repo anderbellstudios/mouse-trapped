@@ -46,7 +46,16 @@ var preloader = {
     this.load.onFileComplete.add(function(progress, cacheKey, success, totalLoaded, totalFiles) {
       loading_text.setText("Loading... " + progress + "%");
       if (progress == 100 && not_started) {
-        launch_menu('main_menu', main_menu);
+
+        var level_code = (new URL(window.location)).searchParams.get("lvl");
+        var level = level_for(level_code);
+        if (level) {
+          gtag('event', level, { 'event_category' : 'Game was started'}); 
+          fadeToLevel(level, "Levelporting...", "interlevel");
+        } else {
+          launch_menu('main_menu', main_menu);
+        }
+
         not_started = false;
       }
     }, this);

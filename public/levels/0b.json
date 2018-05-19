@@ -24,4 +24,4 @@
 	"16": { "action": "pullOpen", "targets": ["09"] },
 	"17": { "action": "pullClosed", "targets": ["08"] },
 	"18": { "action": "pullClosed", "targets": ["15"] }
-}, "message": "These cats are specially trained to not chase any mouse that's out of reach; I recommend you stay out of reach." }
+}, "message": "Make sure you wait for the cat's door to close before going in. It's terribly difficult to clean the floor in this one." }

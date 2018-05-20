@@ -7,5 +7,7 @@
 
   <p>From now on, we'll email you every time we release a new level, or make any other notable change to the game. This could include an improvement to the artwork, a new cutscene to add to the story or anything else we think of in the future.</p>
 
-  <p><a href="<%= Figaro.env.server_domain %>play"><button>Start Playing</button></a></p>
+  <form action="<%= Figaro.env.server_domain %>play">
+    <button>Start Playing</button>
+  </form>
 <% end %>

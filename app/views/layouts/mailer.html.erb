@@ -1,13 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
+<head>
+  <%= yield :title %>
 
-  <body>
-    <%= yield %>
-  </body>
+	<style type="text/css">
+		body {
+			background-color: #f6f6f6;
+			margin: 0;
+			padding: 0;
+			font-family: Helvetica, Arial, sans-serif;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#container {
+			background-color: white;
+			max-width: 512px;
+			width: 75%;
+			padding: 1.5em;
+			margin: auto;
+			margin-top: 1em;
+			border-radius: 5px;
+		}
+
+		button {
+			background-color: #3498db;
+			border: none;
+			border-radius: 5px;
+			padding: 12px 25px;
+			font-weight: bold;
+			font-size: 14px;
+			color: white;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		button:hover {
+			background-color: #34495e;
+		}
+
+		hr {
+		    border: 0;
+		    height: 1px;
+		    background: #333;
+		    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+		}
+
+		table {
+			width: 100%;
+			table-layout: fixed;
+		}
+	</style>
+</head>
+<body>
+
+<div id="container">
+  <%= yield :content %>
+
+  <p>Unlike many automated emails, this is not from a no-reply address. There are actual, real humans just a Reply button away, so why not show your appreciation, express your discontent or query our brains with some feedback?</p>
+  
+  <p>The more positive reviews we get, the more motivated we will be to design new levels and artwork; the more useful criticism we receive, the better this content will become.</p>
+
+  <hr>
+
+  <p>You're receiving this because you subscribed to email notifications about new levels and other important milestones in Mouse Trapped's developmet. If you would prefer not to receive these emails, please click the button below.</p>
+
+  <p><a href="<%= @unsubscribe_url %>"><button>Unsubscribe</button></a></p>
+</div>
+
+</body>
 </html>

@@ -166,7 +166,9 @@ Swipe.prototype.check = function () {
 
   if (Phaser.Point.distance(this.game.input.activePointer.position, this.game.input.activePointer.positionDown) < this.dragLength) return null;
 
-  this.swiping = false;
+  // this.swiping = false;
+  // Modified 26/05/18 by Joe Anderson
+  // Enable continuous swiping
 
   var direction = null;
   var deltaX = this.game.input.activePointer.position.x - this.game.input.activePointer.positionDown.x;

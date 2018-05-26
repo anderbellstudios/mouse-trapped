@@ -43,7 +43,7 @@ function Swipe(game, model) {
 
 Swipe.prototype.setupKeyboard = function() {
   var self = this;
-  var up = this.game.input.keyboard.addKey(Phaser.Keyboard.UP);
+  /*var up = this.game.input.keyboard.addKey(Phaser.Keyboard.UP);
   up.onDown.add(function () {
     if (self.tmpDirection !== null) {
       switch(self.tmpDirection) {
@@ -141,6 +141,10 @@ Swipe.prototype.setupKeyboard = function() {
     }
   })
   right.onUp.add(this.keyUp, this);
+  */
+
+  // Modified 26/05/18 by Joe Anderson:
+  // Disable keyboard input
 }
 
 Swipe.prototype.keyUp = function() {

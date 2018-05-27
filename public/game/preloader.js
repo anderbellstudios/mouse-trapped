@@ -1,5 +1,6 @@
 var loading_text;
 var not_started = true;
+var text_style = "4vw Arial";
 var preloader = {
   preload: function() {
     game.load.audio('stay_optimistic', '/music/stay_optimistic.wav');
@@ -37,7 +38,7 @@ var preloader = {
     bg.height = viewHeight;
 
     loading_text = game.add.text(game.world.centerX, game.world.centerY, 'Loading... ', { 
-      font: "40pt Arial", 
+      font: text_style, 
       fill: "white", 
       align: "center" 
     });

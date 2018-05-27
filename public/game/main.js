@@ -74,10 +74,12 @@ function fadeToLevel(lvl, msg, cutscene) {
   cutsceneInProgress = true;
   setMessageText(msg);
   Fade.toBlack(game, 1000, function () {
-    game.state.start("cutscene", true, false, cutscene, function () {
+    //game.state.start("cutscene", true, false, cutscene, function () {
+    setTimeout(function () {
       game.state.start('playing', true, false, lvl);
       cutsceneInProgress = false;
-    });
+    }, 3000);
+    //});
   });
 }
 

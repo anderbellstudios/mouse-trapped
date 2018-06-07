@@ -83,13 +83,16 @@ function fadeToLevel(lvl, msg, cutscene) {
   });
 }
 
+var messageId = 0; 
+
 function setMessageText(text) {
   $('#message').text(text);
   text_height = $('#message').height();
   $('#message').css('transform', 'translateY(-' + (text_height + 15) + 'px)');
-  var oldText = text;
+  messageId++;
+  var oldId = messageId;
   setTimeout(function (){
-    if ($('#message').text() == oldText) {
+    if (messageId == oldId) {
       $('#message').text("");
     }
   }, 10000);

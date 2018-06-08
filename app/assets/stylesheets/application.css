@@ -20,6 +20,13 @@
   }
 }
 
+@media (max-width: 750px) {
+  #splash-title > h1 {
+    font-size: 15vw;
+  }
+}
+
+
 .btn-outline-primary, .btn-outline-success, .btn-outline-warning {
   margin-right: 1em;
 }

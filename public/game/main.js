@@ -102,14 +102,17 @@ window.addEventListener("load",function(event) {
   gridWidth = 16;
   gridHeight = 12;
 
-  viewWidth  = Math.floor( $('#game-container').width() );
-  viewHeight = Math.floor( viewWidth * (gridHeight / gridWidth) ); 
+  oldWidth = $('#game-container').width();
 
-  oldWidth = viewWidth;
+  idealWidth = window.innerWidth * 0.95;
+  idealHeight = window.innerHeight * 0.95;
 
-  if (viewHeight * 1.25 > window.innerHeight) {
-    viewHeight = Math.floor( window.innerHeight * 0.75 );
-    viewWidth = Math.floor( viewHeight * (gridWidth / gridHeight) );
+  viewWidth = Math.floor(idealWidth);
+  viewHeight = Math.floor(3 * viewWidth / 4);
+
+  if (viewHeight > idealHeight) {
+    viewHeight = Math.floor(idealHeight);
+    viewWidth = Math.floor(4 * viewHeight / 3);
   }
 
   tileSize = Math.floor(viewWidth / gridWidth);

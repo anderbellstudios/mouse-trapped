@@ -20,7 +20,7 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   #splash-title > h1 {
     font-size: 15vw;
   }

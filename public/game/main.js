@@ -88,7 +88,7 @@ var messageId = 0;
 function setMessageText(text) {
   $('#message').text(text);
   text_height = $('#message').height();
-  $('#message').css('transform', 'translateY(-' + (text_height + 45) + 'px)');
+  $('#message').css('transform', 'translateY(-' + (text_height + 15) + 'px)');
   messageId++;
   var oldId = messageId;
   setTimeout(function (){
@@ -126,6 +126,11 @@ window.addEventListener("load",function(event) {
     Phaser.CANVAS,
     'game-container'
   );
+
+  $('#game-container').on('click touchstart', function () {
+    var scroll = $('#game-container').offset().top + ( viewHeight / 2 ) - ( window.innerHeight / 2 );
+    $('body').animate({ 'scrollTop': scroll });
+  });
 
   $('#message').width(viewWidth - 30);
   $('#message').css('left', (window.innerWidth - viewWidth) / 2 + 15);

@@ -16,8 +16,10 @@ class Creature {
 
   update(time) {
     if (!this.isMoving) {
-      this.sprite.x = this.position.x;
-      this.sprite.y = this.position.y;
+      this.sprite.x = absPosfor(this.position).x;
+      this.sprite.y = absPosfor(this.position).y;
+      this.sprite.width = tileSize;
+      this.sprite.height = tileSize;
     }
 
     this.sprite.frame = this.frame(time);
@@ -55,7 +57,7 @@ class Creature {
     } else if (angle < 270) {
       this._frame = 0;
     } 
-    var walkTween = game.add.tween(this.sprite).to(position, 50, Phaser.Easing.Default, true);
+    var walkTween = game.add.tween(this.sprite).to(absPosfor(position), 50, Phaser.Easing.Default, true);
     walkTween.onComplete.add(function() {
       this.isMoving = false;
       this.lastMoved = game.time.time;

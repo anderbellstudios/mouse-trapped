@@ -8,14 +8,11 @@ CreatureGenerator = {
       }
 
       var position = {
-        x: data.position.x * tileSize,
-        y: data.position.y * tileSize
+        x: data.position.x,
+        y: data.position.y
       };
 
       var creature = new constructor(position, null, data.direction, walkCallback, data.special);
-      creature.sprite = game.add.sprite(0, 0, creature.image); 
-      creature.sprite.width = tileSize;
-      creature.sprite.height = tileSize;
 
       creatures.push(creature);
     });

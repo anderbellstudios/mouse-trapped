@@ -42,8 +42,6 @@ var playing = {
 
     entities.forEach(function (entity, index) {
       entity.sprite = game.add.sprite(0, 0, entity.image); 
-      entity.sprite.width = tileSize;
-      entity.sprite.height = tileSize;
     });
 
     this.game.input.keyboard.onDownCallback = FirstResponder.keyDown;
@@ -87,13 +85,13 @@ var playing = {
 
     if (canMove) {
       if (goLeft) {
-        player.walk(tileSize, 0);
+        player.walk(1, 0);
       } else if (goDown) {
-        player.walk(tileSize, 1);
+        player.walk(1, 1);
       } else if (goUp) {
-        player.walk(tileSize, 2);
+        player.walk(1, 2);
       } else if (goRight) {
-        player.walk(tileSize, 3);
+        player.walk(1, 3);
       }
     }
   }
@@ -115,7 +113,7 @@ FirstResponder = {
 
   creatureTriedToMove: function (creature, position) {
     var target;
-    var landedOn = thingAtAbsPos(position, things);
+    var landedOn = thingAtPos(position, things);
 
     if (landedOn) {
       return landedOn.wasLandedOnBy(creature, game.time.time);

@@ -31,8 +31,10 @@ class Sparkle {
   }
   
   update(time) {
-    this.sprite.x = this.position.x;
-    this.sprite.y = this.position.y;
+    this.sprite.x = absPosfor(this.position).x;
+    this.sprite.y = absPosfor(this.position).y;
+    this.sprite.width = tileSize;
+    this.sprite.height = tileSize;
     this.sprite.frame = this.frame(time);
   }
 

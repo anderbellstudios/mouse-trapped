@@ -36,7 +36,7 @@ class Cat extends Creature {
         destinationI = index;
       }
 
-      graph.push( relPosFor(position) );
+      graph.push(position);
     });
 
     var source = graph[sourceI];
@@ -52,8 +52,7 @@ class Cat extends Creature {
         { dx: -1, dy:  0 },
         { dx: -1, dy: -1 } ].forEach(function (d) {
           var relPos = posAdd(node, d);
-          var absPos = absPosfor(relPos);
-          var occupant = thingAtAbsPos(absPos, map);
+          var occupant = thingAtPos(relPos, map);
           if (occupant != undefined) {
             if (occupant.cattable(time)) {
               neighbours.push(relPos);
@@ -65,9 +64,8 @@ class Cat extends Creature {
 
     var relPos = route.pop();
     if ( relPos ) {
-      var absPos = absPosfor(relPos);
-      if ( this.walkCallback(this, absPos) ) {
-        this.moveTo(absPos);
+      if ( this.walkCallback(this, relPos) ) {
+        this.moveTo(relPos);
       }
     }
   }

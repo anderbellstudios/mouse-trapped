@@ -99,44 +99,27 @@ function setMessageText(text) {
 }
 
 window.addEventListener("load",function(event) {
-  gridWidth = 16;
-  gridHeight = 12;
-
-  oldWidth = $('#game-container').width();
-
-  idealWidth = window.innerWidth * 0.95;
-  idealHeight = window.innerHeight * 0.95;
-
-  viewWidth = Math.floor(idealWidth);
-  viewHeight = Math.floor(3 * viewWidth / 4);
-
-  if (viewHeight > idealHeight) {
-    viewHeight = Math.floor(idealHeight);
-    viewWidth = Math.floor(4 * viewHeight / 3);
-  }
-
-  tileSize = Math.floor(viewWidth / gridWidth);
-
-  viewWidth = Math.floor(tileSize * gridWidth);
-  viewHeight = Math.floor(tileSize * gridHeight);
+  var size = resize(undefined);
 
   game = new Phaser.Game(
-    viewWidth, 
-    viewHeight, 
+    size[0], 
+    size[1], 
     Phaser.CANVAS,
     'game-container'
   );
+
+  $(window).resize(function () {
+    resize(game);
+  });
+
+  window.addEventListener("orientationchange", function() {
+    resize(game);
+  });
 
   $('#game-container').on('click touchstart', function () {
     var scroll = $('#game-container').offset().top + ( viewHeight / 2 ) - ( window.innerHeight / 2 );
     $('body').animate({ 'scrollTop': scroll });
   });
-
-  $('#message').width(viewWidth - 30);
-  $('#message').css('left', (window.innerWidth - viewWidth) / 2 + 15);
-
-  offset = (oldWidth - viewWidth) / 2;
-  $('#game-container').css('transform', 'translateX(' + offset + 'px)');
 
   game.state.add('boot', boot);
   game.state.add('preloader', preloader);

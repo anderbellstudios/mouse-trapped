@@ -11,8 +11,8 @@ MapGenerator = {
         var tileId = tileData.slice(3);
           
         var position = {
-          x: cell_number * tileSize,
-          y: row_number  * tileSize
+          x: cell_number,
+          y: row_number
         };
 
         if ( lvldata.sparkle != undefined ) {
@@ -29,9 +29,6 @@ MapGenerator = {
         }
 
         var tile = new tileConstructor(position, frame, tileId, special);
-        tile.sprite = game.add.sprite(0, 0, tile.image); 
-        tile.sprite.width = tileSize;
-        tile.sprite.height = tileSize;
 
         tiles.push(tile);
       });

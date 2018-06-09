@@ -1,8 +1,8 @@
-function thingAtAbsPos(absPos, set) {
+function thingAtPos(pos, set) {
   var it = undefined;
   set.forEach(function (thing, index) {
     target = thing.position;
-    if (posEqual(target, absPos)) {
+    if (posEqual(target, pos)) {
       it = thing;
     }
   });

@@ -1,9 +1,10 @@
-var buttons, titlePath;
+var buttons, titlePath, buttonElements, title, menuBg;
 
 var menu = {
   init: function (_titlePath, _buttons) {
     titlePath = _titlePath;
     buttons = _buttons;
+    buttonElements = [];
   },
 
   preload: function () {
@@ -11,11 +12,25 @@ var menu = {
   },
 
   create: function () {
-    var bg = game.add.sprite(0, 0, 'menu_bg'); 
-    bg.width = viewWidth;
-    bg.height = viewHeight;
+    menuBg = game.add.sprite(0, 0, 'menu_bg'); 
 
     var button_count = buttons.length;
+
+    title = game.add.sprite(0, 0, 'title');
+
+    var button, element;
+    for (var i = 0; i < button_count; i++) {
+      button = buttons[i];
+      element = game.add.button(0, 0, button.name + "ButtonImage", button.onclick, this, 1, 0, 2, 0);
+      buttonElements.push(element);
+    }
+  },
+
+  update: function () {
+    menuBg.width = viewWidth;
+    menuBg.height = viewHeight;
+
+    var button_count = buttonElements.length;
 
     var row_count = 1 + button_count;
     var spacing = viewHeight / ( row_count + 1 );
@@ -23,14 +38,16 @@ var menu = {
 
     var scaleFactor = spacing * 0.6 / rowHeight;
 
-    var title = game.add.sprite(game.world.centerX, verticalPosition(0), 'title');
+    title.x = game.world.centerX;
+    title.y = verticalPosition(0);
     title.anchor.setTo(0.5, 0.5);
     title.scale.setTo(scaleFactor * 1.5);
 
-    var button, element;
+    var button;
     for (var i = 0; i < button_count; i++) {
-      button = buttons[i];
-      element = game.add.button(game.world.centerX, verticalPosition(i + 1), button.name + "ButtonImage", button.onclick, this, 1, 0, 2, 0);
+      element = buttonElements[i];
+      element.x = game.world.centerX;
+      element.y = verticalPosition(i + 1);
       element.anchor.setTo(0.5, 0.5);
       element.scale.setTo(scaleFactor);
     }

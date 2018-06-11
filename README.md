@@ -4,8 +4,6 @@ Mouse Trapped was originally developed for the BAFTA Young Game Designers compet
 
 In the game, you navigate the mouse around a set of mazes of rapidly increasing difficulty which appear to have no end. You receive no sympathy from the scientist, who barely acknowledges that you are any more important than a glass beaker. After all, if you break, he can always get a new one.
 
-This game was not intended as a protest against animal testing. The conditions portrayed in this game are (to my knowledge) inaccurate; most scientists are nothing like the one encountered here.
-
 ## Getting Started
 
 Although this is a javascript game, it requires a server to run it on so that the browser will load assets correctly. By default, the game expects a [Rails server](http://rubyonrails.org), which in turn requires [Ruby](https://www.ruby-lang.org/en/documentation/installation/).

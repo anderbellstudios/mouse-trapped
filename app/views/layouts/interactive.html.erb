@@ -18,28 +18,10 @@
   body {
     background: rgb(0, 144, 255) !important;
   }
-
-  @media (hover: hover) {
-    #mobile-warning { display: none; }
-  }
-    
-  @media (hover: none) {
-    #mobile-warning { display: inherit; }
-  }
-
-  #mobile-warning {
-    margin-top: 1em;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-  }
 </style>
 
 <% content_for :content do %>
   <div id="bg-holder" class="interactive-bg"></div>
-  <div id="mobile-warning" class="alert alert-info alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <b>Warning</b> Support for mobile devices is limited. See the FAQ section under "Contact Us" for more details. 
-  </div>
   <%= yield %>
 <% end %>
 

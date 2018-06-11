@@ -24,11 +24,67 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #game-container > canvas {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#game-buttons {
+  margin-top: 1em;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.game-button {
+}
+
+.game-button-left {
+  float: left;
+  margin-left: 1em;
+}
+
+.game-button-right {
+  float: right;
+  margin-right: 1em;
+}
+
+.arrow-button {
+  background-color: rgba(0, 150, 255, 0.80);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  pointer-events: auto;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+  
+  &:active {
+    filter: brightness(0.80);
+  }
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+}
+
+.mc-wrapper {
+  text-align: center;
+  margin-top: 1em;
 }
 
 #message {

@@ -1,4 +1,4 @@
-var swipe, start_time, current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
+var start_time, current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -10,7 +10,6 @@ function creatureDidDie(creature) {
 var playing = {
   init: function (lvl) {
     lvlId = lvl;
-    swipe = new Swipe(game);
   },
 
   preload: function () {
@@ -52,8 +51,6 @@ var playing = {
       entity.update(game.time.time);
     });
     
-    var swipe_direction = swipe.check();
-
     var keyH     = game.input.keyboard.addKey(Phaser.Keyboard.H);
     var keyA     = game.input.keyboard.addKey(Phaser.Keyboard.A);
     var keyLeft  = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
@@ -67,21 +64,17 @@ var playing = {
     var keyD     = game.input.keyboard.addKey(Phaser.Keyboard.D);
     var keyRight = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
 
-    if (swipe_direction !== null) {
-      var swipeLeft  = swipe_direction.direction == swipe.DIRECTION_LEFT;
-      var swipeDown  = swipe_direction.direction == swipe.DIRECTION_DOWN;
-      var swipeUp    = swipe_direction.direction == swipe.DIRECTION_UP;
-      var swipeRight = swipe_direction.direction == swipe.DIRECTION_RIGHT;
-    } else {
-      var swipeLeft, swipeDown, swipeUp, swipeRight;
-    }
+    var buttonLeft  = $('#left-arrow')[0].down;
+    var buttonDown  = $('#down-arrow')[0].down;
+    var buttonUp    = $('#up-arrow')[0].down;
+    var buttonRight = $('#right-arrow')[0].down;
 
     var canMove = player.canMove(game.time.time) && !cutsceneInProgress;
 
-    var goLeft  = keyH.isDown || keyA.isDown || keyLeft.isDown  || swipeLeft;
-    var goDown  = keyJ.isDown || keyS.isDown || keyDown.isDown  || swipeDown;
-    var goUp    = keyK.isDown || keyW.isDown || keyUp.isDown    || swipeUp;
-    var goRight = keyL.isDown || keyD.isDown || keyRight.isDown || swipeRight;
+    var goLeft  = keyH.isDown || keyA.isDown || keyLeft.isDown  || buttonLeft;
+    var goDown  = keyJ.isDown || keyS.isDown || keyDown.isDown  || buttonDown;
+    var goUp    = keyK.isDown || keyW.isDown || keyUp.isDown    || buttonUp;
+    var goRight = keyL.isDown || keyD.isDown || keyRight.isDown || buttonRight;
 
     if (canMove) {
       if (goLeft) {

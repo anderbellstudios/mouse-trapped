@@ -29,6 +29,10 @@ function resize(game) {
   offset = (oldWidth - viewWidth) / 2;
   $('#game-container').css('transform', 'translateX(' + offset + 'px)');
 
+  $('#game-buttons').css('height', viewHeight);
+  $('.arrow-button').css('width', tileSize * 2);
+  $('.arrow-button').css('height', tileSize * 2);
+
   if (game) {
     game.scale.setGameSize(viewWidth, viewHeight);
   }

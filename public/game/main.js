@@ -3,10 +3,30 @@ var game, gridWidth, gridHeight, viewWidth, viewHeight, tileSize;
 var rowHeight = 225;
 var buttonWidth = 600;
 var titleWidth = 1150;
+var mc = false;
 
 var user_settings = {
   music_enabled: true,
   sounds_enabled: true
+}
+
+function toggle_mc() {
+  mc = !mc;
+  if (mc) {
+    enable_mc();
+  } else {
+    disable_mc();
+  }
+}
+
+function enable_mc() {
+  $('#mc-status').text("ON");
+  $('#game-buttons').css('display', 'flex');
+}
+
+function disable_mc() {
+  $('#mc-status').text("OFF");
+  $('#game-buttons').css('display', 'none');
 }
 
 function launch_menu(name, buttons) {
@@ -119,6 +139,14 @@ window.addEventListener("load",function(event) {
   $('#game-container').on('click touchstart', function () {
     var scroll = $('#game-container').offset().top + ( viewHeight / 2 ) - ( window.innerHeight / 2 );
     $('body').animate({ 'scrollTop': scroll });
+  });
+
+  $(".arrow-button").on('mousedown touchstart', function () {
+    this.down = true;
+  }).on('mouseup touchend touchcancel', function () {
+    this.down = false;
+  }).on('touchmove', function (e) {
+    e.preventDefault();
   });
 
   game.state.add('boot', boot);

@@ -1,7 +1,7 @@
 var rowHeight = 225;
 var buttonWidth = 600;
 var nextLevel;
-var deathButtonElements = [];
+var deathButtonElements;
 var deathBg;
 
 var death = {
@@ -21,6 +21,7 @@ var death = {
     ];
 
     var button;
+    deathButtonElements = [];
     for (var i = 0, len = buttons.length; i < len; i++) {
       button = buttons[i];
       element = game.add.button(0, 0, button.name, button.onclick, this, 1, 0, 2, 0);

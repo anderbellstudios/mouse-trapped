@@ -6,11 +6,12 @@
   background-color: rgb(253, 253, 253);
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
   border-radius: 3px; 
-  padding: 0.2em;
+  padding: 0.4em;
   padding-top: 0.7em;
   margin-top: 1em;
+  border-radius: 5px;
 }
 
 .news-item:hover {
-  transform: translateX(0.5em);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.4);
 }

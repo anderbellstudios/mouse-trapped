@@ -1,0 +1,20 @@
+[
+  { "frame": "01", "duration": 4000 },
+  { "frame": "02", "duration": 2000 },
+  { "frame": "03", "duration":  500 },
+  { "frame": "04", "duration":  500 },
+  { "frame": "05", "duration":  500 },
+  { "frame": "06", "duration":  750 },
+  { "frame": "07", "duration": 3000 },
+  { "frame": "08", "duration": 4000 },
+  { "frame": "09", "duration": 4000 },
+  { "frame": "10", "duration": 4000 },
+  { "frame": "11", "duration": 3000 },
+  { "frame": "12", "duration":  750 },
+  { "frame": "13", "duration":  200 },
+  { "frame": "14", "duration":  200 },
+  { "frame": "15", "duration":  200 },
+  { "frame": "16", "duration": 2000 },
+  { "frame": "17", "duration": 4000 },
+  { "frame": "18", "duration": 8000 }
+]

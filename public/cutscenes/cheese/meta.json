@@ -1,0 +1,13 @@
+[
+  { "frame": "01", "duration":  750 },
+  { "frame": "02", "duration":  750 },
+  { "frame": "03", "duration":  500 },
+  { "frame": "04", "duration":  500 },
+  { "frame": "05", "duration":  500 },
+  { "frame": "06", "duration":  750 },
+  { "frame": "07", "duration": 1000 },
+  { "frame": "08", "duration": 4000 },
+  { "frame": "09", "duration": 4000 },
+  { "frame": "10", "duration": 4000 },
+  { "frame": "11", "duration": 6000 }
+]

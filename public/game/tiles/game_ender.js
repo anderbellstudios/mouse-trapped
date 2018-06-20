@@ -12,8 +12,9 @@ let GameEnder = (superclass) => class extends superclass {
       cutsceneInProgress = true;
       setMessageText("");
       var cutscene = this.cutscene;
+      var cutscene_frames = this.cutscene_frames;
       Fade.toBlack(game, 1000, function () {
-        game.state.start("cutscene", true, false, cutscene, function () {
+        game.state.start("cutscene", true, false, cutscene, cutscene_frames, function () {
           cutsceneInProgress = false;
           launch_menu('main_menu', main_menu);
           var destination = '/gameover';
@@ -27,6 +28,10 @@ let GameEnder = (superclass) => class extends superclass {
 
   get cutscene() {
     alert("All game enders must specify a cutscene.");
+  }
+
+  get cutscene_frames() {
+    alert("All game enders must specify cutscene frames.");
   }
 
   end_game(time) {

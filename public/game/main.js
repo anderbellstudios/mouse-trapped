@@ -94,12 +94,11 @@ function fadeToLevel(lvl, msg, cutscene) {
   cutsceneInProgress = true;
   setMessageText(msg);
   Fade.toBlack(game, 1000, function () {
-    //game.state.start("cutscene", true, false, cutscene, function () {
-    setTimeout(function () {
+    game.state.start("cutscene", true, false, 'cutscenes/interlevel',
+      ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"], function () {
       game.state.start('playing', true, false, lvl);
       cutsceneInProgress = false;
-    }, 3000);
-    //});
+    });
   });
 }
 
@@ -119,6 +118,16 @@ function setMessageText(text) {
 }
 
 window.addEventListener("load",function(event) {
+  var table = document.createElement('table');
+  for (var i = 0; i < 24; i++) {
+    var row = table.insertRow(i);
+    for (var j = 0; j < 64; j++) {
+      var cell = row.insertCell(j);
+      cell.innerHTML = "&nbsp;";
+    }
+  }
+  $('#cutscene-container').append(table);
+
   var size = resize(undefined);
 
   game = new Phaser.Game(

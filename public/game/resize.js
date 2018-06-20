@@ -20,8 +20,27 @@ function resize(game) {
   viewWidth = Math.floor(tileSize * gridWidth);
   viewHeight = Math.floor(tileSize * gridHeight);
 
+  $('#cutscene-container > table').width(viewWidth);
+  $('#cutscene-container > table').height(viewHeight);
+  $('#cutscene-container').css('transform', 'translateY(-' + viewHeight + 'px)');
+
+  var size;
+  var lower = 0;
+  var higher = 100;
+  for (var i = 0; i < 10; i++) {
+    size = lower + ( (higher - lower) / 2);
+    $('#cutscene-container > table').css('font-size', size);
+    if ( $('#cutscene-container').width() > viewWidth ) {
+      higher = size;
+    } else {
+      lower = size;
+    }
+  }
+  $('#cutscene-container > table').css('font-size', lower);
+
   $('#message').width(viewWidth - 30);
   $('#message').css('left', (window.innerWidth - viewWidth) / 2 + 15);
+  $('#cutscene-container').css('left', (window.innerWidth - viewWidth) / 2);
 
   text_height = $('#message').height();
   $('#message').css('transform', 'translateY(-' + (text_height + 15) + 'px)');

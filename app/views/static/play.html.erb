@@ -73,6 +73,16 @@
 
 <div class="container mc-wrapper">
   <button onclick="toggle_mc()" class="btn btn-success">Mobile Compatibility: <b id="mc-status">OFF</b></button>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="fa fa-music" aria-hidden="true"></span>
+    </button>
+    <div class="dropdown-menu" id="audio-settings">
+      <a class="dropdown-item active-tick" id="music" href="#">Music</a>
+      <a class="dropdown-item active-tick" id="sounds" href="#">Sounds</a>
+    </div>
+  </div>
 </div>
 
 <div id="game-buttons">

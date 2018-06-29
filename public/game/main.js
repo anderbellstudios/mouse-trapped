@@ -80,24 +80,7 @@ var main_menu = [
   } },
   { name: 'resume', onclick: function () { 
       display_levelport(true);
-  } },
-  { name: 'options', onclick: function () { launch_menu('options', options_menu); } }
-];
-
-var options_menu = [
-  { name: 'music',  onclick: function () { launch_menu('music', music_menu); } },
-  { name: 'sounds', onclick: function () { launch_menu('sounds', sounds_menu); } },
-  { name: 'back',   onclick: function () { launch_menu('main_menu', main_menu); } }
-];
-
-var music_menu = [
-  { name: 'on',  onclick: function () { user_settings.music_enabled = true;  launch_menu('options', options_menu); } },
-  { name: 'off', onclick: function () { user_settings.music_enabled = false; launch_menu('options', options_menu); } }
-];
-
-var sounds_menu = [
-  { name: 'on',  onclick: function () { user_settings.sounds_enabled = true;  launch_menu('options', options_menu); } },
-  { name: 'off', onclick: function () { user_settings.sounds_enabled = false; launch_menu('options', options_menu); } }
+  } }
 ];
 
 function fadeToLevel(lvl, msg, cutscene) {
@@ -188,6 +171,20 @@ window.addEventListener("load",function(event) {
 
   $('#levelport-container').click(hide_levelport);
   $('#levelport-cancel').click(hide_levelport);
+
+  $('#audio-settings > *').click(function () {
+    $(this).toggleClass('active-tick');
+  });
+
+  $('#audio-settings > #music').click(function () {
+    user_settings.music_enabled = !user_settings.music_enabled;
+    Audio.update();
+  });
+
+  $('#audio-settings > #sounds').click(function () {
+    user_settings.sounds_enabled = !user_settings.sounds_enabled;
+    Audio.update();
+  });
 
   game.state.add('boot', boot);
   game.state.add('preloader', preloader);

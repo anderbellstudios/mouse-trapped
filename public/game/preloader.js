@@ -25,7 +25,7 @@ var preloader = {
       game.load.audio(lvlId + '_dialogue', '/sounds/' + lvlId + '.wav');
     });
 
-    [ 'back', 'music', 'off', 'on', 'options', 'play', 'quit', 'resume', 'sounds', 'tryAgain', ].forEach(function (button){
+    [ 'play', 'quit', 'resume', 'tryAgain', ].forEach(function (button){
       game.load.spritesheet(button + "ButtonImage", 'images/buttons/' + button + '.png', buttonWidth, rowHeight);
     });
 

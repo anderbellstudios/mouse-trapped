@@ -33,18 +33,29 @@ function launch_menu(name, buttons) {
   game.state.start('menu', true, false, name, buttons);
 }
 
-function controlled_levelport(from_start) {
-  var level_code = prompt("Enter your level code here...");
-  var level = level_for(level_code);
+function display_levelport(from_start) {
+  $('#levelport-from-start').val(from_start ? 1 : 0);
+  $('#levelport-container').fadeIn();
+  game.paused = true;
+  game.input.enabled = false;
+  setTimeout(function () {
+    $('#levelport-code').focus();
+  }, 500);
+}
+
+function levelport(code, from_start) {
+  var level = level_for(code);
   if (level) {
     if (from_start) {
       gtag('event', level, { 'event_category' : 'Game was started'}); 
     } else {
       gtag('event', level, { 'event_category' : 'Levelport occurred' }); 
     }
+    hide_levelport();
     fadeToLevel(level, "Levelporting...", "interlevel");
   } else {
-    alert("Code invalid.");
+    $('#levelport-error').text('Invalid code.');
+    $('#levelport-code').select();
   }
 }
 
@@ -68,7 +79,7 @@ var main_menu = [
       game.state.start('playing', true, false, '01'); 
   } },
   { name: 'resume', onclick: function () { 
-      controlled_levelport(true);
+      display_levelport(true);
   } },
   { name: 'options', onclick: function () { launch_menu('options', options_menu); } }
 ];
@@ -158,6 +169,26 @@ window.addEventListener("load",function(event) {
     e.preventDefault();
   });
 
+  var submit_levelport = function () {
+    code = $('#levelport-code').val();
+    levelport( code, $('#levelport-from-start').val() - 0 );
+  }
+
+  $('#levelport-submit').click(submit_levelport);
+
+  $('#levelport-code').keypress(function (e) {
+    if(e.which == 13) {
+      submit_levelport();
+    }
+  });
+
+  $('#levelport-window').click(function (e) {
+    return false;
+  });
+
+  $('#levelport-container').click(hide_levelport);
+  $('#levelport-cancel').click(hide_levelport);
+
   game.state.add('boot', boot);
   game.state.add('preloader', preloader);
   game.state.add('menu', menu);
@@ -167,3 +198,13 @@ window.addEventListener("load",function(event) {
 
   game.state.start('boot');
 }, false);
+
+function hide_levelport() {
+  $('#levelport-container').fadeOut(function () {
+    $('#levelport-code').val("");
+    $('#levelport-code').blur();
+    $('#levelport-error').text('');
+    game.paused = false;
+    game.input.enabled = true;
+  });
+}

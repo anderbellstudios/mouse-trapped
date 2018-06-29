@@ -99,7 +99,7 @@ FirstResponder = {
 
     switch (keypress.keyCode) {
       case Phaser.KeyCode.Q:
-        controlled_levelport(false);
+        display_levelport(false);
         break;
     }
   },

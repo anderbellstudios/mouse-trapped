@@ -1,12 +1,12 @@
 window.addEventListener('load', function() {
-  var h = $('form').height();
-  var w = $('form').width();
+  var h = $('#subscription-form').height();
+  var w = $('#subscription-form').width();
   $('.msg-box').height(h);
   $('.msg-box').width(w);
 
   $('#success-box').hide();
   $('#error-box').hide();
-  $('form').submit(function (event) {
+  $('#subscription-form').submit(function (event) {
     event.preventDefault();
     var valuesToSubmit = $(this).serialize();
     $.ajax({
@@ -29,11 +29,11 @@ window.addEventListener('load', function() {
 }, false);
 
 function successOccured() {
-  $('form').hide();
+  $('#subscription-form').hide();
   $('#success-box').show();
 }
 
 function failureOccured() {
-  $('form').hide();
+  $('#subscription-form').hide();
   $('#error-box').show();
 }

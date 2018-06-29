@@ -54,6 +54,23 @@
   console.log("--------------------------------------------------------------------------------");
 </script>
 
+<div id="levelport-container">
+  <div id="levelport-window">
+    <input type="hidden" id="levelport-from-start" />
+    <p>
+      <h1>Levelport</h1>
+    </p>
+    <p>
+      <input class="form-control" type="text" id="levelport-code" placeholder="Level code" />
+    </p>
+    <p id="levelport-error"></p>
+    <p>
+      <button class="btn btn-primary btn-lg" style="width: 45%; float: left;" type="button" id="levelport-cancel">Cancel</button>
+      <button class="btn btn-success btn-lg" style="width: 45%; float: right;" type="button" id="levelport-submit">Levelport</button>
+    </p>
+  </div>
+</div>
+
 <div class="container mc-wrapper">
   <button onclick="toggle_mc()" class="btn btn-success">Mobile Compatibility: <b id="mc-status">OFF</b></button>
 </div>

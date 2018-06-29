@@ -1,0 +1,10 @@
+{ "music": "everyone_likes_cats", "has_dialogue": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 },
+	{ "type": "cat", "position": { "x": 15, "y": 7 }, "direction": 3, "special": { "speed": 150 } }
+], "player": 0, "special": { 
+	"00": {}, 
+	"01": { "action": "pullOpen", "targets": ["02"] },
+	"02": { "state": "closed" },
+	"03": { "message": "Still jumping into holes? I'm beginning to lose my patience.", "next_level": "0d" },
+	"04": { "message": "Level code: 'pathfinder'", "next_level": "1e" }
+}, "message": "Cats are excellent planners. They always seem to find the shortest path." }

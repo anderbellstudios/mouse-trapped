@@ -5,7 +5,7 @@
   "13": { "frequency":8000, "duration":"500", "offset":2000 }
 }, "special": { 
 	"00": {},
-	"01": { "message": "Level code: 'shadow'", "next_level": "1e" },
+	"01": { "message": "Level code: 'shadow'", "next_level": "0d" },
 	"07": { "state": "closed" },
 	"08": { "state": "open", "message": "Did you think this hole was closed? It wasn't." },
 	"09": { "state": "closed" },

@@ -63,4 +63,4 @@
 	"3a": { "state": "open", "message": "Holes: bad. Not-holes: good. Try to get it right this time.", "next_level": "0e" },
 	"3b": { "state": "open", "message": "Holes: bad. Not-holes: good. Try to get it right this time.", "next_level": "0e" },
 	"3c": { "message": "Level code: 'holes'", "next_level": "1e" }
-}, "message": "Since you like holes so much, I've put together a whole full room of them. Enjoy." }
+}, "message": "Since you like holes so much, I've put together a whole room full of them. Enjoy." }

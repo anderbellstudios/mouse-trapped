@@ -1,6 +1,20 @@
 class StaticController < ApplicationController
   layout :resolve_layout
 
+  def splash
+    @levels = LevelCode.recent
+
+    if @levels.count == 1
+      @verb = "is"
+      @noun = "level"
+      @pronoun = "it"
+    else
+      @verb = "are"
+      @noun = "levels"
+      @pronoun = "them"
+    end
+  end
+
   private
 
   def resolve_layout

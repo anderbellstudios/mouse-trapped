@@ -12,3 +12,19 @@
     </div>
   </div>
 </div>
+
+<% if @levels.count > 0 %>
+  <div class="container" style="margin-top: 2em;">
+    <div class="alert alert-info">
+      <h4 class="alert-heading">Recent Levels</h4>
+      <p>
+        There <%= @verb %> <%= @levels.count %> new <%= @noun %> from the past two weeks. Click below to play <%= @pronoun %>.
+      </p>
+      <p>
+        <% @levels.each do |lvl| %>
+          <a href="/play?lvl=<%= lvl.code %>"><%= lvl.code %></a> <br />
+        <% end %>
+      </p>
+    </div>
+  </div>
+<% end %>

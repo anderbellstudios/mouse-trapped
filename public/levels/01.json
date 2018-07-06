@@ -1,4 +1,4 @@
-{ "music": "stay_optimistic", "has_dialogue": "true", "creatures": [
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "mouse", "resumable": "false", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 5 }, "direction": 3 }
 ], "player": 0, "special": { 
 	"00": {}, 

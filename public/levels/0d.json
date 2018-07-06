@@ -1,4 +1,4 @@
-{ "music": "everyone_likes_cats", "has_dialogue": "true", "creatures": [
+{ "music": "everyone_likes_cats", "has_dialogue": "true", "code": "pathfinder", "resumable": "true", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 },
 	{ "type": "cat", "position": { "x": 15, "y": 7 }, "direction": 3, "special": { "speed": 150 } }
 ], "player": 0, "special": { 

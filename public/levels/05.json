@@ -1,4 +1,4 @@
-{ "music": "stay_optimistic", "has_dialogue": "true", "creatures": [
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "scientist", "resumable": "true", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 11 }, "direction": 2 }
 ], "player": 0, "sparkle": {
   "03": { "frequency":10000, "duration":1000, "offset":0 }

@@ -1,4 +1,4 @@
-{ "music": "stay_optimistic", "has_dialogue": "true", "creatures": [
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "cycle", "resumable": "true", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 },
 	{ "type": "cat", "position": { "x": 7, "y": 5 }, "direction": 3, "special": { "speed": 100 } }
 ], "player": 0, "sparkle": {

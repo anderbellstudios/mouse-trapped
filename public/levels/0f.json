@@ -1,4 +1,4 @@
-{ "music": "everyone_likes_cats", "has_dialogue": "true", "creatures": [
+{ "music": "everyone_likes_cats", "has_dialogue": "true", "code": "friend", "resumable": "true", "creatures": [
 	{ "type": "mouse", "position": { "x": 4, "y": 10 }, "direction": 0 },
 	{ "type": "cat", "position": { "x": 0, "y": 4 }, "direction": 1, "special": { "speed": 120 } }
 ], "player": 0, "sparkle": {

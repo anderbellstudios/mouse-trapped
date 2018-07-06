@@ -1,4 +1,4 @@
-{ "music": "endless_maze", "has_dialogue": "true", "creatures": [
+{ "music": "endless_maze", "has_dialogue": "true", "code": "buttons", "resumable": "true", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 }
 ], "player": 0, "sparkle": {
   "08": { "frequency":20000, "duration":"500", "offset":-1 },

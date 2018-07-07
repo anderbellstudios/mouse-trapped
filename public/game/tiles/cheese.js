@@ -17,6 +17,8 @@ class CheeseTile extends Tile {
       'event_label': 'Time taken to complete'
     });
 
+    $.get('/levelport_locations/create?code=' + current_level_code + '&time=' + time);
+
     gameInProgress = false;
     fadeToLevel(this.data.next_level, this.data.message, "interlevel");
   }

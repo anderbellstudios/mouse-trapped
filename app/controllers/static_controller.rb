@@ -1,6 +1,10 @@
 class StaticController < ApplicationController
   layout :resolve_layout
 
+  def play
+    @level_codes = LevelportLocations.all cookies: cookies
+  end
+
   def splash
     @levels = LevelCode.recent
 

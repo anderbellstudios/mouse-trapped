@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static#splash'
   get 'play', to: 'static#play'
   get 'about', to: 'static#about'
@@ -12,4 +11,5 @@ Rails.application.routes.draw do
   get 'level_code/:id', to: 'level_codes#show'
   resource :subscriptions
   get 'news', to: 'news#index'
+  get 'levelport_locations/create'
 end

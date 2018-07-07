@@ -19,7 +19,7 @@ var playing = {
     var tileset = game.cache.getText(lvlId + '_tiles');
     lvldata = JSON.parse(game.cache.getText(lvlId + '_data'));
 
-    current_level_code = lvldata.level_code;
+    current_level_code = lvldata.code;
 
     gameInProgress = true;
     start_time = game.time.time;

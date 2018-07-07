@@ -165,6 +165,11 @@ window.addEventListener("load",function(event) {
     }
   });
 
+  $('.levelport-link').click(function() {
+    $('#levelport-code').val( $(this).attr('data-code') );
+    submit_levelport();
+  });
+
   $('#levelport-window').click(function (e) {
     return false;
   });

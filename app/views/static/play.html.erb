@@ -64,10 +64,18 @@
       <input class="form-control" type="text" id="levelport-code" placeholder="Level code" />
     </p>
     <p id="levelport-error"></p>
-    <p>
+    <p style="display: block; height: 3em;">
       <button class="btn btn-primary btn-lg" style="width: 45%; float: left;" type="button" id="levelport-cancel">Cancel</button>
       <button class="btn btn-success btn-lg" style="width: 45%; float: right;" type="button" id="levelport-submit">Levelport</button>
     </p>
+    <% unless @level_codes.empty? %>
+      <hr />
+      <ul style="list-style-type: none; padding-left: 0; columns: 2; text-align: center; width: 100%;">
+        <% @level_codes.each do |code| %>
+          <li><a data-code="<%= code %>" class="levelport-link" href="#"><%= code %></a></li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 </div>
 

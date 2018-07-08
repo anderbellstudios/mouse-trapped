@@ -1,0 +1,18 @@
+{ "music": "everyone_likes_cats", "has_dialogue": "true", "code": "multiple", "resumable": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 4 }, "direction": 1 },
+	{ "type": "cat", "position": { "x": 0, "y": 11 }, "direction": 2, "special": { "speed": 169 } },
+	{ "type": "cat", "position": { "x": 11, "y": 2 }, "direction": 0, "special": { "speed": 100 } }
+], "player": 0, "sparkle": {
+  "03": { "frequency":16000, "duration":"500", "offset":-1 }
+}, "special": { 
+	"00": {},
+	"01": { "action": "pullOpen", "targets": ["06"] },
+	"02": { "action": "pullOpen", "targets": ["07"] },
+	"03": { "action": "hello world", "targets": [] },
+	"04": { "action": "toggle", "targets": ["05"] },
+	"05": { "state": "closed", "message": "...", "next_level": "10" },
+	"06": { "state": "closed" },
+	"07": { "state": "closed" },
+	"08": { "message": "That's it, you're going back to the first level.", "next_level": "01" },
+	"09": { "message": "Level code: 'multiple'", "next_level": "1e" }
+}, "message": "Here's a clue: you might want to avoid the second button from the top." }

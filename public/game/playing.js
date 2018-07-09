@@ -1,4 +1,4 @@
-var start_time, current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
+var start_time, levelIsResumable, current_level_code, music, dialogue, map, sparkles, player, creatures, things, entities, lvlId, lvlData, gameInProgress;
 var cutsceneInProgress = false;
 
 function creatureDidDie(creature) {
@@ -20,6 +20,7 @@ var playing = {
     lvldata = JSON.parse(game.cache.getText(lvlId + '_data'));
 
     current_level_code = lvldata.code;
+    levelIsResumable = lvldata.resumable;
 
     gameInProgress = true;
     start_time = game.time.time;

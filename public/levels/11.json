@@ -1,0 +1,32 @@
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "traps", "resumable": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 4 }, "direction": 3 },
+	{ "type": "cat", "position": { "x": 1, "y": 11 },  "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 3, "y": 11 },  "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 5, "y": 11 },  "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 7, "y": 11 },  "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 9, "y": 11 },  "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 11, "y": 11 }, "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 13, "y": 11 }, "direction": 2, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 0, "y": 0 },   "direction": 1, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 2, "y": 0 },   "direction": 1, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 4, "y": 0 },   "direction": 1, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 6, "y": 0 },   "direction": 1, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 8, "y": 0 },   "direction": 1, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 10, "y": 0 },  "direction": 1, "special": { "speed": 100 } },
+	{ "type": "cat", "position": { "x": 12, "y": 0 },  "direction": 1, "special": { "speed": 100 } }
+], "player": 0, "sparkle": {
+  "06": { "frequency":8000, "duration":"500", "offset":-1 },
+  "07": { "frequency":8000, "duration":"500", "offset":-1 }
+}, "special": { 
+	"00": {},
+	"01": { "state": "closed" },
+	"02": { "state": "closed", "message": "...", "next_level": "11" },
+	"03": { "state": "closed", "message": "...", "next_level": "11" },
+	"04": { "state": "closed", "message": "...", "next_level": "11" },
+	"05": { "message": "Level code: 'traps'", "next_level": "1e" },
+	"06": { "action": "pullOpen", "targets": ["01"] },
+	"07": { "action": "pullOpen", "targets": ["03"] },
+	"08": { "action": "pullOpen", "targets": ["02"] },
+	"09": { "state": "open", "message": "You were so close and you jumped into a hole. Try again.", "next_level": "11" },
+	"0a": { "action": "pullClosed", "targets": ["09"] }
+}, "message": "At least one of these buttons is a deadly trap. Try watching the sparkles." }

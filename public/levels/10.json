@@ -14,5 +14,5 @@
 	"06": { "state": "closed" },
 	"07": { "state": "closed" },
 	"08": { "message": "That's it, you're going back to the first level.", "next_level": "01" },
-	"09": { "message": "Level code: 'multiple'", "next_level": "1e" }
+	"09": { "message": "Level code: 'multiple'", "next_level": "11" }
 }, "message": "Here's a clue: you might want to avoid the second button from the top." }

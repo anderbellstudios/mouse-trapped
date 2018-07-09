@@ -4,7 +4,7 @@ var cutsceneInProgress = false;
 function creatureDidDie(creature) {
   creatures.splice(creatures.indexOf(creature), 1);
   things.splice(things.indexOf(creature), 1);
-  entities.splice(things.indexOf(creature), 1);
+  entities.splice(entities.indexOf(creature), 1);
 }
 
 var playing = {

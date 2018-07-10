@@ -36,6 +36,10 @@ class Creature {
   }
 
   walk(distance, direction) {
+    if (this.is_dead) {
+      return false;
+    }
+
     var translation = this.translationFor(distance, direction);
 
     var new_position = posAdd(this.position, translation);

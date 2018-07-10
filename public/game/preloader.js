@@ -30,6 +30,8 @@ var preloader = {
     game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
     game.load.audio('replaceable', '/music/replaceable.wav');
 
+    game.load.audio('mouse_died', '/sounds/mouse_died.wav');
+
     var bg = game.add.sprite(0, 0, 'loading_bg'); 
     bg.width = viewWidth;
     bg.height = viewHeight;

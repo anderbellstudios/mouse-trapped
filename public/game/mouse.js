@@ -13,8 +13,9 @@ class Mouse extends Creature {
       'event_category' : 'Mouse was killed'
     });
 
-    Audio.stopAll();
+    Audio.playSound('mouse_died');
     Fade.toBlack(game, 1000, function () {
+      Audio.stopAll();
       game.state.start('death', true, false, next_level, message);
     });
   }

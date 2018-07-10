@@ -3,10 +3,6 @@ var not_started = true;
 var text_style = "4vw Arial";
 var preloader = {
   preload: function() {
-    game.load.audio('stay_optimistic', '/music/stay_optimistic.wav');
-    game.load.audio('endless_maze', '/music/endless_maze.wav');
-    game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
-    game.load.audio('replaceable', '/music/replaceable.wav');
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
@@ -28,6 +24,11 @@ var preloader = {
     [ 'play', 'quit', 'resume', 'tryAgain', ].forEach(function (button){
       game.load.spritesheet(button + "ButtonImage", 'images/buttons/' + button + '.png', buttonWidth, rowHeight);
     });
+      
+    game.load.audio('stay_optimistic', '/music/stay_optimistic.wav');
+    game.load.audio('endless_maze', '/music/endless_maze.wav');
+    game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
+    game.load.audio('replaceable', '/music/replaceable.wav');
 
     var bg = game.add.sprite(0, 0, 'loading_bg'); 
     bg.width = viewWidth;

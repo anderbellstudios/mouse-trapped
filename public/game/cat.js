@@ -3,6 +3,10 @@ class Cat extends Creature {
     return 'catImage';
   }
 
+  postDie(next_level, message) {
+    Audio.playSound('cat_died');
+  }
+
   update(time) {
     if (this.is_dead) {
       return;

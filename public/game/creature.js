@@ -25,6 +25,11 @@ class Creature {
     this.sprite.frame = this.frame(time);
   }
 
+  wasShot(time) {
+    this.die(lvlId, "You were shot.");
+    return false; 
+  }
+
   die(next_level, message) {
     this.is_dead = true;
     this.sprite.destroy();

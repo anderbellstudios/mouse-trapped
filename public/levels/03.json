@@ -4,9 +4,9 @@
 	"00": {}, 
 	"01": {}, 
 	"02": { "message": "Level code: 'cheese'", "next_level": "04" }, 
-	"03": { "closed": 4000, "open": 4000, "offset":  100 }, 
-	"04": { "closed": 2000, "open": 2000, "offset":  400 }, 
-	"05": { "closed": 1000, "open": 1000, "offset":  900 }, 
-	"06": { "closed":  500, "open":  500, "offset": 1600 }, 
-	"07": { "closed":  250, "open":  250, "offset": 2500 } 
+	"03": { "closed": 8000, "open": 8000, "offset":  100 }, 
+	"04": { "closed": 4000, "open": 4000, "offset":  400 }, 
+	"05": { "closed": 2000, "open": 2000, "offset":  900 }, 
+	"06": { "closed": 1000, "open": 1000, "offset": 1600 }, 
+	"07": { "closed":  500, "open":  500, "offset": 2500 } 
 }, "message": "Wait for the barriers to open before moving through them." }

@@ -32,6 +32,7 @@ var preloader = {
 
     game.load.audio('mouse_died', '/sounds/mouse_died.wav');
     game.load.audio('cat_died', '/sounds/cat_died.wav');
+    game.load.audio('door_close', '/sounds/door_close.wav');
 
     var bg = game.add.sprite(0, 0, 'loading_bg'); 
     bg.width = viewWidth;

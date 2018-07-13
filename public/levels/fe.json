@@ -1,5 +1,5 @@
 { "music": "", "has_dialogue": "false", "code": "fe", "resumable": "false", "creatures": [
-	{ "type": "mouse", "position": { "x": 0, "y": 7 }, "direction": 3 },
+	{ "type": "mouse", "position": { "x": 0, "y": 8 }, "direction": 3 },
 	{ "type": "tesla", "position": { "x": 14, "y": 8 }, "direction": 0 }
 ], "player": 0, "special": { 
 	"00": {}

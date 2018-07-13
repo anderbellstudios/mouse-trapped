@@ -3,6 +3,8 @@ var not_started = true;
 var text_style = "4vw Arial";
 var preloader = {
   preload: function() {
+    game.load.spritesheet('teslaImage', '/images/tesla.png', 100, 100);
+    game.load.spritesheet('boltImage', '/images/bolt.png', 30, 30);
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);

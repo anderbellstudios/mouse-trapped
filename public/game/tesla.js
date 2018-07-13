@@ -1,6 +1,6 @@
 class Tesla extends Creature {
   get image() {
-    return 'holeImage';
+    return 'teslaImage';
   }
 
   update(time) {

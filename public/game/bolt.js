@@ -1,12 +1,12 @@
 class Bolt {
   constructor(position, direction) {
     this.position = position; 
-    this.position = posAdd(this.position, { "dx": 0.4, "dy": 0.4 });
+    this.position = posAdd(this.position, { "dx": 0.35, "dy": 0.35 });
     this.direction = direction;
   }
 
   create(game) {
-    this.sprite = game.add.sprite( 0, 0, 'catImage' );
+    this.sprite = game.add.sprite( 0, 0, 'boltImage' );
     var context = this;
     this.sprite.update = function() {
       context.update(game.time.time);

@@ -26,7 +26,7 @@ class Creature {
   }
 
   wasShot(time) {
-    this.die(lvlId, "You were shot.");
+    this.die(lvlId, "You were zapped by the Tesla.");
     return false; 
   }
 

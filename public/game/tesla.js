@@ -26,14 +26,8 @@ class Tesla extends Creature {
     return true; // do not die
   }
 
-  get angle() {
-    return ( Math.PI / 2 ) - Math.atan2( 
-      player.position.x - this.position.x, 
-      player.position.y - this.position.y);  
-  }
-
   get boltVector() {
-    var speed = 0.2;
+    var speed = this.data.bolt_speed - 0;
     return { "dx": Math.cos(this.angle) * speed, "dy": Math.sin(this.angle) * speed };
   }
 
@@ -43,7 +37,7 @@ class Tesla extends Creature {
       return true;
     }
 
-    if ( this.last_fired + 100 < time ) {
+    if ( this.last_fired + ( this.data.rate - 0 ) < time ) {
       this.last_fired = time; 
       return true;
     }

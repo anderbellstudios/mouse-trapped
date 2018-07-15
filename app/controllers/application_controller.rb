@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def should_redirect?
-    not %w{localhost www.mousetrapped.co.uk mousetrapped-competition.herokuapp.com}.include?(request.host)
+    not %w{localhost www.mousetrapped.co.uk}.include?(request.host)
   end
 end

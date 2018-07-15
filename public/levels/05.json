@@ -5,7 +5,7 @@
 }, "special": { 
 	"00": {}, 
 	"01": {}, 
-	"02": { "message": "Level code: 'scientist'", "next_level": "06" } ,
+	"02": { "message": "Level code: 'scientist'", "next_level": "07" } ,
 	"03": { "action": "toggle", "targets": ["09"] },
 	"04": { "action": "toggle", "targets": ["07"] },
 	"05": { "action": "toggle", "targets": ["08"] },

@@ -23,7 +23,7 @@
 	"02": { "state": "closed", "message": "...", "next_level": "11" },
 	"03": { "state": "closed", "message": "...", "next_level": "11" },
 	"04": { "state": "closed", "message": "...", "next_level": "11" },
-	"05": { "message": "Level code: 'traps'", "next_level": "1e" },
+	"05": { "message": "Level code: 'traps'", "next_level": "12" },
 	"06": { "action": "pullOpen", "targets": ["01"] },
 	"07": { "action": "pullOpen", "targets": ["03"] },
 	"08": { "action": "pullOpen", "targets": ["02"] },

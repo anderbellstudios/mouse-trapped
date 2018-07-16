@@ -11,6 +11,10 @@ class Tile {
   post_init() { 
   }
 
+  wasShot(time) {
+    return this.cattable(time);
+  }
+
   frame(time) {
     return this.default_frame;
   }

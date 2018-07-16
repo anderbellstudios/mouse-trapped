@@ -3,6 +3,17 @@ class TeslaCoil extends Creature {
     return 'teslaImage';
   }
 
+  frame(time) {
+    var shift = 0;
+    if ( this.timeUntilFire(time) < 250 ) {
+      shift = 4;
+    } else if ( this.timeUntilFire(time) < 500 ) {
+      shift = 2;
+    }
+
+    return this.base_frame(time) + shift;
+  }
+
   update(time) {
     super.update(time);
 
@@ -32,17 +43,20 @@ class TeslaCoil extends Creature {
   }
 
   shouldFire(time) {
-    if ( this.last_fired == undefined ) {
-      this.last_fired = time;
-      return true;
-    }
-
-    if ( this.last_fired + ( this.data.rate - 0 ) < time ) {
+    if ( this.timeUntilFire(time) < 0 ) {
       this.last_fired = time; 
       return true;
     }
 
     return false;
+  }
+
+  timeUntilFire(time) {
+    if ( this.last_fired == undefined ) {
+      this.last_fired = time;
+    }
+
+    return this.last_fired + ( this.data.rate - 0 ) - time;
   }
 }
 

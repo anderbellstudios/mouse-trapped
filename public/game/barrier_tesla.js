@@ -1,5 +1,5 @@
 class BarrierTesla extends TeslaCoil {
-  frame(time) {
+  base_frame(time) {
     return 0;
   }
 

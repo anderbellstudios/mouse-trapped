@@ -1,5 +1,5 @@
 class RevolvingTesla extends TeslaCoil {
-  frame(time) {
+  base_frame(time) {
     return 1;
   }
 

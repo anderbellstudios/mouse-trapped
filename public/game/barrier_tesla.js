@@ -1,4 +1,4 @@
-class BarrierTesla extends Tesla {
+class BarrierTesla extends TeslaCoil {
   frame(time) {
     return 0;
   }

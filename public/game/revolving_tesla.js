@@ -1,4 +1,4 @@
-class RevolvingTesla extends Tesla {
+class RevolvingTesla extends TeslaCoil {
   frame(time) {
     return 1;
   }

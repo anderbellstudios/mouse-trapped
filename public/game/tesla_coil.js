@@ -1,4 +1,4 @@
-class Tesla extends Creature {
+class TeslaCoil extends Creature {
   get image() {
     return 'teslaImage';
   }

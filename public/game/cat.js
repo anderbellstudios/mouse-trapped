@@ -56,7 +56,7 @@ class Cat extends Creature {
         { dx: -1, dy:  0 },
         { dx: -1, dy: -1 } ].forEach(function (d) {
           var relPos = posAdd(node, d);
-          var occupant = thingAtPos(relPos, map);
+          var occupant = thingAtPos(relPos, things);
           if (occupant != undefined) {
             if (occupant.cattable(time)) {
               neighbours.push(relPos);

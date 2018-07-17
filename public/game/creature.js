@@ -10,6 +10,10 @@ class Creature {
     this.is_dead = false;
   }
 
+  cattable(time) {
+    return false;
+  }
+
   frame(time) {
     return this._frame;
   }

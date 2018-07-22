@@ -1,0 +1,15 @@
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "teslas", "resumable": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 1, "y": 10 }, "direction": 2 },
+	{ "type": "barrier_tesla", "position": { "x":  3, "y":  4 }, "special": { "rate": "1400", "bolt_speed": 0.05, "direction": 0 } },
+	{ "type": "barrier_tesla", "position": { "x":  3, "y":  5 }, "special": { "rate": "1500", "bolt_speed": 0.05, "direction": 3 } },
+	{ "type": "barrier_tesla", "position": { "x":  3, "y":  8 }, "special": { "rate": "1600", "bolt_speed": 0.05, "direction": 0 } },
+	{ "type": "barrier_tesla", "position": { "x":  3, "y":  9 }, "special": { "rate": "1700", "bolt_speed": 0.05, "direction": 3 } },
+	{ "type": "barrier_tesla", "position": { "x": 12, "y":  2 }, "special": { "rate": "1800", "bolt_speed": 0.05, "direction": 3 } },
+	{ "type": "barrier_tesla", "position": { "x": 12, "y":  3 }, "special": { "rate": "1900", "bolt_speed": 0.05, "direction": 0 } },
+	{ "type": "barrier_tesla", "position": { "x": 12, "y":  6 }, "special": { "rate": "1000", "bolt_speed": 0.05, "direction": 3 } },
+	{ "type": "barrier_tesla", "position": { "x": 12, "y":  7 }, "special": { "rate": "1100", "bolt_speed": 0.05, "direction": 0 } },
+	{ "type": "revolving_tesla", "position": { "x": 7, "y": 7 }, "special": { "rate": "2200", "bolt_speed": 0.05 } }
+], "player": 0, "special": { 
+	"00": {}, 
+	"01": { "message": "Level code: 'teslas'", "next_level": "13" }
+}, "message": "We call these things Tesla coils. Go and stand next to one." }

@@ -26,4 +26,4 @@
 	"0c": { "state": "closed" },
 	"0d": { "action": "toggle", "targets": ["0e"] },
 	"0e": { "state": "closed" }
-}, "message": "" }
+}, "message": "Was that last room too easy for you? Don't worry, this one is much harder." }

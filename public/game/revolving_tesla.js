@@ -3,6 +3,10 @@ class RevolvingTesla extends TeslaCoil {
     return 1;
   }
 
+  wasShot(time) {
+    return true; // do not die
+  }
+
   get angle() {
     return ( Math.PI / 2 ) - Math.atan2( 
       player.position.x - this.position.x, 

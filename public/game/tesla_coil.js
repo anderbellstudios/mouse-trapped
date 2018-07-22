@@ -29,12 +29,11 @@ class TeslaCoil extends Creature {
   }
 
   fire() {
-    var bolt = new Bolt( this.position, this.boltVector );
+    if ( this.id == undefined ) {
+      this.id = Math.random();
+    }
+    var bolt = new Bolt( this.position, this.boltVector, this.id );
     bolt.create(game);
-  }
-
-  wasShot(time) {
-    return true; // do not die
   }
 
   get boltVector() {

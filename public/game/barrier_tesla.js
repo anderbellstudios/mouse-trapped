@@ -3,6 +3,10 @@ class BarrierTesla extends TeslaCoil {
     return 0;
   }
 
+  wasShot(time) {
+    return false; // do not die
+  }
+
   get angle() {
     switch(this.data.direction) {
       case 0:

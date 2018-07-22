@@ -1,8 +1,9 @@
 class Bolt {
-  constructor(position, direction) {
+  constructor(position, direction, owner) {
     this.position = position; 
     this.position = posAdd(this.position, { "dx": 0.35, "dy": 0.35 });
     this.direction = direction;
+    this.owner = owner;
   }
 
   create(game) {
@@ -21,7 +22,7 @@ class Bolt {
     this.sprite.height = tileSize / 5;
 
     var target = thingAtPos( this.nearestPosition, entities );
-    if ( target !== undefined ) {
+    if ( target !== undefined  && target.id !== this.owner ) {
       var still_going = target.wasShot(time);
       if ( !still_going ) {
         this.sprite.destroy();

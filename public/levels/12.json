@@ -13,5 +13,5 @@
 	"08": { "action": "pullOpen", "targets": ["02"] },
 	"0d": { "action": "pullOpen", "targets": ["03"] },
 	"0b": { "action": "pullOpen", "targets": ["04"] },
-	"0e": { "message": "Level code: 'slow'", "next_level": "13" }
+	"0e": { "message": "Level code: 'slow'", "next_level": "14" }
 }, "message": "Bonus points if you can solve this maze after releasing the cat." }

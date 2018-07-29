@@ -12,7 +12,7 @@ class Tile {
   }
 
   wasShot(time) {
-    return this.cattable(time);
+    return this.boltable(time);
   }
 
   frame(time) {
@@ -37,6 +37,10 @@ class Tile {
   
   cattable(time) {
     return this.walkable(time);
+  }
+
+  boltable(time) {
+    return this.cattable(time);
   }
 
   update(time) {

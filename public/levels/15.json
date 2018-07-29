@@ -1,0 +1,15 @@
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "gap", "resumable": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 14, "y": 1 }, "direction": 0 },
+	{ "type": "barrier_tesla", "position": { "x": 0, "y": 6 }, "special": { "rate": "300", "bolt_speed": 0.05, "direction": 3 } },
+	{ "type": "cat", "position": { "x": 13, "y":  4 }, "direction": 0, "special": { "speed": 300 } },
+	{ "type": "cat", "position": { "x": 13, "y": 11 }, "direction": 2, "special": { "speed": 200 } }
+], "player": 0, "special": { 
+	"00": {},
+	"01": { "state": "closed" },
+	"02": { "state": "closed" },
+	"03": { "state": "closed" },
+	"04": { "action": "pullOpen", "targets": ["02"] },
+	"05": { "action": "toggle", "targets": ["03"] },
+	"06": { "message": "Level code: 'gap'", "next_level": "1e" }, 
+	"07": { "message": "Level code: 'gap'", "next_level": "ff" }
+}, "message": "This maze revolves around the principle that you are small, and the cat isn't." }

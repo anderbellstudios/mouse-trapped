@@ -9,7 +9,7 @@ class BarrierTile extends Tile {
   
   frame(time) {
     if ( this.isOpen(time) !== this.was_open && this.was_open !== undefined) {
-      Audio.playSound('door_close');
+      Audio.playSound('door_close', this.position);
     }
     this.was_open = this.isOpen(time);
 

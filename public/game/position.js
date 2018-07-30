@@ -25,6 +25,10 @@ function posAdd(pos, delta) {
   return { x: pos.x + delta.dx, y: pos.y + delta.dy };
 }
 
+function distanceBetween(pos_a, pos_b) {
+  return Math.sqrt( Math.pow(pos_a.x - pos_b.x, 2) + Math.pow(pos_a.y - pos_b.y, 2) );
+}
+
 function angleBetween(a, b) {
   return Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI;
 }

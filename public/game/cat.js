@@ -4,7 +4,7 @@ class Cat extends Creature {
   }
 
   postDie(next_level, message) {
-    Audio.playSound('cat_died');
+    Audio.playSound('cat_died', this.position);
   }
 
   update(time) {

@@ -9,5 +9,5 @@
 	"05": { "state": "open", "message": "Never gonna run around and desert you!", "next_level": "fe" },
 	"06": { "action": "pullClosed", "targets": ["03"] },
 	"07": { "action": "pullClosed", "targets": ["04", "05"] },
-	"08": { "message": "House Trapped", "next_level": "1f" }
+	"08": { "message": "House Trapped", "next_level": "15" }
 }, "message": "" }

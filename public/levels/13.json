@@ -13,7 +13,7 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": { "message": "...", "next_level": "13" },
-	"02": { "message": "Level code: 'zap'", "next_level": "1e" },
+	"02": { "message": "Level code: 'zap'", "next_level": "15" },
 	"03": { "action": "pullOpen", "targets": ["04"] },
 	"04": { "state": "closed" },
 	"05": { "action": "pullOpen", "targets": ["06"] },

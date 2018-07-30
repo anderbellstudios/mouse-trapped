@@ -27,7 +27,7 @@ var playing = {
 
     Audio.stopAll();
     Audio.playMusic(lvldata.music);
-    // Audio.playSound(lvlId + '_dialogue');
+    Audio.playSound(lvlId + '_dialogue');
 
     setMessageText(lvldata.message);
 

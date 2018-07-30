@@ -26,6 +26,10 @@ CreatureGenerator = {
         return Mouse;
       case 'cat':
         return Cat;
+      case 'barrier_tesla':
+        return BarrierTesla;
+      case 'revolving_tesla':
+        return RevolvingTesla;
       default:
         alert("invalid creature found: " + type);
         break;

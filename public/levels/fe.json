@@ -1,0 +1,13 @@
+{ "music": "house_trapped", "has_dialogue": "false", "code": "", "resumable": "false", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 1 }
+], "player": 0, "special": { 
+	"00": {}, 
+	"01": { "message": "You know the rules, and so do I: Don't fall in the holes!", "next_level": "fe" },
+	"02": { "state": "closed", "message": "" },
+	"03": { "state": "open", "message": "Never gonna give you up,", "next_level": "fe" },
+	"04": { "state": "open", "message": "Never gonna let you down,", "next_level": "fe" },
+	"05": { "state": "open", "message": "Never gonna run around and desert you!", "next_level": "fe" },
+	"06": { "action": "pullClosed", "targets": ["03"] },
+	"07": { "action": "pullClosed", "targets": ["04", "05"] },
+	"08": { "message": "House Trapped", "next_level": "1f" }
+}, "message": "" }

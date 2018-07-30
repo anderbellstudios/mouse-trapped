@@ -21,8 +21,20 @@ class BarrierTile extends Tile {
     }
   }
 
-  walkable(time) {
+  cattable(time) {
     return this.isOpen(time);
+  }
+
+  walkable(time) {
+    return this.cattable(time) || this.gap(time);
+  }
+
+  boltable(time) {
+    return this.walkable(time);
+  }
+
+  gap(time) {
+    return this.frame(time) >= 10;
   }
 
   isOpen(time) {

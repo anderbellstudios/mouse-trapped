@@ -1,0 +1,17 @@
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "slow", "resumable": "true", "creatures": [
+	{ "type": "mouse", "position": { "x": 0, "y": 0 }, "direction": 3 },
+	{ "type": "cat", "position": { "x": 10, "y": 2 }, "direction": 0, "special": { "speed": 500 } }
+], "player": 0, "special": { 
+	"00": {}, 
+	"01": { "state": "closed" },
+	"02": { "state": "closed" },
+	"03": { "state": "closed" },
+	"04": { "state": "closed" },
+	"05": { "state": "closed" },
+	"06": { "action": "pullOpen", "targets": ["05"] },
+	"07": { "action": "pullOpen", "targets": ["01"] },
+	"08": { "action": "pullOpen", "targets": ["02"] },
+	"0d": { "action": "pullOpen", "targets": ["03"] },
+	"0b": { "action": "pullOpen", "targets": ["04"] },
+	"0e": { "message": "Level code: 'slow'", "next_level": "14" }
+}, "message": "Bonus points if you can solve this maze after releasing the cat." }

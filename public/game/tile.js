@@ -11,6 +11,10 @@ class Tile {
   post_init() { 
   }
 
+  wasShot(time) {
+    return this.boltable(time);
+  }
+
   frame(time) {
     return this.default_frame;
   }
@@ -33,6 +37,10 @@ class Tile {
   
   cattable(time) {
     return this.walkable(time);
+  }
+
+  boltable(time) {
+    return this.cattable(time);
   }
 
   update(time) {

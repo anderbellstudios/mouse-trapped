@@ -3,6 +3,10 @@ class Mouse extends Creature {
     return 'playerImage';
   }
 
+  cattable(time) {
+    return true;
+  }
+
   wasLandedOnBy(creature, time) {
     this.die(lvlId, "The cat got you! Try again...");
     return false;

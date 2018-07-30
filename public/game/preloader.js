@@ -3,6 +3,8 @@ var not_started = true;
 var text_style = "4vw Arial";
 var preloader = {
   preload: function() {
+    game.load.spritesheet('teslaImage', '/images/tesla.png', 100, 100);
+    game.load.spritesheet('boltImage', '/images/bolt.png', 30, 30);
     game.load.spritesheet('barrierImage', '/images/barrier.png', 100, 100);
     game.load.spritesheet('floorImage', '/images/floor.png', 100, 100);
     game.load.spritesheet('endImage', '/images/end.png', 100, 100);
@@ -15,7 +17,7 @@ var preloader = {
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
     game.load.spritesheet('catImage', '/images/cat.png', 100, 100);
 
-    [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '0c', '0d', '0e', '0f', '10', '11', '1e', 'ff', '1f', '20' ].forEach(function (lvlId){
+    [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '0c', '0d', '0e', '0f', '10', '11', '12', '13', '14', '15', 'fe', '1e', 'ff', '1f', '20' ].forEach(function (lvlId){
       game.load.text(lvlId + '_tiles', '/levels/' + lvlId + '.lvl');
       game.load.text(lvlId + '_data', '/levels/' + lvlId + '.json');
       game.load.audio(lvlId + '_dialogue', '/sounds/' + lvlId + '.wav');
@@ -29,6 +31,7 @@ var preloader = {
     game.load.audio('endless_maze', '/music/endless_maze.wav');
     game.load.audio('everyone_likes_cats', '/music/everyone_likes_cats.wav');
     game.load.audio('replaceable', '/music/replaceable.wav');
+    game.load.audio('house_trapped', '/music/house_trapped.wav');
 
     game.load.audio('mouse_died', '/sounds/mouse_died.wav');
     game.load.audio('cat_died', '/sounds/cat_died.wav');

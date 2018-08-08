@@ -72,6 +72,8 @@ MapGenerator = {
         return EscapeHoleTile;
       case 'E':
         return EscapeCheeseTile;
+      case 's':
+        return SensorTile;
       default:
         alert("invalid symbol found: " + symbol);
         break;

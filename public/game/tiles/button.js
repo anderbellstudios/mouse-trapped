@@ -15,14 +15,7 @@ class ButtonTile extends Tile {
   }
 
   activate_on_walk(walker, time) {
-    var targets = this.data.targets;
-    var action  = this.data.action;
-    map.forEach(function (tile, index) {
-      if (targets.includes(tile.tileId)) {
-        tile.received_action(action);
-      }
-    });
-
+    this.send_action(this.data); 
     this.pressed_time = time;
   }
 

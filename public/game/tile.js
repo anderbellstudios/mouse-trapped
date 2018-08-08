@@ -43,11 +43,23 @@ class Tile {
     return this.cattable(time);
   }
 
+  send_action(action) {
+    map.forEach(function (tile, index) {
+      if (action.targets.includes(tile.tileId)) {
+        tile.received_action(action.action);
+      }
+    });
+  }
+
   update(time) {
     this.sprite.x = absPosfor(this.position).x;
     this.sprite.y = absPosfor(this.position).y;
     this.sprite.width = tileSize;
     this.sprite.height = tileSize;
     this.sprite.frame = this.frame(time);
+    this.postUpdate(time);
+  }
+
+  postUpdate(time) {
   }
 }

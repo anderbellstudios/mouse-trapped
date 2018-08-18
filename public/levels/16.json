@@ -1,0 +1,187 @@
+{ "music": "stay_optimistic", 
+  "has_dialogue": "true", 
+  "code": "gate", 
+  "resumable": "true", 
+
+  "creatures": [
+    { "type": "mouse", 
+      "position": { "x": 8, "y": 11 }, 
+      "direction": 2 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 6, "y": 4 }, 
+      "special": { 
+        "rate": "3000", 
+        "bolt_speed": 0.02, 
+        "direction": 0 
+      } 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 6, "y": 7 }, 
+      "special": { 
+        "rate": "400", 
+        "bolt_speed": 0.1, 
+        "direction": 0 
+      } 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 2, "y": 7 }, 
+      "special": { 
+        "rate": "400", 
+        "bolt_speed": 0.1, 
+        "direction": 3 
+      } 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 1, "y": 2 }, 
+      "special": { 
+        "rate": "100", 
+        "bolt_speed": 0.1, 
+        "direction": 3 
+      } 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 14, "y": 2 }, 
+      "special": { 
+        "rate": "100", 
+        "bolt_speed": 0.1, 
+        "direction": 0 
+      } 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 0, "y": 11 }, 
+      "special": { 
+        "rate": "2000", 
+        "bolt_speed": 0.1, 
+        "direction": 2 
+      } 
+    },
+
+    { "type": "barrier_tesla", 
+      "position": { "x": 15, "y": 11 }, 
+      "special": { 
+        "rate": "2000", 
+        "bolt_speed": 0.1, 
+        "direction": 2 
+      } 
+    }
+  ], 
+
+  "player": 0, 
+
+  "special": { 
+    "00": {},
+    "01": { 
+      "action": "pullOpen", 
+      "targets": ["02", "03", "04"] 
+    },
+    "02": { "state": "closed" },
+    "03": { "state": "closed" },
+    "04": { "state": "closed" },
+    "05": { 
+      "closed": 3000, 
+      "open": 3000, 
+      "offset": 0 
+    },
+    "06": { 
+      "message": "...", 
+      "next_level": "16" 
+    },
+    "07": { 
+      "action": "pullOpen", 
+      "targets": ["08"] 
+    },
+    "08": { "state": "closed" },
+    "09": { 
+      "action": "toggle", 
+      "targets": ["0f", "11"] 
+    },
+    "0a": { 
+      "action": "toggle", 
+      "targets": ["0f", "11", "12"] 
+    },
+    "0b": { 
+      "action": "toggle", 
+      "targets": ["11", "12", "13"] 
+    },
+    "0c": { 
+      "action": "toggle", 
+      "targets": ["12", "13", "14"] 
+    },
+    "0d": { 
+      "action": "toggle", 
+      "targets": ["13", "14", "15"] 
+    },
+    "0e": { 
+      "action": "toggle", 
+      "targets": ["14", "15"] 
+    },
+    "0f": { "state": "closed" },
+    "11": { "state": "closed" },
+    "12": { "state": "open" },
+    "13": { "state": "open" },
+    "14": { "state": "closed" },
+    "15": { "state": "open" },
+    "16": { 
+      "action": "toggle", 
+      "targets": ["18"] 
+    },
+    "17": { 
+      "action": "toggle", 
+      "targets": ["19"] 
+    },
+    "18": { 
+      "state": "open", 
+      "message": "...", 
+      "next_level": "16" 
+    },
+    "19": { 
+      "state": "open", 
+      "message": "...", 
+      "next_level": "16" 
+    },
+    "1a": { 
+      "action": "toggle", 
+      "targets": ["1b", "0f", "10", "11", "12", "13", "14", "15", "08"] 
+    },
+    "1b": { 
+      "state": "open", 
+      "message": "...", 
+      "next_level": "16" 
+    },
+    "1c":{
+      "frequency": 2000,
+      "activate": { 
+        "action": "pullClosed",
+        "targets": ["02"]
+      },
+      "deactivate": { 
+        "action": "pullOpen",
+        "targets": ["02"]
+      }
+    },
+    "1d":{
+      "frequency": 2000,
+      "activate": { 
+        "action": "pullClosed",
+        "targets": ["03"]
+      },
+      "deactivate": { 
+        "action": "pullOpen",
+        "targets": ["03"]
+      }
+    },
+    "1e": { 
+      "message": "Level code: 'gate'", 
+      "next_level": "1e" 
+    }
+  }, 
+
+  "message": "See those white orbs? Try firing a Tesla into one." 
+}

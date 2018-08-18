@@ -10,6 +10,6 @@
 	"03": { "state": "closed" },
 	"04": { "action": "pullOpen", "targets": ["02"] },
 	"05": { "action": "toggle", "targets": ["03"] },
-	"06": { "message": "Level code: 'gap'", "next_level": "1e" }, 
+	"06": { "message": "Level code: 'gap'", "next_level": "16" }, 
 	"07": { "message": "Level code: 'gap'", "next_level": "fe" }
 }, "message": "This maze revolves around the principle that you are small, and the cat isn't." }

@@ -17,7 +17,7 @@ class SensorTile extends Tile {
   }
 
   postUpdate(time) {
-    if ( this.last_state !== this.active(time) ) {
+    if ( this.last_shot !== undefined ) {
       switch( this.active(time) ) {
         case true:
           this.send_action( this.data.activate );

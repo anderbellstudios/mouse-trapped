@@ -12,7 +12,7 @@
     { "type": "barrier_tesla", 
       "position": { "x": 6, "y": 4 }, 
       "special": { 
-        "rate": "3000", 
+        "rate": "6000", 
         "bolt_speed": 0.02, 
         "direction": 0 
       } 

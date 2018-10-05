@@ -7,7 +7,7 @@
 	"00": {},
 	"01": { "message": "Level code: 'shadow'", "next_level": "0d" },
 	"07": { "state": "closed" },
-	"08": { "state": "open", "message": "Did you think this hole was closed? It wasn't." },
+	"08": { "state": "open", "message": "Did you think this hole was closed? It wasn't.", "next_level": "0b" },
 	"09": { "state": "closed" },
 	"0a": { "action": "pullClosed", "targets": ["0c"] },
 	"0b": { "action": "pullOpen", "targets": ["0c"] },

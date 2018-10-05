@@ -20,7 +20,7 @@
 	"0f": { "state": "open" },
 	"10": { "action": "toggle", "targets": ["11"] },
 	"11": { "state": "closed" },
-	"12": { "message": "I'm not talking to you anymore." },
+	"12": { "message": "I'm not talking to you anymore.", "next_level": "0f" },
 	"13": { "state": "closed" },
 	"14": { "message": "Level code: 'friend'", "next_level": "10" }
 }, "message": "To your right, you will see a line of deadly holes. I would appreciate it if you avoided mercilessly throwing my cat into them." }

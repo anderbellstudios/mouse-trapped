@@ -51,40 +51,15 @@ var playing = {
     entities.forEach(function (entity, index) {
       entity.update(game.time.time);
     });
-    
-    var keyH     = game.input.keyboard.addKey(Phaser.Keyboard.H);
-    var keyA     = game.input.keyboard.addKey(Phaser.Keyboard.A);
-    var keyLeft  = game.input.keyboard.addKey(Phaser.Keyboard.LEFT);
-    var keyJ     = game.input.keyboard.addKey(Phaser.Keyboard.J);
-    var keyS     = game.input.keyboard.addKey(Phaser.Keyboard.S);
-    var keyDown  = game.input.keyboard.addKey(Phaser.Keyboard.DOWN);
-    var keyK     = game.input.keyboard.addKey(Phaser.Keyboard.K);
-    var keyW     = game.input.keyboard.addKey(Phaser.Keyboard.W);
-    var keyUp    = game.input.keyboard.addKey(Phaser.Keyboard.UP);
-    var keyL     = game.input.keyboard.addKey(Phaser.Keyboard.L);
-    var keyD     = game.input.keyboard.addKey(Phaser.Keyboard.D);
-    var keyRight = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
 
-    var buttonLeft  = $('#left-arrow')[0].down;
-    var buttonDown  = $('#down-arrow')[0].down;
-    var buttonUp    = $('#up-arrow')[0].down;
-    var buttonRight = $('#right-arrow')[0].down;
-
-    var canMove = player.canMove(game.time.time) && !cutsceneInProgress;
-
-    var goLeft  = keyH.isDown || keyA.isDown || keyLeft.isDown  || buttonLeft;
-    var goDown  = keyJ.isDown || keyS.isDown || keyDown.isDown  || buttonDown;
-    var goUp    = keyK.isDown || keyW.isDown || keyUp.isDown    || buttonUp;
-    var goRight = keyL.isDown || keyD.isDown || keyRight.isDown || buttonRight;
-
-    if (canMove) {
-      if (goLeft) {
+    if ( player.canMove(game.time.time) && !cutsceneInProgress ) {
+      if ( Controls.left() ) {
         player.walk(1, 0);
-      } else if (goDown) {
+      } else if ( Controls.down() ) {
         player.walk(1, 1);
-      } else if (goUp) {
+      } else if ( Controls.up() ) {
         player.walk(1, 2);
-      } else if (goRight) {
+      } else if ( Controls.right() ) {
         player.walk(1, 3);
       }
     }

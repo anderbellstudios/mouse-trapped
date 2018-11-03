@@ -5,7 +5,8 @@ var Controls = {
       Control_HJKL, 
       Control_Arrows, 
       Control_Buttons,
-      Control_DPad
+      Control_DPad,
+      Control_Joystick
     ].some( function (source) {
       if ( source.enabled() )
         return source[method]();
@@ -73,4 +74,23 @@ var Control_DPad = {
   down:  function() { return gamepad().buttons[13].pressed; },
   right: function() { return gamepad().buttons[15].pressed; },
   left:  function() { return gamepad().buttons[14].pressed; }
+};
+
+function joystick_angle() {
+  var x = gamepad().axes[0];
+  var y = gamepad().axes[1];
+  
+  if ( x**2 + y**2 > 0.5 ) {
+    return Math.atan2(y, x) * (180 / Math.PI);
+  } else {
+    return undefined;
+  }
+}
+
+var Control_Joystick = {
+  enabled: function() { return !!gamepad(); },
+  up:    function() { return joystick_angle() < -45 && joystick_angle() > -135; },
+  down:  function() { return joystick_angle() >  45 && joystick_angle() <  135; },
+  right: function() { return joystick_angle() > -45 && joystick_angle() <   45; },
+  left:  function() { return joystick_angle() > 135 || joystick_angle() < -135; }
 };

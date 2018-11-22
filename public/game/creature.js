@@ -15,7 +15,15 @@ class Creature {
   }
 
   frame(time) {
-    return this._frame;
+    return this._frame + this.skin_adjust(time);
+  }
+
+  skin(time) {
+    return 0;
+  }
+
+  skin_adjust(time) {
+    return this.skin(time) * 4;
   }
 
   update(time) {

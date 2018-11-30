@@ -7,6 +7,10 @@ class Mouse extends Creature {
     return true;
   }
 
+  get skin() {
+    return user_settings.skin;
+  }
+
   wasLandedOnBy(creature, time) {
     this.die(lvlId, "The cat got you! Try again...");
     return false;

@@ -17,6 +17,7 @@ var preloader = {
     game.load.image('death_bg', '/images/death_bg.png');
     game.load.spritesheet('playerImage', '/images/player.png', 100, 100);
     game.load.spritesheet('catImage', '/images/cat.png', 100, 100);
+    game.load.spritesheet('skinSwitcherImage', '/images/skin_switcher.png', 100, 100);
 
     [ '01', '02', '03', '04', '05', '06', '07', '08', '09', '0a', '0b', '0c', '0d', '0e', '0f', '10', '11', '12', '13', '14', '15', '16', 'fe', '1e', 'ff', '1f', '20' ].forEach(function (lvlId){
       game.load.text(lvlId + '_tiles', '/levels/' + lvlId + '.lvl');

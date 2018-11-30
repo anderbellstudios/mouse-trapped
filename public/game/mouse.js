@@ -3,10 +3,6 @@ class Mouse extends Creature {
     return 'playerImage';
   }
 
-  skin(time) {
-    return 0;
-  }
-
   cattable(time) {
     return true;
   }

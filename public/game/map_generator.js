@@ -66,14 +66,22 @@ MapGenerator = {
         break;
       case 'o':
         return ToggledHoleTile;
+        break;
       case 'd':
         return EscapeFloorTile;
+        break;
       case 'w':
         return EscapeHoleTile;
+        break;
       case 'E':
         return EscapeCheeseTile;
+        break;
       case 's':
         return SensorTile;
+        break;
+      case 'k':
+        return SkinSwitcherTile;
+        break;
       default:
         alert("invalid symbol found: " + symbol);
         break;

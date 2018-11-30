@@ -127,7 +127,7 @@ window.addEventListener("load",function(event) {
   game = new Phaser.Game(
     size[0], 
     size[1], 
-    Phaser.CANVAS,
+    Phaser.AUTO,
     'game-container'
   );
 

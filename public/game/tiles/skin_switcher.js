@@ -19,7 +19,10 @@ class SkinSwitcherTile extends Tile {
   }
 
   switch_skin_on(walker, time) {
-    user_settings.skin = this.skin;
+    var skin_to_use = this.skin;
+    setTimeout(function() {
+      user_settings.skin = skin_to_use;
+    }, 50);
   }
 
   skin_adjust(time) {

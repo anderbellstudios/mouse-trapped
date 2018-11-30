@@ -7,7 +7,8 @@ var mc = false;
 
 var user_settings = {
   music_enabled: true,
-  sounds_enabled: true
+  sounds_enabled: true,
+  skin: 0
 }
 
 function toggle_mc() {

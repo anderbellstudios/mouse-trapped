@@ -4,5 +4,5 @@
 	"00": {}, 
 	"01": {}, 
 	"02": { "message": "Level code: 'mouse'", "next_level": "02" },
-  "03": { "skin": 1 }
+  	"03": { "message": "...", "next_level": "13" }
 }, "message": "Use WASD, HJKL or the arrow keys to move the mouse and reach the cheese." }

@@ -1,4 +1,4 @@
-{ "music": "stay_optimistic", "has_dialogue": "true", "code": "zap", "resumable": "true", "creatures": [
+{ "music": "stay_optimistic", "has_dialogue": "true", "code": "", "resumable": "false", "creatures": [
 	{ "type": "mouse", "position": { "x": 0, "y": 11 }, "direction": 2 },
 	{ "type": "barrier_tesla", "position": { "x": 15, "y": 5 }, "special": { "rate": "3000", "bolt_speed": 0.05, "direction": 0 } },
 	{ "type": "barrier_tesla", "position": { "x": 15, "y": 6 }, "special": { "rate": "3500", "bolt_speed": 0.07, "direction": 0 } },
@@ -12,7 +12,7 @@
 ], "player": 0, "special": { 
 	"00": {}, 
 	"01": { "message": "...", "next_level": "13" },
-	"02": { "message": "Level code: 'zap'", "next_level": "15" },
+	"02": { "message": "Level code: 'zap'", "next_level": "01" },
 	"03": { "action": "pullOpen", "targets": ["04"] },
 	"04": { "state": "closed" },
 	"05": { "action": "pullOpen", "targets": ["06"] },
@@ -26,4 +26,4 @@
 	"0d": { "action": "toggle", "targets": ["0e"] },
 	"0e": { "state": "closed" },
 	"0f": { "skin": 1 }
-}, "message": "Was that last room too easy for you? Don't worry, this one is much harder." }
+}, "message": "..." }

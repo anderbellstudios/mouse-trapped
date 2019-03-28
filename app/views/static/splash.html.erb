@@ -11,6 +11,26 @@
       <button type="button" class="btn btn-success" onclick="window.location = '/about';">About the Game</button>
     </div>
   </div>
+
+  <div class="row row-flex promo-banner">
+    <div class="col">
+      <h1>Play Pop Pixie</h1>
+      <p>
+        We're working on a new game, Pop Pixie!
+      </p>
+
+      <button type="button" class="btn btn-primary" onclick="window.location = '/poppixie';">Play the Game</button> 
+      <button type="button" class="btn btn-success" onclick="window.location = 'https://github.com/12joan/pop-pixie';">Find Out More</button>
+    </div>
+
+    <div id="promo-sprites">
+      <style type="text/css" media="all">
+#promo-sprites {
+  background-image: url('<%= image_url 'promo_sprite.png' %>');
+}
+      </style>
+    </div>
+  </div>
 </div>
 
 <% if @levels.count > 0 %>

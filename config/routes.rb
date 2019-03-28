@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resource :subscriptions
   get 'news', to: 'news#index'
   get 'levelport_locations/create'
+  get '/poppixie', to: redirect('https://12joan.github.io/pop-pixie-online/')
 end

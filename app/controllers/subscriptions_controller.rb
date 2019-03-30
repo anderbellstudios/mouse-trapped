@@ -10,6 +10,8 @@ class SubscriptionsController < ApplicationController
   # POST /subscriptions
   # POST /subscriptions.json
   def create
+    return # Disable this feature
+
     @subscription = Subscription.new(subscription_params)
     succeeded = @subscription.save 
     @result = succeeded ? "success" : "failure"

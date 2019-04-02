@@ -47,11 +47,6 @@ function display_levelport(from_start) {
 function levelport(code, from_start) {
   var level = level_for(code);
   if (level) {
-    if (from_start) {
-      gtag('event', level, { 'event_category' : 'Game was started'}); 
-    } else {
-      gtag('event', level, { 'event_category' : 'Levelport occurred' }); 
-    }
     hide_levelport();
     fadeToLevel(level, "Levelporting...", "interlevel");
   } else {

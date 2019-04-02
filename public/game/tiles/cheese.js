@@ -11,12 +11,6 @@ class CheeseTile extends Tile {
   }
 
   levelport_on_walk(walker, time) {
-    gtag('event', lvlId, {
-      'event_category' : 'Level was finished',
-      'value': ( time - start_time ),
-      'event_label': 'Time taken to complete'
-    });
-
     if ( levelIsResumable ) {
       $.get('/levelport_locations/create?code=' + current_level_code + '&time=' + time);
     }

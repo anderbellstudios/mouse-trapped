@@ -57,7 +57,6 @@ var preloader = {
         var level_code = (new URL(window.location)).searchParams.get("lvl");
         var level = level_for(level_code);
         if (level) {
-          gtag('event', level, { 'event_category' : 'Game was started'}); 
           fadeToLevel(level, "Levelporting...", "interlevel");
         } else {
           launch_menu('main_menu', main_menu);

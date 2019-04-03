@@ -15,7 +15,14 @@ class Bolt {
   }
 
   update(time) {
-    this.position = posAdd(this.position, this.direction);
+    var time_dilation_factor = 60 * ( game.time.elapsedMS / 1000 );
+    var velocity = {
+      dx: time_dilation_factor * this.direction.dx,
+      dy: time_dilation_factor * this.direction.dy
+    };
+
+    this.position = posAdd(this.position, velocity);
+
     this.sprite.x = this.absPos.x;
     this.sprite.y = this.absPos.y;
     this.sprite.width = tileSize / 5;

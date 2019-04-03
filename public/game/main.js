@@ -71,7 +71,6 @@ function level_for(code) {
 
 var main_menu = [
   { name: 'play', onclick: function () { 
-      gtag('event', '01', { 'event_category' : 'Game was started' }); 
       game.state.start('playing', true, false, '01'); 
   } },
   { name: 'resume', onclick: function () { 

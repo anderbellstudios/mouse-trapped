@@ -1,0 +1,120 @@
+#levelport-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  -webkit-backdrop-filter: blur(3px);
+}
+
+#levelport-window {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 40%;
+  transform: translate(-50%, -50%);
+  padding: 1em;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#levelport-error {
+  color: red;
+}
+
+#game-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 1em;
+}
+
+#game-container > canvas {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#cutscene-container {
+  position: absolute;
+  pointer-events: none;
+}
+
+#cutscene-container > table {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  font-family: monospace;
+  color: white;
+  empty-cells: show;
+}
+
+#game-buttons {
+  margin-top: 1em;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+   -khtml-user-select: none; 
+     -moz-user-select: none; 
+      -ms-user-select: none; 
+          user-select: none; 
+}
+
+.game-button-left {
+  float: left;
+  margin-left: 1em;
+}
+
+.game-button-right {
+  float: right;
+  margin-right: 1em;
+}
+
+.arrow-button {
+  background-color: rgba(0, 150, 255, 0.80);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  pointer-events: auto;
+  padding: 0;
+}
+
+.arrow-button:hover {
+  filter: brightness(0.95);
+}
+
+.arrow-button:active {
+  filter: brightness(0.80);
+}
+
+.arrow-button > img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.mc-wrapper {
+  text-align: center;
+  margin-top: 1em;
+}
+
+#message {
+  position: absolute;
+  font-size: 2vw;
+  color: white; 
+  text-shadow: 0 0 10px #000000;
+  font-family: 'Avenir Next', 'Helvetica', 'Arial';
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(-2.5em);
+  pointer-events: none;
+}
+

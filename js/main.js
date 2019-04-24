@@ -56,18 +56,7 @@ function levelport(code, from_start) {
 }
 
 function level_for(code) {
-  return false;
-  // var result = $.ajax({
-  //   type: "GET",
-  //   url: '/level_code/' + code,
-  //   async: false
-  // }).responseText.replace(/\n|\r/g,'');
-
-  // if (result == 'invalid') { 
-  //   return false;
-  // } else {
-  //   return result;
-  // }
+  return LevelCodes[code] || false;
 }
 
 var main_menu = [

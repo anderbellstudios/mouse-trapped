@@ -10,7 +10,7 @@ Mouse Trapped is available to play online at www.mousetrapped.co.uk.
 
 ## Bring your own server
 
-If you're feeling brave, you can download the source code and host the game yourself on a localhost server. Navigate to play.html in a browser and enjoy the negligible loading times! 
+If you're feeling brave, you can download the source code and host the game yourself on a localhost server. Navigate to the index.html page in a browser and enjoy the negligible loading times! 
 
 
 ## Acknowledgements

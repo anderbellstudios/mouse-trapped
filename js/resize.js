@@ -5,7 +5,7 @@ function resize(game) {
   oldWidth = $('#game-container').width();
 
   idealWidth = window.innerWidth * 0.95;
-  idealHeight = window.innerHeight * 0.95;
+  idealHeight = window.innerHeight * 0.85;
 
   viewWidth = Math.floor(idealWidth);
   viewHeight = Math.floor(3 * viewWidth / 4);
